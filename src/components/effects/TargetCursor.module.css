@@ -1,0 +1,67 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 2147483647;
+  transform: translate(-50%, -50%);
+}
+
+.dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  background: #1a1a1a;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+
+.corner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border: 2.5px solid #1a1a1a;
+  will-change: transform;
+}
+
+.tl {
+  transform: translate(-150%, -150%);
+  border-right: none;
+  border-bottom: none;
+}
+
+.tr {
+  transform: translate(50%, -150%);
+  border-left: none;
+  border-bottom: none;
+}
+
+.br {
+  transform: translate(50%, 50%);
+  border-left: none;
+  border-top: none;
+}
+
+.bl {
+  transform: translate(-150%, 50%);
+  border-right: none;
+  border-top: none;
+}
+
+:global(html.target-cursor-active),
+:global(html.target-cursor-active *) {
+  cursor: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wrapper {
+    display: none;
+  }
+}

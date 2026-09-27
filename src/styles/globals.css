@@ -1,0 +1,296 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #1a1a1a;
+  --ink-muted: #6b6b6b;
+  --paper: #f7f7f7;
+  --stone: #eeeeee;
+  --steel: #24303c;
+  --brand: #c9342e;
+  --brand-deep: #b02c27;
+  --line: rgba(0, 0, 0, 0.12);
+  --surface: #ffffff;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-paper: var(--paper);
+  --color-stone: var(--stone);
+  --color-steel: var(--steel);
+  --color-brand: var(--brand);
+  --color-brand-deep: var(--brand-deep);
+  --color-line: var(--line);
+  --color-surface: var(--surface);
+  --font-sans: var(--font-outfit);
+  --font-display: var(--font-instrument);
+  --font-nav: var(--font-barlow);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--brand) 22%, white);
+  color: var(--ink);
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+.font-display {
+  font-family: var(--font-instrument), Georgia, serif;
+}
+
+.font-nav {
+  font-family: var(--font-barlow), "Arial Narrow", sans-serif;
+}
+
+.hero-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 180px 180px;
+  mix-blend-mode: soft-light;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+@keyframes marquee-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes marquee-down {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes marquee-rtl {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-ltr {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes cube-spin {
+  0% {
+    transform: rotateX(-22deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(-22deg) rotateY(360deg);
+  }
+}
+
+.cube-loader {
+  perspective: 480px;
+  perspective-origin: 50% 50%;
+}
+
+.cube-loader__scene {
+  width: 44px;
+  height: 44px;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.cube-loader__cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: cube-spin 2.4s linear infinite;
+}
+
+.cube-loader__face {
+  position: absolute;
+  inset: 0;
+  border: 1.5px solid color-mix(in srgb, var(--brand) 55%, #1a1a1a);
+  background: color-mix(in srgb, var(--brand) 12%, white);
+  backface-visibility: visible;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+.cube-loader__face--front {
+  transform: translateZ(22px);
+  background: color-mix(in srgb, var(--brand) 22%, white);
+}
+
+.cube-loader__face--back {
+  transform: rotateY(180deg) translateZ(22px);
+  background: color-mix(in srgb, var(--brand) 8%, #f4f4f4);
+}
+
+.cube-loader__face--right {
+  transform: rotateY(90deg) translateZ(22px);
+  border-color: #1a1a1a;
+  background: color-mix(in srgb, #1a1a1a 8%, white);
+}
+
+.cube-loader__face--left {
+  transform: rotateY(-90deg) translateZ(22px);
+  border-color: #1a1a1a;
+  background: color-mix(in srgb, #1a1a1a 6%, white);
+}
+
+.cube-loader__face--top {
+  transform: rotateX(90deg) translateZ(22px);
+  background: color-mix(in srgb, var(--brand) 16%, white);
+}
+
+.cube-loader__face--bottom {
+  transform: rotateX(-90deg) translateZ(22px);
+  background: color-mix(in srgb, #1a1a1a 10%, white);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cube-loader__cube {
+    animation: none;
+    transform: rotateX(-22deg) rotateY(32deg);
+  }
+}
+
+@keyframes why-gear-spin-cw {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes why-gear-spin-ccw {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.animate-marquee-up {
+  animation: marquee-up 42s linear infinite;
+}
+
+.animate-marquee-down {
+  animation: marquee-down 48s linear infinite;
+}
+
+.animate-marquee-rtl {
+  animation: marquee-rtl 40s linear infinite;
+}
+
+.animate-marquee-ltr {
+  animation: marquee-ltr 44s linear infinite;
+}
+
+.group:hover .animate-marquee-rtl,
+.group:hover .animate-marquee-ltr {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-up,
+  .animate-marquee-down,
+  .animate-marquee-rtl,
+  .animate-marquee-ltr {
+    animation: none;
+  }
+
+  .btn-shine:hover::before,
+  .btn-shine:focus-visible::before {
+    animation: none;
+  }
+
+  .why-gear-spin {
+    animation: none !important;
+  }
+}
+
+/* Elegant glass shine — left → right on hover (pill CTAs) */
+@keyframes btn-shine-sweep {
+  from {
+    transform: translateX(-130%) skewX(-16deg);
+  }
+  to {
+    transform: translateX(220%) skewX(-16deg);
+  }
+}
+
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.btn-shine > * {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-shine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 45%;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0) 38%,
+    rgba(255, 255, 255, 0.42) 50%,
+    rgba(255, 255, 255, 0) 62%,
+    transparent 100%
+  );
+  transform: translateX(-130%) skewX(-16deg);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.btn-shine:hover::before,
+.btn-shine:focus-visible::before {
+  animation: btn-shine-sweep 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Target cursor: keep default pointer off targets only when active */
+html.target-cursor-active .cursor-target {
+  cursor: none;
+}

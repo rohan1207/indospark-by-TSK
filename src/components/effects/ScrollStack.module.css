@@ -1,0 +1,61 @@
+.scroller {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: auto;
+  transform: translateZ(0);
+  scrollbar-width: none;
+}
+
+.scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.inner {
+  padding: 12vh 0 55vh;
+  min-height: 100vh;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  min-height: min(72vh, 560px);
+  box-sizing: border-box;
+  transform-origin: top center;
+  will-change: transform, filter;
+  backface-visibility: hidden;
+}
+
+.end {
+  width: 100%;
+  height: 1px;
+}
+
+.window {
+  height: auto;
+  overflow: visible;
+}
+
+.window .inner {
+  padding: 8vh 0 40vh;
+  min-height: 0;
+}
+
+/* Page-scrubbed stack inside a pinned panel */
+.driven {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.driven .inner {
+  padding: 18% 0 70%;
+  min-height: 100%;
+}
+
+.driven .card {
+  min-height: min(56vh, 420px);
+}
