@@ -7,8 +7,8 @@ export default function ServicesPage() {
   return (
     <>
       <SeoHead
-        title="Construction Services — Shutdown Demolition & Cutting"
-        description="IndoSpark construction services: vibration-free concrete and metal cutting, drilling, underwater demolition, rebar scanning, rock anchoring — plus technology and project case studies."
+        title="Pull Out Test & Installation Services"
+        description="ICFS pull-out testing (POT) and chemical/mechanical anchor installation — on-site tests up to 75 tons, calibrated equipment, and co-signed reports across India."
         path="/services"
       />
       <Navbar />

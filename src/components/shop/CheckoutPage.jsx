@@ -26,17 +26,17 @@ const INITIAL = {
 function Field({ label, children, error }) {
   return (
     <label className="block">
-      <span className="text-[11px] font-semibold uppercase tracking-[0.12em] text-ink/40">
+      <span className="text-[13px] font-semibold uppercase tracking-[0.12em] text-ink/40">
         {label}
       </span>
       <div className="mt-1.5">{children}</div>
-      {error && <p className="mt-1 text-[11px] font-medium text-brand">{error}</p>}
+      {error && <p className="mt-1 text-[13px] font-medium text-brand">{error}</p>}
     </label>
   );
 }
 
 const inputClass =
-  "h-11 w-full rounded-xl border border-black/[0.08] bg-[#f7f6f4] px-3.5 text-[14px] text-ink outline-none transition placeholder:text-ink/35 focus:border-brand/40 focus:bg-white focus:ring-2 focus:ring-brand/15";
+  "h-11 w-full rounded-xl border border-black/[0.08] bg-[#f7f6f4] px-3.5 text-[16px] text-ink outline-none transition placeholder:text-ink/35 focus:border-brand/40 focus:bg-white focus:ring-2 focus:ring-brand/15";
 
 export default function CheckoutPage() {
   const router = useRouter();
@@ -108,7 +108,7 @@ export default function CheckoutPage() {
 
   if (!hydrated) {
     return (
-      <div className="flex min-h-[50vh] items-center justify-center bg-[#fafafa] text-[14px] text-ink/45">
+      <div className="flex min-h-[50vh] items-center justify-center bg-[#fafafa] text-[16px] text-ink/45">
         Loading checkout…
       </div>
     );
@@ -137,27 +137,27 @@ export default function CheckoutPage() {
             <h1 className="mt-5 text-[clamp(1.5rem,3vw,2rem)] font-bold tracking-[-0.03em] text-ink">
               Order received
             </h1>
-            <p className="mt-2 text-[14px] text-ink/55">
+            <p className="mt-2 text-[16px] text-ink/55">
               Thanks{form.fullName ? `, ${form.fullName.split(" ")[0]}` : ""}. We&apos;ll confirm
               stock and shipping shortly.
             </p>
-            <p className="mt-4 rounded-full bg-[#f3f1ee] px-4 py-2 text-[13px] font-semibold text-ink">
+            <p className="mt-4 rounded-full bg-[#f3f1ee] px-4 py-2 text-[15px] font-semibold text-ink">
               Order ID · {orderId}
             </p>
-            <p className="mt-4 text-[13px] text-ink/45">
+            <p className="mt-4 text-[15px] text-ink/45">
               A confirmation note will go to <span className="font-medium text-ink">{form.email}</span>
               {form.payment === "quote" ? " with a project quote." : "."}
             </p>
             <div className="mt-8 flex flex-col gap-2.5 sm:flex-row sm:justify-center">
               <Link
                 href="/shop"
-                className="cursor-target btn-shine inline-flex h-11 items-center justify-center rounded-full bg-ink px-6 text-[13px] font-semibold text-white transition hover:bg-brand"
+                className="cursor-target btn-shine inline-flex h-11 items-center justify-center rounded-full bg-ink px-6 text-[15px] font-semibold text-white transition hover:bg-brand"
               >
                 Continue shopping
               </Link>
               <Link
                 href="/contact"
-                className="cursor-target inline-flex h-11 items-center justify-center rounded-full border border-black/10 px-6 text-[13px] font-semibold text-ink transition hover:border-brand hover:text-brand"
+                className="cursor-target inline-flex h-11 items-center justify-center rounded-full border border-black/10 px-6 text-[15px] font-semibold text-ink transition hover:border-brand hover:text-brand"
               >
                 Talk to sales
               </Link>
@@ -175,10 +175,10 @@ export default function CheckoutPage() {
           <h1 className="text-[clamp(1.5rem,3vw,2rem)] font-bold tracking-[-0.03em] text-ink">
             Your cart is empty
           </h1>
-          <p className="mt-2 text-[14px] text-ink/55">Add products before checking out.</p>
+          <p className="mt-2 text-[16px] text-ink/55">Add products before checking out.</p>
           <Link
             href="/shop"
-            className="cursor-target btn-shine mt-8 inline-flex h-11 items-center rounded-full bg-brand px-6 text-[13px] font-semibold text-white transition hover:bg-brand-deep"
+            className="cursor-target btn-shine mt-8 inline-flex h-11 items-center rounded-full bg-brand px-6 text-[15px] font-semibold text-white transition hover:bg-brand-deep"
           >
             Browse shop
           </Link>
@@ -191,7 +191,7 @@ export default function CheckoutPage() {
     <div className="bg-[#fafafa]">
       <section className="border-b border-black/[0.06] bg-white">
         <div className="mx-auto max-w-[1440px] px-4 py-8 sm:px-5 lg:px-6 xl:px-8">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand">
+          <p className="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand">
             Secure checkout
           </p>
           <div className="mt-2 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
@@ -206,7 +206,7 @@ export default function CheckoutPage() {
                     onClick={() => {
                       if (i < step) setStep(i);
                     }}
-                    className={`flex h-8 items-center gap-2 rounded-full px-3 text-[12px] font-semibold transition ${
+                    className={`flex h-8 items-center gap-2 rounded-full px-3 text-[14px] font-semibold transition ${
                       i === step
                         ? "bg-ink text-white"
                         : i < step
@@ -380,10 +380,10 @@ export default function CheckoutPage() {
                             )}
                           </span>
                           <span>
-                            <span className="block text-[14px] font-semibold text-ink">
+                            <span className="block text-[16px] font-semibold text-ink">
                               {opt.title}
                             </span>
-                            <span className="mt-0.5 block text-[12px] text-ink/50">{opt.text}</span>
+                            <span className="mt-0.5 block text-[14px] text-ink/50">{opt.text}</span>
                           </span>
                         </button>
                       ))}
@@ -434,10 +434,10 @@ export default function CheckoutPage() {
                             )}
                           </span>
                           <span>
-                            <span className="block text-[14px] font-semibold text-ink">
+                            <span className="block text-[16px] font-semibold text-ink">
                               {opt.title}
                             </span>
-                            <span className="mt-0.5 block text-[12px] text-ink/50">{opt.text}</span>
+                            <span className="mt-0.5 block text-[14px] text-ink/50">{opt.text}</span>
                           </span>
                         </button>
                       ))}
@@ -451,7 +451,7 @@ export default function CheckoutPage() {
                   <h2 className="text-[18px] font-bold tracking-[-0.02em] text-ink">
                     Review & place order
                   </h2>
-                  <div className="rounded-2xl bg-[#f7f6f4] p-4 text-[13px] leading-relaxed text-ink/70">
+                  <div className="rounded-2xl bg-[#f7f6f4] p-4 text-[15px] leading-relaxed text-ink/70">
                     <p className="font-semibold text-ink">{form.fullName}</p>
                     {form.company && <p>{form.company}</p>}
                     <p className="mt-2">
@@ -463,7 +463,7 @@ export default function CheckoutPage() {
                     <p className="mt-2">
                       {form.email} · {form.phone}
                     </p>
-                    <p className="mt-3 text-[12px] text-ink/45">
+                    <p className="mt-3 text-[14px] text-ink/45">
                       Delivery:{" "}
                       <span className="font-medium text-ink/70">
                         {form.delivery === "express"
@@ -483,13 +483,13 @@ export default function CheckoutPage() {
                       </span>
                     </p>
                     {form.notes && (
-                      <p className="mt-2 border-t border-black/5 pt-2 text-[12px]">
+                      <p className="mt-2 border-t border-black/5 pt-2 text-[14px]">
                         Notes: {form.notes}
                       </p>
                     )}
                   </div>
-                  <p className="text-[12px] text-ink/45">
-                    By placing this order you agree to be contacted by IndoSpark for confirmation,
+                  <p className="text-[14px] text-ink/45">
+                    By placing this order you agree to be contacted by ICFS for confirmation,
                     stock, and delivery. This demo checkout does not charge a card.
                   </p>
                 </div>
@@ -500,7 +500,7 @@ export default function CheckoutPage() {
                   <button
                     type="button"
                     onClick={() => setStep((s) => s - 1)}
-                    className="cursor-target text-[13px] font-semibold text-ink/50 transition hover:text-ink"
+                    className="cursor-target text-[15px] font-semibold text-ink/50 transition hover:text-ink"
                   >
                     ← Back
                   </button>
@@ -508,7 +508,7 @@ export default function CheckoutPage() {
                   <button
                     type="button"
                     onClick={() => router.push("/shop")}
-                    className="cursor-target text-[13px] font-semibold text-ink/50 transition hover:text-ink"
+                    className="cursor-target text-[15px] font-semibold text-ink/50 transition hover:text-ink"
                   >
                     ← Back to shop
                   </button>
@@ -518,7 +518,7 @@ export default function CheckoutPage() {
                   <button
                     type="button"
                     onClick={goNext}
-                    className="cursor-target btn-shine inline-flex h-11 items-center rounded-full bg-ink px-6 text-[13px] font-semibold text-white transition hover:bg-brand"
+                    className="cursor-target btn-shine inline-flex h-11 items-center rounded-full bg-ink px-6 text-[15px] font-semibold text-white transition hover:bg-brand"
                   >
                     Continue
                   </button>
@@ -527,7 +527,7 @@ export default function CheckoutPage() {
                     type="button"
                     disabled={submitting}
                     onClick={placeOrder}
-                    className="cursor-target btn-shine inline-flex h-11 items-center rounded-full bg-brand px-6 text-[13px] font-semibold text-white transition hover:bg-brand-deep disabled:opacity-60"
+                    className="cursor-target btn-shine inline-flex h-11 items-center rounded-full bg-brand px-6 text-[15px] font-semibold text-white transition hover:bg-brand-deep disabled:opacity-60"
                   >
                     {submitting ? "Placing order…" : `Place order · ${formatMoney(total)}`}
                   </button>
@@ -554,21 +554,21 @@ export default function CheckoutPage() {
                     />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <p className="line-clamp-2 text-[13px] font-semibold leading-snug text-ink">
+                    <p className="line-clamp-2 text-[15px] font-semibold leading-snug text-ink">
                       {product.name}
                     </p>
-                    <p className="mt-1 text-[12px] text-ink/45">
+                    <p className="mt-1 text-[14px] text-ink/45">
                       {product.priceLabel} × {qty}
                     </p>
                   </div>
-                  <p className="shrink-0 text-[13px] font-bold text-ink">
+                  <p className="shrink-0 text-[15px] font-bold text-ink">
                     {formatMoney(lineTotal)}
                   </p>
                 </li>
               ))}
             </ul>
 
-            <div className="mt-5 space-y-2 border-t border-black/[0.06] pt-4 text-[13px]">
+            <div className="mt-5 space-y-2 border-t border-black/[0.06] pt-4 text-[15px]">
               <div className="flex justify-between text-ink/55">
                 <span>Subtotal</span>
                 <span className="font-medium text-ink">{formatMoney(cartSubtotal)}</span>
@@ -579,7 +579,7 @@ export default function CheckoutPage() {
                   {shipping === 0 ? "Free" : formatMoney(shipping)}
                 </span>
               </div>
-              <div className="flex justify-between border-t border-black/[0.06] pt-3 text-[15px] font-bold text-ink">
+              <div className="flex justify-between border-t border-black/[0.06] pt-3 text-[16px] font-bold text-ink">
                 <span>Total</span>
                 <span>{formatMoney(total)}</span>
               </div>
@@ -587,7 +587,7 @@ export default function CheckoutPage() {
 
             <Link
               href="/cart"
-              className="mt-5 inline-flex text-[12px] font-semibold text-brand transition hover:underline"
+              className="mt-5 inline-flex text-[14px] font-semibold text-brand transition hover:underline"
             >
               Review / edit cart →
             </Link>

@@ -8,8 +8,6 @@ import ScrollStack, { ScrollStackItem } from "@/components/effects/ScrollStack";
 import {
   ABOUT_TABS,
   ACHIEVEMENTS,
-  DEMOLITION_OFFERS,
-  DEMOLITION_STATS,
   VERTICALS,
 } from "./aboutData";
 import HistorySection from "./HistorySection";
@@ -65,7 +63,7 @@ function FadeIn({ children, className = "", delay = 0 }) {
 
 function SectionLabel({ children }) {
   return (
-    <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand">
+    <p className="text-[13px] font-semibold uppercase tracking-[0.22em] text-brand">
       {children}
     </p>
   );
@@ -83,7 +81,7 @@ function AboutHero() {
           id="about-hero-heading"
           className="mx-auto max-w-3xl text-center text-[clamp(1.75rem,3.6vw,2.85rem)] font-bold leading-[1.12] tracking-[-0.03em] text-ink"
         >
-          Built on honesty. Grown on craft.
+          Anchor fasteners. Clear specs. On-time supply.
         </h1>
 
         {/* Bento grid — same structure as reference */}
@@ -95,8 +93,8 @@ function AboutHero() {
                 <p className="text-[clamp(2.4rem,4vw,3.25rem)] font-bold leading-none tracking-[-0.05em] text-ink">
                   43<span className="text-brand">+</span>
                 </p>
-                <p className="mt-2 text-[13px] font-medium leading-snug text-ink/55">
-                  Years of IndoSpark
+                <p className="mt-2 text-[15px] font-medium leading-snug text-ink/55">
+                  Years of ICFS
                 </p>
               </div>
               <div className="mt-5 inline-flex w-fit items-center gap-1 rounded-full bg-white px-2 py-1.5 shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
@@ -110,7 +108,7 @@ function AboutHero() {
                     </span>
                   )
                 )}
-                <span className="ml-1 flex h-7 w-7 items-center justify-center rounded-full bg-brand text-[11px] text-white">
+                <span className="ml-1 flex h-7 w-7 items-center justify-center rounded-full bg-brand text-[13px] text-white">
                   ♥
                 </span>
               </div>
@@ -119,9 +117,9 @@ function AboutHero() {
             <button
               type="button"
               onClick={() => scrollToId("verticals")}
-              className="cursor-target btn-shine flex h-12 shrink-0 items-center justify-between rounded-full bg-brand px-5 text-[13px] font-semibold text-white transition hover:bg-brand-deep sm:h-14 sm:px-6"
+              className="cursor-target btn-shine flex h-12 shrink-0 items-center justify-between rounded-full bg-brand px-5 text-[15px] font-semibold text-white transition hover:bg-brand-deep sm:h-14 sm:px-6"
             >
-              Explore verticals
+              Our products
               <span className="flex h-8 w-8 items-center justify-center rounded-full bg-ink text-lg leading-none text-white">
                 +
               </span>
@@ -140,10 +138,10 @@ function AboutHero() {
               </div>
               <div>
                 <p className="text-[clamp(2.4rem,4vw,3.25rem)] font-bold leading-none tracking-[-0.05em] text-ink">
-                  3
+                  2
                 </p>
-                <p className="mt-2 text-[13px] font-medium leading-snug text-ink/55">
-                  Core verticals
+                <p className="mt-2 text-[15px] font-medium leading-snug text-ink/55">
+                  Anchor systems
                 </p>
               </div>
               <div className="mt-4 flex h-16 items-end gap-1.5" aria-hidden>
@@ -162,18 +160,18 @@ function AboutHero() {
           <div className="relative min-h-[260px] overflow-hidden rounded-[1.5rem] sm:col-span-2 sm:min-h-[320px] sm:rounded-[1.75rem] lg:col-span-1 lg:min-h-0">
             <Image
               src="/images/news/exhibition.png"
-              alt="IndoSpark at industry exhibitions and project sites"
+              alt="ICFS at industry exhibitions and project sites"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 40vw"
               className="object-cover"
             />
-            <span className="absolute right-4 top-4 rounded-full bg-white px-3.5 py-1.5 text-[11px] font-semibold text-ink shadow-sm">
+            <span className="absolute right-4 top-4 rounded-full bg-white px-3.5 py-1.5 text-[13px] font-semibold text-ink shadow-sm">
               Est. 1978
             </span>
             <div className="absolute -bottom-6 -left-6 h-[58%] w-[72%] rounded-[100%] bg-brand sm:h-[52%] sm:w-[65%]" />
-            <p className="absolute bottom-5 left-5 z-10 max-w-[11rem] text-[15px] font-bold leading-snug tracking-[-0.02em] text-white sm:bottom-6 sm:left-6 sm:max-w-[13rem] sm:text-[17px]">
-              Timely delivery. Fair dealing. Sites that keep moving.
+            <p className="absolute bottom-5 left-5 z-10 max-w-[11rem] text-[16px] font-bold leading-snug tracking-[-0.02em] text-white sm:bottom-6 sm:left-6 sm:max-w-[13rem] sm:text-[17px]">
+              Right product. On time. Every order.
             </p>
           </div>
 
@@ -181,8 +179,8 @@ function AboutHero() {
           <div className="flex flex-col gap-3 sm:gap-3.5 lg:min-h-[420px]">
             <div className="relative min-h-[180px] flex-1 overflow-hidden rounded-[1.5rem] sm:rounded-[1.75rem] lg:min-h-0">
               <Image
-                src="/images/banners/concrete-cutting.png"
-                alt="IndoSpark construction services on site"
+                src="/images/banners/mechanical-anchors.png"
+                alt="ICFS mechanical anchors"
                 fill
                 sizes="(max-width: 1024px) 100vw, 22vw"
                 className="object-cover"
@@ -195,7 +193,7 @@ function AboutHero() {
               <button
                 type="button"
                 onClick={() => scrollToId("history")}
-                className="cursor-target absolute bottom-3 left-3 rounded-full bg-ink px-3.5 py-2 text-[11px] font-semibold text-white transition hover:bg-brand"
+                className="cursor-target absolute bottom-3 left-3 rounded-full bg-ink px-3.5 py-2 text-[13px] font-semibold text-white transition hover:bg-brand"
               >
                 Our history
               </button>
@@ -204,9 +202,9 @@ function AboutHero() {
             <div className="flex flex-1 flex-col justify-between rounded-[1.5rem] bg-[#fceeed] p-5 sm:rounded-[1.75rem] sm:p-6">
               <div>
                 <p className="text-[clamp(2rem,3.5vw,2.75rem)] font-bold leading-none tracking-[-0.05em] text-ink">
-                  29<span className="text-brand">+</span>
+                  ETA
                 </p>
-                <p className="mt-2 text-[13px] font-medium text-ink/55">Years cutting &amp; fixing</p>
+                <p className="mt-2 text-[15px] font-medium text-ink/55">Approved products</p>
               </div>
               <div className="mt-4 flex gap-1" aria-label="5 star reputation">
                 {Array.from({ length: 5 }).map((_, i) => (
@@ -257,15 +255,15 @@ function AboutHero() {
               </Link>
             </div>
 
-            <p className="relative z-10 mt-8 max-w-[15rem] text-[14px] font-medium leading-relaxed text-ink/70 sm:text-[15px]">
-              From a two-person workshop in 1978 to ICFS fastening systems — products, site services,
-              and design software under one house.
+            <p className="relative z-10 mt-8 max-w-[15rem] text-[16px] font-medium leading-relaxed text-ink/70 sm:text-[16px]">
+              From a two-person workshop in 1978 to ICFS anchor fasteners and design tools
+              under one house.
             </p>
 
             <button
               type="button"
               onClick={() => scrollToId("overview")}
-              className="cursor-target btn-shine relative z-10 mt-6 inline-flex h-11 w-full items-center justify-center rounded-full bg-ink px-5 text-[13px] font-semibold text-white transition hover:bg-brand sm:mt-8"
+              className="cursor-target btn-shine relative z-10 mt-6 inline-flex h-11 w-full items-center justify-center rounded-full bg-ink px-5 text-[15px] font-semibold text-white transition hover:bg-brand sm:mt-8"
             >
               Explore our story
             </button>
@@ -282,7 +280,7 @@ function AboutTabs({ active, onSelect }) {
       <div className="mx-auto max-w-[1440px] px-4 sm:px-5 lg:px-6 xl:px-8">
         <div
           role="tablist"
-          aria-label="About IndoSpark"
+          aria-label="About ICFS"
           className="-mx-1 flex gap-1 overflow-x-auto py-2.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {ABOUT_TABS.map((tab) => {
@@ -294,7 +292,7 @@ function AboutTabs({ active, onSelect }) {
                 role="tab"
                 aria-selected={isActive}
                 onClick={() => onSelect(tab.id)}
-                className={`cursor-target relative shrink-0 rounded-full px-4 py-2 text-[12px] font-semibold tracking-[-0.01em] transition-colors sm:px-5 sm:text-[13px] ${
+                className={`cursor-target relative shrink-0 rounded-full px-4 py-2 text-[14px] font-semibold tracking-[-0.01em] transition-colors sm:px-5 sm:text-[15px] ${
                   isActive ? "text-white" : "text-ink/55 hover:text-ink"
                 }`}
               >
@@ -319,14 +317,14 @@ function OverviewSection() {
   const gallery = [
     { src: "/images/banners/chemical-mortars.png", alt: "Chemical mortars" },
     { src: "/images/banners/mechanical-anchors.png", alt: "Mechanical anchors" },
-    { src: "/images/banners/concrete-cutting.png", alt: "Concrete cutting" },
     { src: "/images/banners/design-software.png", alt: "Design software" },
+    { src: "/images/news/exhibition.png", alt: "ICFS at trade shows" },
   ];
 
   const stats = [
-    { value: "43", label: "Years IndoSpark" },
+    { value: "43", label: "Years experience" },
     { value: "25", label: "Years fastening" },
-    { value: "29", label: "Years cutting" },
+    { value: "ETA", label: "Approvals" },
   ];
 
   return (
@@ -339,40 +337,30 @@ function OverviewSection() {
           {/* Left — copy + social, vertically balanced */}
           <FadeIn className="flex h-full flex-col justify-between gap-8 lg:py-1">
             <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand">
+              <p className="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand">
                 Overview
               </p>
               <h2 className="mt-2.5 max-w-xl text-[clamp(1.65rem,3.2vw,2.55rem)] font-bold leading-[1.12] tracking-[-0.035em] text-ink">
-                Honesty, craft, and made with{" "}
-                <span className="text-brand">Care</span>
-                <span className="relative mx-1.5 inline-block h-8 w-[4.25rem] align-middle overflow-hidden rounded-full sm:h-9 sm:w-[5rem]">
-                  <Image
-                    src="/images/banners/chemical-mortars.png"
-                    alt=""
-                    fill
-                    sizes="80px"
-                    className="object-cover"
-                  />
-                </span>{" "}
-                — every day.
+                Chemical and mechanical{" "}
+                <span className="text-brand">anchors</span> for construction.
               </h2>
-              <p className="mt-3 max-w-md text-[13.5px] leading-relaxed text-ink/55 sm:text-[14.5px]">
-                Indo-Spark Construction Services is the home of ICFS — a 43-year house focused on the
-                right product on site, on time. We deliver worldwide, with strong presence across
-                Solapur, Hyderabad, Bengaluru, Chiplun and Mumbai.
+              <p className="mt-3 max-w-md text-[16px] leading-relaxed text-ink/55">
+                ICFS supplies anchor fasteners that hold when the load matters. Clear specs, steady
+                stock, and support across India — including Solapur, Hyderabad, Bengaluru, Chiplun,
+                and Mumbai.
               </p>
               <div className="mt-5 flex flex-wrap gap-2.5">
                 <button
                   type="button"
                   onClick={() => scrollToId("verticals")}
-                  className="cursor-target inline-flex h-10 items-center gap-1.5 rounded-full border border-brand bg-transparent px-5 text-[12.5px] font-semibold text-brand transition hover:bg-brand hover:text-white sm:h-11 sm:text-[13px]"
+                  className="cursor-target inline-flex h-10 items-center gap-1.5 rounded-full border border-brand bg-transparent px-5 text-[14px] font-semibold text-brand transition hover:bg-brand hover:text-white sm:h-11 sm:text-[15px]"
                 >
-                  Explore verticals
+                  See products
                   <span aria-hidden>→</span>
                 </button>
                 <Link
-                  href="/#shop-by-category"
-                  className="cursor-target btn-shine inline-flex h-10 items-center gap-1.5 rounded-full bg-brand px-5 text-[12.5px] font-semibold text-white transition hover:bg-brand-deep sm:h-11 sm:text-[13px]"
+                  href="/#shop"
+                  className="cursor-target btn-shine inline-flex h-10 items-center gap-1.5 rounded-full bg-brand px-5 text-[14px] font-semibold text-white transition hover:bg-brand-deep sm:h-11 sm:text-[15px]"
                 >
                   Shop products
                   <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" aria-hidden>
@@ -392,7 +380,7 @@ function OverviewSection() {
               <h3 className="text-[1.05rem] font-bold tracking-[-0.03em] text-ink sm:text-[1.15rem]">
                 From our fastening house
               </h3>
-              <p className="mt-1.5 max-w-sm text-[12.5px] leading-relaxed text-ink/50 sm:text-[13px]">
+              <p className="mt-1.5 max-w-sm text-[14px] leading-relaxed text-ink/50 sm:text-[15px]">
                 Jobsite sales, consultation, and ETA-backed ICFS products — customers talk about the
                 service.
               </p>
@@ -443,7 +431,7 @@ function OverviewSection() {
             <div className="relative min-h-[200px] flex-1 overflow-hidden rounded-[1.15rem] sm:min-h-[240px] sm:rounded-[1.35rem] lg:min-h-0">
               <Image
                 src="/images/news/exhibition.png"
-                alt="IndoSpark at industry exhibitions"
+                alt="ICFS at industry exhibitions"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
@@ -454,7 +442,7 @@ function OverviewSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cursor-target absolute inset-0 flex items-center justify-center bg-ink/10 transition hover:bg-ink/20"
-                aria-label="Watch IndoSpark overview video"
+                aria-label="Watch ICFS overview video"
               >
                 <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 shadow-lg sm:h-16 sm:w-16">
                   <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand sm:h-11 sm:w-11">
@@ -540,18 +528,17 @@ function VerticalsSection() {
           <div className="mx-auto grid h-full w-full max-w-[1440px] items-center gap-6 px-4 sm:px-5 lg:grid-cols-12 lg:gap-10 lg:px-6 xl:gap-12 xl:px-8">
             <div className="lg:col-span-4">
               <FadeIn>
-                <SectionLabel>Three verticals</SectionLabel>
+                <SectionLabel>What we offer</SectionLabel>
                 <h2 className="mt-3 text-[clamp(1.6rem,2.8vw,2.55rem)] font-bold leading-[1.1] tracking-[-0.035em] text-ink">
-                  One house. Three engines.
+                  Anchors and the tools to size them
                 </h2>
-                <p className="mt-3 max-w-sm text-[14px] leading-relaxed text-ink/55 sm:text-[15px]">
-                  INDO-SPARK is a 43-year company with expertise across fastening products,
-                  construction services, and design software. Scroll the stack to explore each
-                  vertical.
+                <p className="mt-3 max-w-sm text-[16px] leading-relaxed text-ink/55 sm:text-[16px]">
+                  Chemical anchors, mechanical anchors, and free design software — scroll to explore
+                  each line.
                 </p>
                 <div className="mt-6 flex items-center gap-3" aria-hidden>
                   <div className="h-px flex-1 max-w-[4rem] bg-black/10" />
-                  <span className="font-display text-[13px] tabular-nums text-ink/35">
+                  <span className="text-[15px] font-semibold tabular-nums text-ink/35">
                     {String(Math.min(3, Math.floor(stackProgress * 3) + 1)).padStart(2, "0")} / 03
                   </span>
                 </div>
@@ -577,23 +564,23 @@ function VerticalsSection() {
                   >
                     <div className="grid h-full min-h-[min(56vh,420px)] lg:grid-cols-12">
                       <div className="flex flex-col justify-center p-5 sm:p-7 lg:col-span-6 lg:p-8">
-                        <span className="font-display text-[26px] text-brand/70 sm:text-[32px]">
+                        <span className="text-[26px] font-bold text-brand/70 sm:text-[32px]">
                           {v.code}
                         </span>
-                        <p className="mt-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/35">
+                        <p className="mt-1.5 text-[13px] font-semibold uppercase tracking-[0.18em] text-ink/35">
                           {v.eyebrow}
                         </p>
                         <h3 className="mt-1.5 text-[clamp(1.2rem,2vw,1.65rem)] font-bold tracking-[-0.03em] text-ink">
                           {v.title}
                         </h3>
-                        <p className="mt-2.5 text-[13px] leading-relaxed text-ink/55 sm:text-[14px]">
+                        <p className="mt-2.5 text-[15px] leading-relaxed text-ink/55 sm:text-[16px]">
                           {v.summary}
                         </p>
                         <ul className="mt-4 space-y-2">
                           {v.points.map((point) => (
                             <li
                               key={point}
-                              className="flex gap-2.5 text-[12px] leading-snug text-ink/70 sm:text-[13px]"
+                              className="flex gap-2.5 text-[14px] leading-snug text-ink/70 sm:text-[15px]"
                             >
                               <span
                                 className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand"
@@ -622,110 +609,6 @@ function VerticalsSection() {
                 ))}
               </ScrollStack>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="border-t border-black/[0.05] bg-[#f7f6f4]">
-        <div className="mx-auto max-w-[1440px] px-4 py-14 sm:px-5 sm:py-16 lg:px-6 lg:py-20 xl:px-8">
-          <div className="grid items-end gap-8 lg:grid-cols-12 lg:gap-10">
-            <FadeIn className="lg:col-span-7">
-              <SectionLabel>Selective demolition</SectionLabel>
-              <h3 className="mt-2.5 max-w-xl text-[clamp(1.55rem,3vw,2.35rem)] font-bold leading-[1.12] tracking-[-0.035em] text-ink">
-                From buildings to bridges — precision where it matters.
-              </h3>
-              <p className="mt-3 max-w-lg text-[14px] leading-relaxed text-ink/55 sm:text-[15px]">
-                Vibration-free cutting and controlled removal for shutdowns, live plants, and marine
-                work — diamond wire, blade saws, core drilling, and bursting under one crew.
-              </p>
-            </FadeIn>
-
-            <FadeIn delay={0.06} className="grid grid-cols-3 gap-4 lg:col-span-5 lg:justify-items-end">
-              {DEMOLITION_STATS.map((s) => (
-                <div key={s.label} className="text-left lg:text-right">
-                  <p className="text-[clamp(1.35rem,2.2vw,1.85rem)] font-bold leading-none tracking-[-0.04em] text-ink">
-                    {s.value}
-                  </p>
-                  <p className="mt-1.5 text-[11px] font-medium leading-snug text-ink/45">{s.label}</p>
-                </div>
-              ))}
-            </FadeIn>
-          </div>
-
-          {/* Hero strip */}
-          <FadeIn delay={0.04} className="relative mt-10 overflow-hidden rounded-[1.35rem] sm:rounded-[1.6rem]">
-            <div className="relative aspect-[21/9] min-h-[200px] w-full sm:min-h-[240px]">
-              <Image
-                src="/images/demolition/hero.jpg"
-                alt="Selective concrete demolition on an industrial structure"
-                fill
-                sizes="100vw"
-                className="object-cover"
-              />
-              <div
-                className="absolute inset-0 bg-gradient-to-r from-ink/75 via-ink/35 to-transparent"
-                aria-hidden
-              />
-              <div className="absolute inset-0 flex flex-col justify-end p-5 sm:p-8 lg:p-10">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/55">
-                  Construction services
-                </p>
-                <p className="mt-2 max-w-md text-[clamp(1.15rem,2vw,1.55rem)] font-bold leading-snug tracking-[-0.03em] text-white">
-                  Engineered cuts — adjacent structures and running equipment stay protected.
-                </p>
-                <Link
-                  href="/services"
-                  className="cursor-target btn-shine mt-5 inline-flex h-10 w-fit items-center gap-1.5 rounded-full bg-brand px-5 text-[12.5px] font-semibold text-white transition hover:bg-brand-deep"
-                >
-                  View all services
-                  <span aria-hidden>→</span>
-                </Link>
-              </div>
-            </div>
-          </FadeIn>
-
-          {/* Offer cards */}
-          <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:mt-6 lg:grid-cols-3 lg:gap-4">
-            {DEMOLITION_OFFERS.map((item, i) => (
-              <FadeIn key={item.title} delay={Math.min(i * 0.04, 0.2)}>
-                <motion.article
-                  whileHover={{ y: -3 }}
-                  transition={{ type: "spring", stiffness: 380, damping: 28 }}
-                  className="group flex h-full flex-col overflow-hidden rounded-[1.2rem] bg-white ring-1 ring-black/[0.06] sm:rounded-[1.35rem]"
-                >
-                  <div className="relative aspect-[16/10] overflow-hidden">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      sizes="(max-width: 1024px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                    />
-                    <span className="absolute left-3 top-3 rounded-full bg-white/95 px-2.5 py-1 text-[10px] font-bold tracking-wide text-ink/70">
-                      {item.code}
-                    </span>
-                  </div>
-                  <div className="flex flex-1 flex-col p-4 sm:p-5">
-                    <h4 className="text-[15px] font-bold tracking-[-0.02em] text-ink sm:text-[16px]">
-                      {item.title}
-                    </h4>
-                    <p className="mt-1.5 flex-1 text-[12.5px] leading-relaxed text-ink/55 sm:text-[13px]">
-                      {item.text}
-                    </p>
-                    <div className="mt-3 flex flex-wrap gap-1.5">
-                      {item.materials.map((m) => (
-                        <span
-                          key={m}
-                          className="rounded-full bg-[#f3f1ee] px-2.5 py-1 text-[10px] font-medium text-ink/55"
-                        >
-                          {m}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </motion.article>
-              </FadeIn>
-            ))}
           </div>
         </div>
       </div>
@@ -758,38 +641,34 @@ function LeadershipSection() {
             />
 
             <div className="relative">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-white/55">
+              <p className="text-[13px] font-semibold uppercase tracking-[0.2em] text-white/55">
                 CEO speech
               </p>
 
               <span
-                className="mt-5 block font-display text-[4.5rem] leading-none text-white/25 select-none sm:text-[5.5rem]"
+                className="mt-5 block text-[4.5rem] font-bold leading-none text-white/25 select-none sm:text-[5.5rem]"
                 aria-hidden
               >
                 “
               </span>
 
-              <div className="-mt-6 space-y-4 text-[14px] leading-relaxed text-white/90 sm:-mt-8 sm:text-[15px] lg:text-[16px]">
+              <div className="-mt-6 space-y-4 text-[16px] leading-relaxed text-white/90 sm:-mt-8 sm:text-[16px] lg:text-[16px]">
                 <p>
-                  Every crisis throws up opportunities. Capital markets and businesses are
-                  undergoing unprecedented change — and we know how to grab these moments to cement
-                  strong partnerships for the next growth cycle.
+                  Change in the market is constant. We use these moments to build strong
+                  partnerships for the next stage of growth.
                 </p>
                 <p>
                   Construction Fastening Systems (United Kingdom) has entered a strategic
-                  partnership with Indo-Spark Construction Services. We are thrilled to be together
-                  in this journey.
+                  partnership with ICFS. We are glad to walk this path together.
                 </p>
                 <p>
-                  From an obscure automotive workshop employing just two in 1978, to a leading
-                  business house in India — the journey was full of challenges. We came out intact,
-                  and grew many folds. Our best assets remain our reputation for honesty, fair
-                  dealing, timely delivery and quality.
+                  From a small workshop with two people in 1978 to a trusted fastener brand in
+                  India — the journey had challenges. We stayed honest, delivered on time, and
+                  kept quality first.
                 </p>
                 <p>
-                  Two factors made Indo Spark blossom: the wisdom and honesty of our chairperson
-                  Mr. Tilakchand Ingale and his trust in employees — and the wholehearted hard work
-                  of our people, young and old.
+                  Two things made ICFS grow: the wisdom of our chairperson Mr. Tilakchand Ingale
+                  and his trust in people — and the hard work of our team, young and old.
                 </p>
               </div>
 
@@ -798,8 +677,8 @@ function LeadershipSection() {
               </p>
 
               <div className="mt-8 border-t border-white/20 pt-6">
-                <p className="text-[15px] font-bold text-white">Sandeep Ingale</p>
-                <p className="mt-0.5 text-[12px] text-white/55">CEO · Indo Spark Group</p>
+                <p className="text-[16px] font-bold text-white">Sandeep Ingale</p>
+                <p className="mt-0.5 text-[14px] text-white/55">CEO · ICFS</p>
               </div>
             </div>
           </blockquote>
@@ -812,7 +691,7 @@ function LeadershipSection() {
         >
           <Image
             src="/founder.png"
-            alt="IndoSpark founders — Tilakchand Ingale and Sandeep Ingale"
+            alt="ICFS founders — Tilakchand Ingale and Sandeep Ingale"
             width={920}
             height={1100}
             priority
@@ -833,7 +712,7 @@ function AchievementsSection() {
           <h2 className="mt-3 text-[clamp(1.75rem,3.2vw,2.75rem)] font-bold tracking-[-0.035em] text-ink">
             Proof on the floor — and on paper.
           </h2>
-          <p className="mt-3 text-[14px] leading-relaxed text-ink/55 sm:text-[15px]">
+          <p className="mt-3 text-[16px] leading-relaxed text-ink/55 sm:text-[16px]">
             Limca records, ETA approvals, UK partnership, anniversary milestones, and industry
             exhibitions — curated highlights from a long public journey.
           </p>
@@ -855,15 +734,15 @@ function AchievementsSection() {
                     sizes="(max-width: 1024px) 50vw, 25vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <span className="absolute left-3 top-3 rounded-full bg-white/95 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-ink/70">
+                  <span className="absolute left-3 top-3 rounded-full bg-white/95 px-2.5 py-1 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink/70">
                     {item.tag}
                   </span>
                 </div>
                 <div className="flex flex-1 flex-col p-5">
-                  <h3 className="text-[15px] font-bold tracking-[-0.02em] text-ink sm:text-[16px]">
+                  <h3 className="text-[16px] font-bold tracking-[-0.02em] text-ink sm:text-[16px]">
                     {item.title}
                   </h3>
-                  <p className="mt-2 flex-1 text-[13px] leading-relaxed text-ink/55">
+                  <p className="mt-2 flex-1 text-[15px] leading-relaxed text-ink/55">
                     {item.text}
                   </p>
                 </div>
@@ -873,25 +752,25 @@ function AchievementsSection() {
         </div>
 
         <FadeIn className="mt-14 overflow-hidden rounded-[1.75rem] bg-steel px-6 py-10 text-center text-white sm:rounded-[2rem] sm:px-10 sm:py-12">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-white/40">
+          <p className="text-[13px] font-semibold uppercase tracking-[0.2em] text-white/40">
             Next step
           </p>
           <h3 className="mx-auto mt-3 max-w-lg text-[clamp(1.5rem,3vw,2.25rem)] font-bold tracking-[-0.03em]">
-            Need anchors, cutting, or a custom solution?
+            Need the right anchor for your project?
           </h3>
-          <p className="mx-auto mt-3 max-w-md text-[14px] text-white/55">
-            Give us a try and decide for yourself if our service is worth talking about.
+          <p className="mx-auto mt-3 max-w-md text-[16px] text-white/55">
+            Tell us the job — we will help you pick the product and get it to site.
           </p>
           <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
             <Link
               href="/contact"
-              className="cursor-target btn-shine inline-flex h-11 items-center rounded-full bg-brand px-6 text-[13px] font-semibold text-white transition hover:bg-brand-deep"
+              className="cursor-target btn-shine inline-flex h-11 items-center rounded-full bg-brand px-6 text-[15px] font-semibold text-white transition hover:bg-brand-deep"
             >
               Contact us
             </Link>
             <Link
-              href="/#shop-by-category"
-              className="cursor-target btn-shine inline-flex h-11 items-center rounded-full bg-white px-6 text-[13px] font-semibold text-ink transition hover:bg-brand hover:text-white"
+              href="/#shop"
+              className="cursor-target btn-shine inline-flex h-11 items-center rounded-full bg-white px-6 text-[15px] font-semibold text-ink transition hover:bg-brand hover:text-white"
             >
               Browse products
             </Link>

@@ -36,7 +36,7 @@ export default function ProductDetail({ product }) {
     <article className="bg-white">
       <div className="border-b border-black/[0.06] bg-[#fafafa]">
         <div className="mx-auto max-w-[1440px] px-4 py-4 sm:px-5 lg:px-6 xl:px-8">
-          <nav className="flex flex-wrap items-center gap-1.5 text-[12px] text-ink/45" aria-label="Breadcrumb">
+          <nav className="flex flex-wrap items-center gap-1.5 text-[14px] text-ink/45" aria-label="Breadcrumb">
             <Link href="/shop" className="transition hover:text-brand">
               Shop
             </Link>
@@ -66,7 +66,7 @@ export default function ProductDetail({ product }) {
               className="object-contain p-8 sm:p-12"
             />
             {product.tag && (
-              <span className="absolute left-4 top-4 rounded-full bg-brand px-3 py-1 text-[10px] font-bold uppercase tracking-[0.1em] text-white">
+              <span className="absolute left-4 top-4 rounded-full bg-brand px-3 py-1 text-[12px] font-bold uppercase tracking-[0.1em] text-white">
                 {product.tag}
               </span>
             )}
@@ -91,20 +91,20 @@ export default function ProductDetail({ product }) {
 
         {/* Buy box */}
         <div className="lg:col-span-6 lg:py-2">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand">
+          <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-brand">
             {product.categoryLabel}
           </p>
           <h1 className="mt-2 text-[clamp(1.65rem,3.2vw,2.45rem)] font-bold leading-[1.12] tracking-[-0.035em] text-ink">
             {product.name}
           </h1>
-          <p className="mt-2 text-[12px] text-ink/40">SKU: {product.sku}</p>
+          <p className="mt-2 text-[14px] text-ink/40">SKU: {product.sku}</p>
 
           <div className="mt-5 flex flex-wrap items-end gap-3">
             <p className="text-[clamp(1.75rem,3vw,2.15rem)] font-bold tracking-[-0.04em] text-ink">
               {product.priceLabel}
             </p>
             <span
-              className={`mb-1 rounded-full px-2.5 py-1 text-[11px] font-semibold ${
+              className={`mb-1 rounded-full px-2.5 py-1 text-[13px] font-semibold ${
                 product.inStock
                   ? "bg-emerald-50 text-emerald-700"
                   : "bg-black/5 text-ink/45"
@@ -114,7 +114,7 @@ export default function ProductDetail({ product }) {
             </span>
           </div>
 
-          <p className="mt-4 max-w-xl text-[14px] leading-relaxed text-ink/60 sm:text-[15px]">
+          <p className="mt-4 max-w-xl text-[16px] leading-relaxed text-ink/60 sm:text-[16px]">
             {product.shortDescription}
           </p>
 
@@ -136,7 +136,7 @@ export default function ProductDetail({ product }) {
                 onChange={(e) =>
                   setQty(Math.max(1, Math.min(99, Number(e.target.value) || 1)))
                 }
-                className="h-12 w-12 border-x border-black/10 bg-transparent text-center text-[14px] font-semibold tabular-nums text-ink outline-none"
+                className="h-12 w-12 border-x border-black/10 bg-transparent text-center text-[16px] font-semibold tabular-nums text-ink outline-none"
                 aria-label="Quantity"
               />
               <button
@@ -152,7 +152,7 @@ export default function ProductDetail({ product }) {
             <button
               type="button"
               onClick={() => toggleWishlist(product.id)}
-              className={`cursor-target inline-flex h-12 items-center gap-2 rounded-full border px-5 text-[13px] font-semibold transition ${
+              className={`cursor-target inline-flex h-12 items-center gap-2 rounded-full border px-5 text-[15px] font-semibold transition ${
                 wishlisted
                   ? "border-brand bg-brand/5 text-brand"
                   : "border-black/10 text-ink/70 hover:border-brand hover:text-brand"
@@ -174,20 +174,20 @@ export default function ProductDetail({ product }) {
             <button
               type="button"
               onClick={() => addToCart(product.id, qty, { open: true })}
-              className="cursor-target btn-shine inline-flex h-12 items-center justify-center rounded-full bg-ink text-[13px] font-semibold text-white transition hover:bg-brand"
+              className="cursor-target btn-shine inline-flex h-12 items-center justify-center rounded-full bg-ink text-[15px] font-semibold text-white transition hover:bg-brand"
             >
               Add to cart
             </button>
             <button
               type="button"
               onClick={buyNow}
-              className="cursor-target btn-shine inline-flex h-12 items-center justify-center rounded-full bg-brand text-[13px] font-semibold text-white transition hover:bg-brand-deep"
+              className="cursor-target btn-shine inline-flex h-12 items-center justify-center rounded-full bg-brand text-[15px] font-semibold text-white transition hover:bg-brand-deep"
             >
               Buy now · {formatMoney(product.price * qty)}
             </button>
           </div>
 
-          <ul className="mt-8 grid gap-2.5 border-t border-black/[0.06] pt-6 text-[13px] text-ink/55 sm:grid-cols-2">
+          <ul className="mt-8 grid gap-2.5 border-t border-black/[0.06] pt-6 text-[15px] text-ink/55 sm:grid-cols-2">
             {[
               "Site-ready packaging",
               "Technical support available",
@@ -217,7 +217,7 @@ export default function ProductDetail({ product }) {
                 role="tab"
                 aria-selected={tab === t.id}
                 onClick={() => setTab(t.id)}
-                className={`cursor-target shrink-0 rounded-full px-4 py-2.5 text-[12px] font-semibold transition sm:text-[13px] ${
+                className={`cursor-target shrink-0 rounded-full px-4 py-2.5 text-[14px] font-semibold transition sm:text-[15px] ${
                   tab === t.id
                     ? "bg-ink text-white"
                     : "border border-black/10 bg-white text-ink/60 hover:text-ink"
@@ -236,10 +236,10 @@ export default function ProductDetail({ product }) {
             className="mt-8 rounded-[1.5rem] bg-white p-6 ring-1 ring-black/[0.05] sm:rounded-[1.75rem] sm:p-8"
           >
             {tab === "description" && (
-              <div className="max-w-3xl space-y-4 text-[14px] leading-relaxed text-ink/65 sm:text-[15px]">
+              <div className="max-w-3xl space-y-4 text-[16px] leading-relaxed text-ink/65 sm:text-[16px]">
                 <p>{product.description}</p>
                 <p>
-                  Need a datasheet, ETA certificate, or project quantity? Contact IndoSpark with your
+                  Need a datasheet, ETA certificate, or project quantity? Contact ICFS with your
                   site requirements — we support contractors and distributors nationwide.
                 </p>
               </div>
@@ -252,10 +252,10 @@ export default function ProductDetail({ product }) {
                     key={row.label}
                     className="rounded-2xl border border-black/[0.06] bg-[#fafafa] px-4 py-3"
                   >
-                    <dt className="text-[11px] font-semibold uppercase tracking-[0.12em] text-ink/40">
+                    <dt className="text-[13px] font-semibold uppercase tracking-[0.12em] text-ink/40">
                       {row.label}
                     </dt>
-                    <dd className="mt-1 text-[14px] font-medium text-ink">{row.value}</dd>
+                    <dd className="mt-1 text-[16px] font-medium text-ink">{row.value}</dd>
                   </div>
                 ))}
               </dl>
@@ -266,7 +266,7 @@ export default function ProductDetail({ product }) {
                 {product.applications.map((app) => (
                   <div
                     key={app}
-                    className="rounded-2xl border border-black/[0.06] bg-[#fafafa] px-4 py-5 text-[14px] font-semibold text-ink"
+                    className="rounded-2xl border border-black/[0.06] bg-[#fafafa] px-4 py-5 text-[16px] font-semibold text-ink"
                   >
                     {app}
                   </div>
@@ -282,7 +282,7 @@ export default function ProductDetail({ product }) {
           <div className="mx-auto max-w-[1440px] px-4 py-12 sm:px-5 lg:px-6 lg:py-14 xl:px-8">
             <div className="flex items-end justify-between gap-4">
               <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand">
+                <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-brand">
                   Related
                 </p>
                 <h2 className="mt-1 text-[clamp(1.35rem,2.4vw,1.85rem)] font-bold tracking-[-0.03em] text-ink">
@@ -291,7 +291,7 @@ export default function ProductDetail({ product }) {
               </div>
               <Link
                 href={`/shop?category=${product.categoryId}`}
-                className="cursor-target text-[13px] font-semibold text-ink/55 transition hover:text-brand"
+                className="cursor-target text-[15px] font-semibold text-ink/55 transition hover:text-brand"
               >
                 View all →
               </Link>

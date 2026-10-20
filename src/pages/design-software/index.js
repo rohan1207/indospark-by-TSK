@@ -7,8 +7,8 @@ export default function DesignSoftwarePage() {
   return (
     <>
       <SeoHead
-        title="Design Software — ICFS & IndoExperts Anchor Tools"
-        description="ICFS Chemical Anchor / Rebar Design, Chemical Anchor Calculation Software, and IndoExpert Professional — design and calculate chemical and mechanical anchors."
+        title="Anchor Design Software"
+        description="Free ICFS tools to size chemical and mechanical anchors — mobile and desktop software for engineers and contractors."
         path="/design-software"
       />
       <Navbar />

@@ -34,14 +34,14 @@ function CategoryItem({ category }) {
           </span>
         </span>
 
-        <h3 className="line-clamp-2 min-h-[2.6em] px-1 text-center text-[12px] font-semibold leading-snug tracking-[-0.01em] text-ink transition-colors duration-200 group-hover:text-brand sm:text-[13px]">
+        <h3 className="line-clamp-2 min-h-[2.6em] px-1 text-center text-[15px] font-semibold leading-snug tracking-[-0.01em] text-ink transition-colors duration-200 group-hover:text-brand sm:text-[16px]">
           {category.label}
         </h3>
       </Link>
 
       <Link
         href={category.href}
-        className="cursor-target btn-shine mt-3 inline-flex h-8 w-[6.5rem] shrink-0 items-center justify-center rounded-full bg-ink text-[11px] font-semibold text-white transition-colors duration-200 hover:bg-brand sm:h-9 sm:w-28 sm:text-[12px]"
+        className="cursor-target btn-shine mt-3 inline-flex h-8 w-[6.5rem] shrink-0 items-center justify-center rounded-full bg-ink text-[13px] font-semibold text-white transition-colors duration-200 hover:bg-brand sm:h-9 sm:w-28 sm:text-[14px]"
       >
         Buy Now
       </Link>
@@ -83,7 +83,7 @@ export default function ShopByCategory() {
     >
       <div className="mx-auto max-w-[1440px] px-4 sm:px-5 lg:px-6 xl:px-8">
         <div className="mb-10 text-center sm:mb-12">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand">
+          <p className="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand">
             Browse products
           </p>
           <h2
@@ -92,8 +92,8 @@ export default function ShopByCategory() {
           >
             Shop By Category
           </h2>
-          <p className="mx-auto mt-3 max-w-md text-[14px] leading-relaxed text-ink/55">
-            Explore the complete ICFS fastening range — pick a category and buy online.
+          <p className="mx-auto mt-3 max-w-md text-[16px] leading-relaxed text-ink/55">
+            Chemical anchors, mechanical fixings, foam, and accessories — shop by type.
           </p>
         </div>
 
@@ -108,7 +108,7 @@ export default function ShopByCategory() {
         <div className="mt-10 flex justify-center">
           <Link
             href="/shop"
-            className="cursor-target btn-shine inline-flex h-11 items-center rounded-full border border-ink bg-transparent px-7 text-[13px] font-semibold text-ink transition hover:border-brand hover:bg-brand hover:text-white"
+            className="cursor-target btn-shine inline-flex h-11 items-center rounded-full border border-ink bg-transparent px-7 text-[15px] font-semibold text-ink transition hover:border-brand hover:bg-brand hover:text-white"
           >
             Open full shop
           </Link>

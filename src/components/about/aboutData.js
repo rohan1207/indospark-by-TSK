@@ -1,16 +1,16 @@
 export const ABOUT_TABS = [
   { id: "overview", label: "Overview" },
-  { id: "verticals", label: "Verticals" },
+  { id: "verticals", label: "Products" },
   { id: "history", label: "History" },
   { id: "leadership", label: "Leadership" },
   { id: "achievements", label: "Achievements" },
 ];
 
 export const STATS = [
-  { value: "43", suffix: "+", label: "Years of IndoSpark" },
-  { value: "25", suffix: "+", label: "Years fastening sales" },
-  { value: "29", suffix: "+", label: "Years cutting & fixing" },
-  { value: "3", suffix: "", label: "Core verticals" },
+  { value: "43", suffix: "+", label: "Years of experience" },
+  { value: "25", suffix: "+", label: "Years in fastening" },
+  { value: "ETA", suffix: "", label: "Approved products" },
+  { value: "2", suffix: "", label: "Anchor systems" },
 ];
 
 export const CITIES = [
@@ -24,46 +24,46 @@ export const CITIES = [
 
 export const VERTICALS = [
   {
-    id: "icfs",
+    id: "chemical",
     code: "01",
-    title: "ICFS Anchor Fastening Systems",
+    title: "Chemical anchors",
     eyebrow: "Products",
     summary:
-      "Mechanical and chemical anchoring with ETA international approvals — a single window for site fastening.",
+      "Resin mortars, capsules, and studs for bonded fixing in concrete and masonry — with clear specs for site use.",
     points: [
-      "Chemical anchors in Pure Epoxy, Vinylester and Polyester with Zinc / SS 304 / SS 316 bolts",
-      "Accessories: guns, cleaning brushes, blow pumps and hammer drills",
-      "Technical training and on-site pull-out tests to validate tensile load",
-      "Drop-in anchors, heavy-duty nylon plugs, and PU foam for crack sealing",
+      "Pure epoxy, vinylester, and polyester mortars",
+      "Zinc, SS 304, and SS 316 studs and bolts",
+      "Guns, brushes, blow pumps, and cleaning kits",
+      "ETA-approved options for critical applications",
     ],
     image: "/images/banners/chemical-mortars.png",
   },
   {
-    id: "services",
+    id: "mechanical",
     code: "02",
-    title: "Construction Services",
-    eyebrow: "Site work",
+    title: "Mechanical anchors",
+    eyebrow: "Products",
     summary:
-      "Professional cutting & fixing for civil structures — concrete, masonry, rock, and underwater — for 29 years.",
+      "Wedge and related mechanical fixings for reliable hold where expansion anchors are the right choice.",
     points: [
-      "Vibration-free concrete and metal cutting",
-      "Concrete drilling and underwater core demolition",
-      "Rebar testing and scanning services",
-      "Diamond wire sawing, blade sawing, core drilling, parapet & curb cutting",
+      "Wedge anchors for concrete and masonry",
+      "Drop-in and heavy-duty options",
+      "Nylon frame anchors for lighter fixing",
+      "Matching washers, nuts, and accessories",
     ],
-    image: "/images/banners/concrete-cutting.png",
+    image: "/images/banners/mechanical-anchors.png",
   },
   {
     id: "designer",
     code: "03",
-    title: "ICFS Anchor Designer",
+    title: "Anchor design tools",
     eyebrow: "Software",
     summary:
-      "Mobile app to validate and design chemical and mechanical anchoring — on Android & iOS.",
+      "Free tools to size chemical and mechanical anchors before you specify or order.",
     points: [
-      "Suggests chemical type, bolt diameter, and consumption per hole",
-      "Design load parameters for furniture and structural fixing",
-      "Application support for Android and iOS",
+      "Suggests anchor type, diameter, and depth",
+      "Helps estimate mortar volume per hole",
+      "Available for mobile and desktop use",
     ],
     image: "/images/banners/design-software.png",
   },
@@ -72,75 +72,63 @@ export const VERTICALS = [
 export const TIMELINE = [
   {
     year: "1978",
-    text: "A small workshop for testing fuel injection equipment — the IndoSpark beginning.",
+    text: "A small workshop in Kolhapur — the start of our journey.",
     tag: "origins",
     image: "/images/history/workshop.jpg",
   },
   {
     year: "1983",
-    text: "Recognized as an authorised fuel injection workshop.",
+    text: "Recognised as an authorised fuel injection workshop.",
     tag: "recognition",
     image: "/images/history/fuel.jpg",
   },
   {
     year: "1991",
-    text: "New fuel injection equipment workshop venture in Kolhapur.",
+    text: "New workshop venture for fuel injection equipment in Kolhapur.",
     tag: "expansion",
     image: "/images/history/workshop.jpg",
   },
   {
     year: "1994",
-    text: "Diversified into power tools sales and service.",
+    text: "Expanded into power tools sales and service.",
     tag: "diversify",
     image: "/images/history/tools.jpg",
   },
   {
     year: "1996",
-    text: "Authorised fuel injection workshop opens at Islampur.",
+    text: "Authorised workshop opens at Islampur.",
     tag: "network",
     image: "/images/history/fuel.jpg",
   },
   {
     year: "2001",
-    text: "Began diversified activity with construction services.",
+    text: "Grew into broader construction trade activities.",
     tag: "pivot",
-    image: "/images/history/cutting.jpg",
+    image: "/images/history/tools.jpg",
   },
   {
     year: "2004",
-    text: "Entered telecommunication line diversification.",
+    text: "Entered telecommunication line work.",
     tag: "growth",
     image: "/images/history/tools.jpg",
   },
   {
-    year: "2007",
-    text: "Investment in vibration-free concrete cutting.",
-    tag: "capability",
-    image: "/images/history/cutting.jpg",
-  },
-  {
     year: "2008",
-    text: "Euro-compliant vehicle repairs · Strategic alliance with CFS UK.",
+    text: "Strategic alliance with Construction Fastening Systems (UK).",
     tag: "alliance",
     image: "/images/history/exhibition.jpg",
   },
   {
     year: "2013",
-    text: "New brand ICFS — Indo Construction Fastening Systems — is born.",
+    text: "ICFS brand launched for construction fastening systems.",
     tag: "brand",
     image: "/images/history/anchors.jpg",
   },
   {
     year: "2014",
-    text: "ETA approval for ICFS brand chemical products.",
+    text: "ETA approval for ICFS chemical anchor products.",
     tag: "approval",
     image: "/images/history/anchors.jpg",
-  },
-  {
-    year: "2015",
-    text: "Limca Book of Records for highest number of rebaring.",
-    tag: "record",
-    image: "/images/history/exhibition.jpg",
   },
   {
     year: "2016",
@@ -149,14 +137,8 @@ export const TIMELINE = [
     image: "/images/history/anchors.jpg",
   },
   {
-    year: "2019",
-    text: "Wire-saw metal cutting milestone · EDA member · stepped into Mumbai.",
-    tag: "milestone",
-    image: "/images/history/cutting.jpg",
-  },
-  {
     year: "2020",
-    text: "ETA for CM350VESF · IDA membership · CFS UK strategic partnership.",
+    text: "Further ETA approvals and continued CFS UK partnership.",
     tag: "partnership",
     image: "/images/history/exhibition.jpg",
   },
@@ -164,78 +146,31 @@ export const TIMELINE = [
 
 export const ACHIEVEMENTS = [
   {
-    tag: "Record",
-    title: "Limca Book of Records",
-    text: "Highest number of rebaring — a national recognition for precision and scale on site.",
-    image: "/images/news/exhibition.png",
-  },
-  {
     tag: "Approvals",
-    title: "ETA International Approvals",
-    text: "Chemical and mechanical anchors tested and approved to global performance benchmarks.",
+    title: "ETA approvals",
+    text: "Chemical and mechanical anchors tested to international performance standards.",
     image: "/images/banners/mechanical-anchors.png",
   },
   {
     tag: "Partnership",
     title: "CFS United Kingdom",
-    text: "Strategic partnership with Construction Fastening Systems (UK) — building for the next growth cycle.",
+    text: "Long-standing partnership with Construction Fastening Systems (UK).",
     image: "/images/banners/chemical-mortars.png",
   },
   {
     tag: "Community",
-    title: "Exhibitions & Anniversaries",
-    text: "From MAHATECH floors to 40–45th anniversary celebrations, environment days, and industry forums.",
+    title: "Trade shows & milestones",
+    text: "From MAHATECH floors to anniversary events — meeting engineers and builders face to face.",
+    image: "/images/news/exhibition.png",
+  },
+  {
+    tag: "Software",
+    title: "Anchor design tools",
+    text: "Free design software so teams can size ICFS anchors before they order.",
     image: "/images/news/software.png",
   },
 ];
 
-export const DEMOLITION_OFFERS = [
-  {
-    code: "01",
-    title: "Diamond wire sawing",
-    text: "Heavily-reinforced concrete, solid stainless steel and rock — clean cuts where blade saws cannot reach.",
-    materials: ["Reinforced concrete", "Stainless steel", "Rock"],
-    image: "/images/demolition/wire-saw.jpg",
-  },
-  {
-    code: "02",
-    title: "Blade sawing",
-    text: "Wall, floor and track sawing for steel-reinforced / pre-cast concrete, asphalt, stone walls and cobblestone beds.",
-    materials: ["Pre-cast concrete", "Asphalt", "Stone"],
-    image: "/images/demolition/blade-saw.jpg",
-  },
-  {
-    code: "03",
-    title: "Core drilling",
-    text: "Precise openings in concrete, asphalt, masonry, metal and rock — on live sites with controlled dust and vibration.",
-    materials: ["Concrete", "Masonry", "Metal"],
-    image: "/images/demolition/core-drill.jpg",
-  },
-  {
-    code: "04",
-    title: "Parapet / curb cutting",
-    text: "Edge removal on bridges, decks and roadways — steel-reinforced concrete, pre-cast and asphalt.",
-    materials: ["Bridge decks", "Curbs", "Parapets"],
-    image: "/images/demolition/curb-cut.jpg",
-  },
-  {
-    code: "05",
-    title: "Underwater core demolition",
-    text: "Marine and tidal concrete cutting for jetties, piles and submerged structures with specialized underwater systems.",
-    materials: ["Jetties", "Piles", "Marine concrete"],
-    image: "/images/history/cutting.jpg",
-  },
-  {
-    code: "06",
-    title: "Controlled bursting",
-    text: "Hydraulic burster heads create controlled fractures — low noise, vibration and dust for sensitive environments.",
-    materials: ["Sensitive sites", "Live plants", "Urban work"],
-    image: "/images/banners/concrete-cutting.png",
-  },
-];
-
-export const DEMOLITION_STATS = [
-  { value: "29+", label: "Years on site" },
-  { value: "0", label: "Vibration damage focus" },
-  { value: "24/7", label: "Shutdown ready" },
-];
+/** Kept for any legacy imports; demolition is not part of the ICFS brand site. */
+export const DEMOLITION_OFFERS = [];
+export const DEMOLITION_STATS = [];

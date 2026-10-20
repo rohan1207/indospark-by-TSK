@@ -9,10 +9,10 @@ const ITEMS = [
     id: "exhibition",
     tag: "Events",
     title: "Exhibition, Events & Achievements",
-    excerpt: "MAHATECH, Pune — IndoSpark & ICFS on the floor with live demos and project conversations.",
+    excerpt: "MAHATECH, Pune — ICFS on the floor with live demos and project conversations.",
     href: "/news/mahatech-pune",
     image: "/images/news/exhibition.png",
-    alt: "IndoSpark exhibition booth at a trade fair",
+    alt: "ICFS exhibition booth at a trade fair",
   },
   {
     id: "software",
@@ -28,7 +28,7 @@ const ITEMS = [
     id: "video",
     tag: "Video",
     title: "ICFS Introduction",
-    excerpt: "A short film on ICFS fastening systems, site services, and how IndoSpark keeps projects moving.",
+    excerpt: "A short film on ICFS chemical and mechanical anchors — and how we support your projects.",
     href: "https://www.youtube.com/@indospark/videos",
     image: "/images/news/video.png",
     alt: "ICFS product introduction video thumbnail",
@@ -77,13 +77,13 @@ function NewsCard({ item, index }) {
             </span>
           </span>
         )}
-        <span className="absolute left-3 top-3 rounded-full bg-white/95 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-ink/70">
+        <span className="absolute left-3 top-3 rounded-full bg-white/95 px-2.5 py-1 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink/70">
           {item.tag}
         </span>
       </Wrapper>
 
       <div className="flex flex-1 flex-col px-5 pb-5 pt-4 sm:px-6 sm:pb-6 sm:pt-5">
-        <h3 className="text-[15px] font-bold leading-snug tracking-[-0.015em] text-ink sm:text-[16px]">
+        <h3 className="text-[16px] font-bold leading-snug tracking-[-0.015em] text-ink sm:text-[16px]">
           <Wrapper
             {...wrapperProps}
             className="transition-colors hover:text-brand"
@@ -91,12 +91,12 @@ function NewsCard({ item, index }) {
             {item.title}
           </Wrapper>
         </h3>
-        <p className="mt-2.5 flex-1 text-[13px] leading-relaxed text-ink/55 sm:text-[14px]">
+        <p className="mt-2.5 flex-1 text-[15px] leading-relaxed text-ink/55 sm:text-[16px]">
           {item.excerpt}
         </p>
         <Wrapper
           {...wrapperProps}
-          className="cursor-target mt-4 inline-flex items-center gap-1.5 text-[13px] font-semibold text-ink transition-colors hover:text-brand"
+          className="cursor-target mt-4 inline-flex items-center gap-1.5 text-[15px] font-semibold text-ink transition-colors hover:text-brand"
         >
           Learn more
           <span className="text-brand" aria-hidden>
@@ -117,7 +117,7 @@ export default function NewsEvents() {
     >
       <div className="mx-auto max-w-[1440px] px-4 sm:px-5 lg:px-6 xl:px-8">
         <div className="mb-10 text-center sm:mb-12">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand">
+          <p className="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand">
             Stay updated
           </p>
           <h2
@@ -127,8 +127,8 @@ export default function NewsEvents() {
             News &amp; Events
           </h2>
           <div className="mx-auto mt-4 h-px w-12 bg-black/15" aria-hidden />
-          <p className="mx-auto mt-4 max-w-md text-[14px] leading-relaxed text-ink/55">
-            Exhibitions, design tools, films, and catalogue updates from IndoSpark &amp; ICFS.
+          <p className="mx-auto mt-4 max-w-md text-[16px] leading-relaxed text-ink/55">
+            Exhibitions, design tools, product films, and catalogue updates.
           </p>
         </div>
 
@@ -141,7 +141,7 @@ export default function NewsEvents() {
         <div className="mt-10 flex justify-center sm:mt-12">
           <Link
             href="/news"
-            className="cursor-target btn-shine inline-flex h-11 items-center rounded-full bg-ink px-7 text-[13px] font-semibold text-white transition hover:bg-brand"
+            className="cursor-target btn-shine inline-flex h-11 items-center rounded-full bg-ink px-7 text-[15px] font-semibold text-white transition hover:bg-brand"
           >
             View all news &amp; events
           </Link>

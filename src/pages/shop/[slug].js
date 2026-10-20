@@ -10,7 +10,7 @@ export default function ProductPage({ product }) {
   return (
     <>
       <SeoHead
-        title={`${product.name} | IndoSpark Shop`}
+        title={`${product.name} | ICFS Shop`}
         description={product.shortDescription}
         path={`/shop/${product.slug}`}
       />

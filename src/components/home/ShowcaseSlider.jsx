@@ -8,47 +8,47 @@ import { AnimatePresence, motion } from "framer-motion";
 const SLIDES = [
   {
     id: "mortars",
-    eyebrow: "ICFS Products",
+    eyebrow: "Chemical anchors",
     title: "ICFS Chemical Mortars",
     description:
-      "High-performance chemical mortars for structural rebaring, façade fixing, and heavy-duty anchoring.",
+      "Resin mortars for rebaring, façades, and heavy fixing in concrete and masonry.",
     cta: "Shop chemical mortars",
-    href: "/products/chemical-mortars",
+    href: "/shop?category=mortars",
     image: "/images/banners/chemical-mortars.png",
-    alt: "Chemical mortar application on a concrete structure",
+    alt: "ICFS chemical mortar for structural anchoring",
   },
   {
-    id: "cutting",
-    eyebrow: "IndoSpark Services",
-    title: "Vibration Free Concrete Cutting",
+    id: "capsules",
+    eyebrow: "Chemical anchors",
+    title: "Capsules & Studs",
     description:
-      "Precision diamond cutting with minimal vibration — ideal for occupied buildings and sensitive structures.",
-    cta: "Book a site visit",
-    href: "/services/concrete-cutting",
-    image: "/images/banners/concrete-cutting.png",
-    alt: "Vibration-free diamond concrete cutting on site",
+      "Ready-to-use capsules and studs for clean, repeatable chemical fixing on site.",
+    cta: "Shop capsules",
+    href: "/shop?category=capsules",
+    image: "/images/banners/chemical-mortars.png",
+    alt: "ICFS chemical capsules and anchor studs",
   },
   {
     id: "anchors",
-    eyebrow: "ICFS Products",
+    eyebrow: "Mechanical anchors",
     title: "ICFS Mechanical Anchors",
     description:
-      "Wedge anchors, nuts, and washers engineered for reliable hold in concrete and masonry applications.",
+      "Wedge anchors and related hardware for reliable hold in concrete and masonry.",
     cta: "Shop mechanical anchors",
-    href: "/products/mechanical-anchors",
+    href: "/shop?category=mechanical",
     image: "/images/banners/mechanical-anchors.png",
-    alt: "ICFS mechanical wedge anchors product photography",
+    alt: "ICFS mechanical wedge anchors",
   },
   {
     id: "software",
-    eyebrow: "Design Software",
-    title: "IndoExpert Anchor Design",
+    eyebrow: "Design tools",
+    title: "Anchor Design Software",
     description:
-      "Professional anchor calculation and rebar design tools — size the right ICFS system with confidence.",
+      "Size chemical and mechanical anchors before you specify — free tools for engineers.",
     cta: "Explore design software",
     href: "/design-software",
     image: "/images/banners/design-software.png",
-    alt: "Engineer using professional anchor design software",
+    alt: "ICFS anchor design software",
   },
 ];
 
@@ -132,18 +132,18 @@ export default function ShowcaseSlider() {
       id="showcase"
       className="bg-white"
       aria-roledescription="carousel"
-      aria-label="Featured products and services"
+      aria-label="Featured products and design tools"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
       <div className="mx-auto max-w-[1440px] px-4 pt-10 sm:px-5 sm:pt-12 lg:px-6 xl:px-8">
         <div className="mb-6 flex items-end justify-between gap-4 sm:mb-7">
           <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand">
+            <p className="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand">
               Spotlight
             </p>
             <h2 className="mt-1.5 text-[clamp(1.45rem,2.8vw,2rem)] font-bold tracking-[-0.03em] text-ink">
-              Products, services &amp; design tools
+              Products &amp; design tools
             </h2>
           </div>
 
@@ -205,18 +205,18 @@ export default function ShowcaseSlider() {
 
               <div className="absolute inset-0 flex items-end p-5 sm:items-center sm:p-8 lg:p-12">
                 <div className="max-w-xl">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/70">
+                  <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-white/70">
                     {slide.eyebrow}
                   </p>
                   <h3 className="mt-2 text-[clamp(1.45rem,3.2vw,2.35rem)] font-bold leading-[1.12] tracking-[-0.03em] text-white">
                     {slide.title}
                   </h3>
-                  <p className="mt-3 max-w-md text-[13px] leading-relaxed text-white/75 sm:text-[15px]">
+                  <p className="mt-3 max-w-md text-[15px] leading-relaxed text-white/75 sm:text-[16px]">
                     {slide.description}
                   </p>
                   <Link
                     href={slide.href}
-                    className="cursor-target btn-shine mt-5 inline-flex h-11 items-center rounded-full bg-white px-5 text-[13px] font-semibold text-ink transition hover:bg-brand hover:text-white sm:mt-6"
+                    className="cursor-target btn-shine mt-5 inline-flex h-11 items-center rounded-full bg-white px-5 text-[15px] font-semibold text-ink transition hover:bg-brand hover:text-white sm:mt-6"
                   >
                     {slide.cta}
                   </Link>

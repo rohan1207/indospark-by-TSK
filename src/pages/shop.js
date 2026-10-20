@@ -7,8 +7,8 @@ export default function Shop() {
   return (
     <>
       <SeoHead
-        title="Shop ICFS Products | IndoSpark"
-        description="Browse the full ICFS fastening range — chemical mortars, guns, capsules, studs, mechanical anchors, PU foam, and nylon frame anchors."
+        title="Shop ICFS Products"
+        description="Shop ICFS anchor fasteners — chemical mortars, guns, capsules, studs, mechanical anchors, PU foam, and nylon frame anchors. Order online across India."
         path="/shop"
       />
       <Navbar />

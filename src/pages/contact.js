@@ -7,8 +7,8 @@ export default function Contact() {
   return (
     <>
       <SeoHead
-        title="Contact Us — IndoSpark & ICFS"
-        description="Contact IndoSpark Head Office Kolhapur, Pune & Mumbai branches. Email email@indospark.com or call toll-free 1800 1235 00023. We deliver worldwide."
+        title="Contact Us — ICFS"
+        description="Contact ICFS for chemical and mechanical anchor fasteners. Head office Kolhapur, branches in Pune & Mumbai. Call 1800 123 500 023 or email email@icfs.in."
         path="/contact"
       />
       <Navbar />

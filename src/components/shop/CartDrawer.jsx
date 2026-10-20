@@ -42,7 +42,7 @@ export default function CartDrawer() {
           >
             <div className="flex items-center justify-between border-b border-black/[0.06] px-5 py-4">
               <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-brand">
+                <p className="text-[13px] font-semibold uppercase tracking-[0.16em] text-brand">
                   Your cart
                 </p>
                 <h2 className="text-[18px] font-bold tracking-[-0.02em] text-ink">
@@ -63,13 +63,13 @@ export default function CartDrawer() {
               {cartLines.length === 0 ? (
                 <div className="flex h-full flex-col items-center justify-center px-6 text-center">
                   <p className="text-[16px] font-bold text-ink">Cart is empty</p>
-                  <p className="mt-2 text-[13px] text-ink/50">
+                  <p className="mt-2 text-[15px] text-ink/50">
                     Browse the shop and add fastening products for your next site.
                   </p>
                   <Link
                     href="/shop"
                     onClick={closeCart}
-                    className="cursor-target btn-shine mt-6 inline-flex h-11 items-center rounded-full bg-ink px-6 text-[13px] font-semibold text-white transition hover:bg-brand"
+                    className="cursor-target btn-shine mt-6 inline-flex h-11 items-center rounded-full bg-ink px-6 text-[15px] font-semibold text-white transition hover:bg-brand"
                   >
                     Continue shopping
                   </Link>
@@ -98,11 +98,11 @@ export default function CartDrawer() {
                         <Link
                           href={product.href}
                           onClick={closeCart}
-                          className="line-clamp-2 text-[13px] font-semibold leading-snug text-ink hover:text-brand"
+                          className="line-clamp-2 text-[15px] font-semibold leading-snug text-ink hover:text-brand"
                         >
                           {product.name}
                         </Link>
-                        <p className="mt-1 text-[12px] text-ink/45">{product.priceLabel}</p>
+                        <p className="mt-1 text-[14px] text-ink/45">{product.priceLabel}</p>
                         <div className="mt-2.5 flex items-center justify-between gap-2">
                           <div className="inline-flex items-center rounded-full border border-black/10 bg-white">
                             <button
@@ -113,7 +113,7 @@ export default function CartDrawer() {
                             >
                               −
                             </button>
-                            <span className="w-7 text-center text-[13px] font-semibold tabular-nums">
+                            <span className="w-7 text-center text-[15px] font-semibold tabular-nums">
                               {qty}
                             </span>
                             <button
@@ -126,11 +126,11 @@ export default function CartDrawer() {
                             </button>
                           </div>
                           <div className="text-right">
-                            <p className="text-[13px] font-bold text-ink">{formatMoney(lineTotal)}</p>
+                            <p className="text-[15px] font-bold text-ink">{formatMoney(lineTotal)}</p>
                             <button
                               type="button"
                               onClick={() => removeFromCart(product.id)}
-                              className="cursor-target mt-0.5 text-[11px] font-semibold text-ink/40 transition hover:text-brand"
+                              className="cursor-target mt-0.5 text-[13px] font-semibold text-ink/40 transition hover:text-brand"
                             >
                               Remove
                             </button>
@@ -145,18 +145,18 @@ export default function CartDrawer() {
 
             {cartLines.length > 0 && (
               <div className="border-t border-black/[0.06] px-5 py-4">
-                <div className="flex items-center justify-between text-[14px]">
+                <div className="flex items-center justify-between text-[16px]">
                   <span className="text-ink/55">Subtotal</span>
                   <span className="text-[18px] font-bold tracking-[-0.02em] text-ink">
                     {formatMoney(cartSubtotal)}
                   </span>
                 </div>
-                <p className="mt-1 text-[11px] text-ink/40">Taxes & shipping calculated at checkout.</p>
+                <p className="mt-1 text-[13px] text-ink/40">Taxes & shipping calculated at checkout.</p>
                 <div className="mt-4 grid gap-2">
                   <Link
                     href="/checkout"
                     onClick={closeCart}
-                    className="cursor-target btn-shine inline-flex h-11 items-center justify-center rounded-full bg-brand text-[13px] font-semibold text-white transition hover:bg-brand-deep"
+                    className="cursor-target btn-shine inline-flex h-11 items-center justify-center rounded-full bg-brand text-[15px] font-semibold text-white transition hover:bg-brand-deep"
                   >
                     Checkout
                   </Link>
@@ -164,14 +164,14 @@ export default function CartDrawer() {
                     <Link
                       href="/shop"
                       onClick={closeCart}
-                      className="cursor-target inline-flex h-10 items-center justify-center rounded-full border border-black/10 text-[12px] font-semibold text-ink transition hover:border-brand hover:text-brand"
+                      className="cursor-target inline-flex h-10 items-center justify-center rounded-full border border-black/10 text-[14px] font-semibold text-ink transition hover:border-brand hover:text-brand"
                     >
                       Keep shopping
                     </Link>
                     <button
                       type="button"
                       onClick={clearCart}
-                      className="cursor-target inline-flex h-10 items-center justify-center rounded-full text-[12px] font-semibold text-ink/45 transition hover:text-brand"
+                      className="cursor-target inline-flex h-10 items-center justify-center rounded-full text-[14px] font-semibold text-ink/45 transition hover:text-brand"
                     >
                       Clear cart
                     </button>
@@ -195,7 +195,7 @@ export function ShopToast() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 12 }}
-          className="pointer-events-none fixed bottom-6 left-1/2 z-[100] -translate-x-1/2 rounded-full bg-ink px-5 py-2.5 text-[12px] font-semibold text-white shadow-lg"
+          className="pointer-events-none fixed bottom-6 left-1/2 z-[100] -translate-x-1/2 rounded-full bg-ink px-5 py-2.5 text-[14px] font-semibold text-white shadow-lg"
         >
           {toast}
         </motion.div>

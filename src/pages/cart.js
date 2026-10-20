@@ -6,7 +6,7 @@ import CartPageView from "@/components/shop/CartPageView";
 export default function Cart() {
   return (
     <>
-      <SeoHead title="Cart | IndoSpark Shop" description="Review your ICFS product cart." path="/cart" />
+      <SeoHead title="Cart | ICFS Shop" description="Review your ICFS product cart." path="/cart" />
       <Navbar />
       <main>
         <CartPageView />

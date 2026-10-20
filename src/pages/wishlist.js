@@ -7,7 +7,7 @@ export default function Wishlist() {
   return (
     <>
       <SeoHead
-        title="Wishlist | IndoSpark Shop"
+        title="Wishlist | ICFS Shop"
         description="Saved ICFS fastening products — mortars, guns, capsules, anchors, foam, and more."
         path="/wishlist"
       />

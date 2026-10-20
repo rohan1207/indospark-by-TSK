@@ -23,8 +23,8 @@
   --color-line: var(--line);
   --color-surface: var(--surface);
   --font-sans: var(--font-outfit);
-  --font-display: var(--font-instrument);
-  --font-nav: var(--font-barlow);
+  --font-display: var(--font-outfit);
+  --font-nav: var(--font-outfit);
 }
 
 * {
@@ -40,8 +40,15 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--font-outfit), system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Readable defaults for prose-like copy */
+p {
+  line-height: 1.65;
 }
 
 ::selection {
@@ -57,12 +64,9 @@ button {
   font: inherit;
 }
 
-.font-display {
-  font-family: var(--font-instrument), Georgia, serif;
-}
-
+.font-display,
 .font-nav {
-  font-family: var(--font-barlow), "Arial Narrow", sans-serif;
+  font-family: var(--font-outfit), system-ui, sans-serif;
 }
 
 .hero-grain {

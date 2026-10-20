@@ -135,7 +135,7 @@ export default function HistorySection() {
               style={{ borderColor: isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.06)" }}
             >
               <div className="min-w-0">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand">
+                <p className="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand">
                   Our history
                 </p>
                 <h2 className="mt-1.5 text-[clamp(1.45rem,2.6vw,2.15rem)] font-bold tracking-[-0.035em]">
@@ -160,7 +160,7 @@ export default function HistorySection() {
                       key={opt.id}
                       type="button"
                       onClick={() => setTheme(opt.id)}
-                      className={`cursor-target rounded-full px-3.5 py-1.5 text-[11px] font-semibold transition ${
+                      className={`cursor-target rounded-full px-3.5 py-1.5 text-[13px] font-semibold transition ${
                         on
                           ? isDark
                             ? "bg-white text-ink"
@@ -198,10 +198,10 @@ export default function HistorySection() {
                         <p className="text-[clamp(1.65rem,2.8vw,2.35rem)] font-bold leading-none tracking-[-0.045em]">
                           {item.year}
                         </p>
-                        <p className={`mt-3 max-w-[16ch] text-[12px] leading-snug sm:text-[12.5px] ${muted}`}>
+                        <p className={`mt-3 max-w-[16ch] text-[14px] leading-snug sm:text-[14px] ${muted}`}>
                           {item.text}
                         </p>
-                        <p className={`mt-4 text-[9px] font-semibold uppercase tracking-[0.18em] ${tagMuted}`}>
+                        <p className={`mt-4 text-[12px] font-semibold uppercase tracking-[0.18em] ${tagMuted}`}>
                           {item.tag}
                         </p>
                         <span
@@ -272,7 +272,7 @@ export default function HistorySection() {
                         key={item.year}
                         type="button"
                         onClick={() => scrollToYear(item.year)}
-                        className={`cursor-target relative z-[1] py-1 text-[10px] font-medium transition lg:text-[11px] ${
+                        className={`cursor-target relative z-[1] py-1 text-[12px] font-medium transition lg:text-[13px] ${
                           isDark
                             ? "text-white/35 hover:text-white/70"
                             : "text-ink/30 hover:text-ink/60"
@@ -283,7 +283,7 @@ export default function HistorySection() {
                     ))}
 
                     <div
-                      className="pointer-events-none absolute left-1/2 z-10 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full bg-brand text-[11px] font-bold text-white shadow-md transition-[top] duration-150 ease-out lg:h-11 lg:w-11 lg:text-[12px]"
+                      className="pointer-events-none absolute left-1/2 z-10 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full bg-brand text-[13px] font-bold text-white shadow-md transition-[top] duration-150 ease-out lg:h-11 lg:w-11 lg:text-[14px]"
                       style={{ top: markerTop }}
                       aria-hidden
                     >
@@ -340,7 +340,7 @@ export default function HistorySection() {
                   <button
                     type="button"
                     onClick={scrollToTop}
-                    className={`cursor-target mt-0.5 text-[10px] font-bold uppercase tracking-[0.14em] transition ${
+                    className={`cursor-target mt-0.5 text-[12px] font-bold uppercase tracking-[0.14em] transition ${
                       isDark ? "text-white/40 hover:text-brand" : "text-ink/35 hover:text-brand"
                     }`}
                   >

@@ -10,7 +10,7 @@ export default function ServicePage({ service }) {
   return (
     <>
       <SeoHead
-        title={`${service.title} | IndoSpark Services`}
+        title={`${service.title} | ICFS Services`}
         description={service.short}
         path={`/services/${service.slug}`}
       />

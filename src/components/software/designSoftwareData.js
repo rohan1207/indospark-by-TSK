@@ -225,7 +225,7 @@ export const SOFTWARE_PRODUCTS = [
     requirements: [
       "Windows 10/11 (64-bit recommended)",
       "Display suitable for dual-panel engineering UI",
-      "Valid IndoExperts licence / access key from IndoSpark",
+      "Valid IndoExperts licence / access key from ICFS",
     ],
   },
   {
@@ -318,7 +318,7 @@ export const SOFTWARE_PRODUCTS = [
         id: "library",
         title: "ICFS mechanical library",
         image: "/images/software/indoexpert.png",
-        summary: "Stay inside the ICFS mechanical range used on IndoSpark projects.",
+        summary: "Stay inside the ICFS mechanical range used on live projects.",
         detail:
           "Recommendations stay tied to products your procurement and training teams already know.",
         bullets: [

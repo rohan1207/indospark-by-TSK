@@ -1,12 +1,12 @@
 import Head from "next/head";
 
-const SITE_NAME = "IndoSpark";
+const SITE_NAME = "ICFS";
 const SITE_URL = "https://www.indospark.com";
 const DEFAULT_DESCRIPTION =
-  "IndoSpark — India's leading construction fastening systems company. Shop ICFS chemical & mechanical anchors online, and book concrete cutting, rebaring, core drilling, and wire sawing services.";
+  "ICFS — chemical and mechanical anchor fasteners for construction. Shop mortars, studs, capsules, guns, and accessories online across India.";
 
 export default function SeoHead({
-  title = "Anchor Fastening Systems & Concrete Cutting Services",
+  title = "Chemical & Mechanical Anchor Fasteners",
   description = DEFAULT_DESCRIPTION,
   path = "/",
   image = `${SITE_URL}/og-image.jpg`,
@@ -20,12 +20,14 @@ export default function SeoHead({
   const organizationJsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "IndoSpark",
+    name: "ICFS",
     alternateName: "Indo Construction Fastening Systems",
+    description:
+      "ICFS manufactures and supplies chemical and mechanical anchor fasteners for construction projects across India.",
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
-    email: "email@indospark.com",
-    telephone: "+91-1800-1235-00023",
+    email: "email@icfs.in",
+    telephone: "+91-1800-123-500-023",
     address: [
       {
         "@type": "PostalAddress",
@@ -54,7 +56,7 @@ export default function SeoHead({
       <meta name="description" content={description} />
       <meta
         name="keywords"
-        content="IndoSpark, ICFS, chemical anchors, mechanical anchors, construction fastening, concrete cutting, rebaring, core drilling, wire sawing, PU foam, India"
+        content="ICFS, anchor fasteners, chemical anchors, mechanical anchors, chemical mortar, rebar anchoring, wedge anchors, construction fasteners, India"
       />
       <link rel="canonical" href={url} />
 

@@ -32,9 +32,10 @@ export default function HeroProductModel() {
     el.setAttribute("touch-action", "none");
     el.setAttribute("interaction-prompt", "none");
     el.setAttribute("environment-image", "neutral");
-    el.setAttribute("camera-orbit", "0deg 75deg 105%");
+    el.setAttribute("camera-orbit", "25deg 72deg 92%");
     el.setAttribute("min-camera-orbit", "auto 55deg auto");
     el.setAttribute("max-camera-orbit", "auto 95deg auto");
+    el.setAttribute("field-of-view", "30deg");
     el.setAttribute("interpolation-decay", "90");
     el.style.setProperty("--poster-color", "transparent");
 

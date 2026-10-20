@@ -1,44 +1,43 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 
 const FAQS = [
   {
-    question: "What are chemical anchors, and where are they used?",
+    question: "What are chemical anchors?",
     answer:
-      "Chemical anchors use a resin mortar to bond a stud or rebar into drilled concrete or masonry. They’re ideal for structural connections, façade fixing, heavy machinery bases, and retrofit work where high load capacity and vibration resistance matter.",
+      "Chemical anchors use a resin mortar to bond a stud or rebar into drilled concrete or masonry. They are used for structural fixing, façades, machinery bases, and retrofit work where a strong, even hold is needed.",
   },
   {
-    question: "What is the difference between chemical anchors and mechanical anchors?",
+    question: "Chemical vs mechanical anchors — which should I use?",
     answer:
-      "Mechanical anchors expand inside the hole to create a friction or key hold. Chemical anchors form a bonded connection with resin, distributing stress more evenly — better for cracked concrete, edge distances, and higher design loads. ICFS offers both systems so you can match the method to the substrate and load.",
+      "Mechanical anchors expand in the hole for a friction hold. Chemical anchors bond with resin and often suit higher loads, edge distances, and cracked concrete. ICFS offers both — we help you match the product to the base and the load.",
   },
   {
-    question: "How can I choose the right anchor fastener for my project?",
+    question: "How do I choose the right fastener?",
     answer:
-      "Start with base material (concrete, brick, hollow block), load type (tension, shear, dynamic), edge distance, and environment (dry, wet, outdoor). Our team and design software can help size the correct chemical mortar, capsule, stud, or mechanical wedge for your application.",
+      "Check the base material, load type, edge distance, and site conditions. Then pick chemical mortar, capsule, stud, or mechanical wedge. Our team and design software can help size the fix.",
   },
   {
-    question: "How long does a chemical mortar take to cure?",
+    question: "How long does chemical mortar take to cure?",
     answer:
-      "Cure time depends on the product grade and ambient temperature. Many ICFS chemical mortars reach working strength within minutes to a few hours in typical site conditions; always follow the technical data sheet for gel time, full cure, and load application windows.",
+      "It depends on the product and temperature. Many ICFS mortars reach working strength in minutes to a few hours. Always follow the data sheet for gel time and when you can apply full load.",
   },
   {
-    question: "What services does IndoSpark offer besides fastening systems?",
+    question: "Can I buy ICFS anchors online?",
     answer:
-      "Beyond ICFS fastening products, IndoSpark provides site services including concrete cutting, rebaring, core drilling, wire sawing, and pull-out testing — so supply and installation support stay under one trusted partner.",
+      "Yes. Shop chemical mortars, guns, capsules, studs, mechanical anchors, PU foam, and nylon frame anchors on this site. Need bulk or project pricing? Email email@icfs.in or call 1800 123 500 023.",
   },
   {
-    question: "What is PU foam and how is it used in construction?",
+    question: "What is PU foam used for?",
     answer:
-      "ICFS PU foam is a one-component polyurethane expanding foam used to fill gaps, seal joints, insulate around frames, and close cracks. It expands after application, then cures to a lightweight, durable fill that can be trimmed and finished.",
+      "ICFS PU foam fills gaps, seals joints, and packs around frames. It expands on site, then cures so you can trim and finish it.",
   },
   {
-    question: "Are IndoSpark ICFS anchor fasteners certified for safety?",
+    question: "Are ICFS anchors tested for safety?",
     answer:
-      "ICFS fasteners are engineered for structural performance and tested to industry standards. Product documentation and performance data are available on request so engineers and contractors can specify with confidence on critical projects.",
+      "Yes. Our fasteners are built for structural use and tested to industry standards. Performance data is available so engineers can specify with confidence.",
   },
 ];
 
@@ -95,32 +94,20 @@ function FaqItem({ item, index, open, onToggle }) {
         onClick={onToggle}
         className="flex w-full items-start gap-4 py-5 text-left sm:gap-5 sm:py-6"
       >
-        <span className="mt-0.5 w-7 shrink-0 text-[12px] font-medium tabular-nums text-ink/35 sm:text-[13px]">
+        <span className="mt-0.5 w-7 shrink-0 text-[14px] font-medium tabular-nums text-ink/35 sm:text-[15px]">
           {number}
         </span>
-
-        <span className="min-w-0 flex-1 pt-px text-[15px] font-semibold leading-snug tracking-[-0.015em] text-ink sm:text-[16px]">
+        <span className="min-w-0 flex-1 text-[16px] font-semibold leading-snug tracking-[-0.02em] text-ink sm:text-[16px]">
           {item.question}
         </span>
-
         <span
-          className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border transition-colors duration-200 ${
-            open
-              ? "border-brand bg-brand text-white"
-              : "border-black/10 bg-white text-ink/50"
+          className={`mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#f4f4f4] text-ink/50 transition ${
+            open ? "rotate-180 bg-brand text-white" : ""
           }`}
-          aria-hidden
         >
-          <motion.span
-            animate={{ rotate: open ? 180 : 0 }}
-            transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
-            className="flex"
-          >
-            <IconChevron />
-          </motion.span>
+          <IconChevron className="h-3.5 w-3.5" />
         </span>
       </button>
-
       <AnimatePresence initial={false}>
         {open && (
           <motion.div
@@ -133,7 +120,7 @@ function FaqItem({ item, index, open, onToggle }) {
             transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
             className="overflow-hidden"
           >
-            <p className="max-w-2xl pb-6 pl-11 text-[14px] leading-relaxed text-ink/55 sm:pl-12 sm:text-[15px]">
+            <p className="pb-5 pl-11 pr-10 text-[16px] leading-relaxed text-ink/55 sm:pb-6 sm:pl-12 sm:text-[16px]">
               {item.answer}
             </p>
           </motion.div>
@@ -146,7 +133,7 @@ function FaqItem({ item, index, open, onToggle }) {
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(0);
 
-  const toggle = (index) => {
+  const onToggle = (index) => {
     setOpenIndex((current) => (current === index ? null : index));
   };
 
@@ -157,17 +144,16 @@ export default function FAQ() {
       aria-labelledby="faq-heading"
     >
       <div className="mx-auto grid max-w-[1440px] gap-10 px-4 sm:px-5 lg:grid-cols-12 lg:gap-12 lg:px-6 xl:gap-16 xl:px-8">
-        {/* Left — sticky intro + contact */}
         <div className="lg:col-span-5 xl:col-span-4">
           <div className="lg:sticky lg:top-28">
             <h2
               id="faq-heading"
               className="max-w-md text-[clamp(1.75rem,3.2vw,2.75rem)] font-bold leading-[1.12] tracking-[-0.035em] text-ink"
             >
-              Everything teams ask before specifying ICFS.
+              Common questions about ICFS anchors
             </h2>
-            <p className="mt-4 max-w-sm text-[14px] leading-relaxed text-ink/55 sm:text-[15px]">
-              Anchors, cure times, services, ordering, and more — clear answers so engineers and contractors can move with confidence.
+            <p className="mt-4 max-w-sm text-[16px] leading-relaxed text-ink/55 sm:text-[16px]">
+              Clear answers on chemical anchors, mechanical fixings, cure times, and how to order.
             </p>
 
             <div className="mt-8 overflow-hidden rounded-2xl border border-black/[0.08] bg-[#f7f7f7]">
@@ -182,10 +168,10 @@ export default function FAQ() {
                 </span>
                 <span className="min-w-0 flex-1">
                   <span className="flex items-center justify-between gap-2">
-                    <span className="text-[14px] font-semibold text-ink">WhatsApp / Live help</span>
+                    <span className="text-[16px] font-semibold text-ink">WhatsApp help</span>
                     <IconArrowOut className="h-3.5 w-3.5 text-ink/30 transition group-hover:text-brand" />
                   </span>
-                  <span className="mt-0.5 block text-[12px] text-ink/45">
+                  <span className="mt-0.5 block text-[14px] text-ink/45">
                     Weekdays, 9:00–18:00 IST
                   </span>
                 </span>
@@ -194,7 +180,7 @@ export default function FAQ() {
               <div className="mx-4 border-t border-black/[0.06] sm:mx-5" />
 
               <a
-                href="mailto:email@indospark.com"
+                href="mailto:email@icfs.in"
                 className="cursor-target group flex items-start gap-3.5 px-4 py-4 transition-colors hover:bg-black/[0.03] sm:px-5"
               >
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-ink ring-1 ring-black/8">
@@ -202,13 +188,13 @@ export default function FAQ() {
                 </span>
                 <span className="min-w-0 flex-1">
                   <span className="flex items-center justify-between gap-2">
-                    <span className="truncate text-[14px] font-semibold text-ink">
-                      email@indospark.com
+                    <span className="truncate text-[16px] font-semibold text-ink">
+                      email@icfs.in
                     </span>
                     <IconArrowOut className="h-3.5 w-3.5 shrink-0 text-ink/30 transition group-hover:text-brand" />
                   </span>
-                  <span className="mt-0.5 block text-[12px] text-ink/45">
-                    Replies within a few business hours
+                  <span className="mt-0.5 block text-[14px] text-ink/45">
+                    We reply within a few business hours
                   </span>
                 </span>
               </a>
@@ -216,27 +202,17 @@ export default function FAQ() {
           </div>
         </div>
 
-        {/* Right — FAQ list */}
         <div className="lg:col-span-7 xl:col-span-8">
-          <div className="border-t border-black/[0.08]" role="list">
+          <div className="rounded-2xl border border-black/[0.06] bg-[#fafafa] px-4 sm:px-6">
             {FAQS.map((item, index) => (
               <FaqItem
                 key={item.question}
                 item={item}
                 index={index}
                 open={openIndex === index}
-                onToggle={() => toggle(index)}
+                onToggle={() => onToggle(index)}
               />
             ))}
-          </div>
-
-          <div className="mt-8 flex justify-start sm:mt-10">
-            <Link
-              href="/faq"
-              className="cursor-target btn-shine inline-flex h-11 items-center rounded-full bg-ink px-7 text-[13px] font-semibold text-white transition hover:bg-brand"
-            >
-              View all questions
-            </Link>
           </div>
         </div>
       </div>

@@ -44,7 +44,7 @@ function IconArrowOut({ className = "h-3.5 w-3.5" }) {
 
 function FieldLabel({ htmlFor, children, required }) {
   return (
-    <label htmlFor={htmlFor} className="mb-1.5 block text-[12px] font-medium text-ink/50">
+    <label htmlFor={htmlFor} className="mb-1.5 block text-[14px] font-medium text-ink/50">
       {children}
       {required ? <span className="text-brand"> *</span> : null}
     </label>
@@ -52,7 +52,7 @@ function FieldLabel({ htmlFor, children, required }) {
 }
 
 const inputClass =
-  "w-full rounded-xl border border-black/[0.08] bg-[#f4f4f4] px-3.5 py-3 text-[14px] text-ink outline-none transition placeholder:text-ink/30 focus:border-brand/40 focus:bg-white focus:ring-1 focus:ring-brand/25";
+  "w-full rounded-xl border border-black/[0.08] bg-[#f4f4f4] px-3.5 py-3 text-[16px] text-ink outline-none transition placeholder:text-ink/30 focus:border-brand/40 focus:bg-white focus:ring-1 focus:ring-brand/25";
 
 function makeCaptcha() {
   return String(Math.floor(1000 + Math.random() * 9000));
@@ -164,40 +164,40 @@ export default function ContactPage() {
 
         <div className="relative mx-auto grid min-h-[min(72svh,640px)] max-w-[1440px] items-center gap-8 px-4 py-10 sm:px-5 sm:py-12 lg:grid-cols-12 lg:gap-10 lg:px-6 lg:py-14 xl:px-8">
           <div className="lg:col-span-5">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand">
+            <p className="text-[13px] font-semibold uppercase tracking-[0.22em] text-brand">
               Contact us
             </p>
             <h1
               id="contact-hero-heading"
               className="mt-3 max-w-md text-[clamp(1.85rem,3.8vw,3.1rem)] font-bold uppercase leading-[1.08] tracking-[-0.02em] text-ink"
             >
-              We deliver
+              Talk to us
               <br />
-              worldwide
+              about anchors
             </h1>
-            <p className="mt-4 max-w-md text-[14px] leading-relaxed text-ink/55 sm:text-[15px]">
-              Send us your enquiry and our team will get back to you. Full range across India and
-              export markets — Solapur, Hyderabad, Bengaluru, Chiplun, Mumbai and beyond.
+            <p className="mt-4 max-w-md text-[16px] leading-relaxed text-ink/55 sm:text-[16px]">
+              Send your enquiry and we will reply soon. Chemical and mechanical anchors for sites
+              across India — Kolhapur, Pune, Mumbai, and beyond.
             </p>
 
             <div className="mt-7 flex flex-wrap items-center gap-2.5">
               <button
                 type="button"
                 onClick={scrollToForm}
-                className="cursor-target btn-shine inline-flex h-11 items-center rounded-full bg-ink px-6 text-[13px] font-semibold text-white transition hover:bg-brand"
+                className="cursor-target btn-shine inline-flex h-11 items-center rounded-full bg-ink px-6 text-[15px] font-semibold text-white transition hover:bg-brand"
               >
                 Send enquiry
               </button>
               <a
                 href="tel:1800123500023"
-                className="cursor-target btn-shine inline-flex h-11 items-center rounded-full bg-white px-5 text-[13px] font-semibold text-ink ring-1 ring-ink/10 transition hover:bg-paper"
+                className="cursor-target btn-shine inline-flex h-11 items-center rounded-full bg-white px-5 text-[15px] font-semibold text-ink ring-1 ring-ink/10 transition hover:bg-paper"
               >
                 Call toll free
               </a>
               <a
-                href="mailto:email@indospark.com"
+                href="mailto:email@icfs.in"
                 className="cursor-target flex h-11 w-11 items-center justify-center rounded-full bg-brand text-white transition hover:scale-105"
-                aria-label="Email IndoSpark"
+                aria-label="Email ICFS"
               >
                 <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden>
                   <path
@@ -214,10 +214,10 @@ export default function ContactPage() {
             <div className="mt-8 grid max-w-md grid-cols-3 gap-3 border-t border-black/[0.08] pt-6">
               {CONTACT_OFFICES.map((o) => (
                 <div key={o.id}>
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-ink/35">
+                  <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-ink/35">
                     {o.label.replace(" Branch", "").replace("Head Office", "HQ")}
                   </p>
-                  <p className="mt-1 text-[13px] font-bold tracking-[-0.02em] text-ink">{o.title}</p>
+                  <p className="mt-1 text-[15px] font-bold tracking-[-0.02em] text-ink">{o.title}</p>
                 </div>
               ))}
             </div>
@@ -226,7 +226,7 @@ export default function ContactPage() {
           <div className="relative min-h-[280px] overflow-hidden rounded-[1.5rem] sm:min-h-[360px] sm:rounded-[1.75rem] lg:col-span-7 lg:min-h-[480px]">
             <Image
               src="/images/news/exhibition.png"
-              alt="IndoSpark team and customers"
+              alt="ICFS team and customers"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 58vw"
@@ -237,24 +237,24 @@ export default function ContactPage() {
               aria-hidden
             />
             <div className="absolute inset-x-0 bottom-0 p-5 sm:p-7">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/65">
+              <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-white/65">
                 Presence
               </p>
-              <p className="mt-1.5 max-w-lg text-[14px] font-semibold leading-snug text-white sm:text-[15px]">
+              <p className="mt-1.5 max-w-lg text-[16px] font-semibold leading-snug text-white sm:text-[16px]">
                 {CONTACT_CITIES.join(" · ")}
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
                 <a
-                  href="mailto:email@indospark.com"
-                  className="cursor-target inline-flex items-center rounded-full bg-white/95 px-3.5 py-1.5 text-[12px] font-semibold text-ink transition hover:bg-brand hover:text-white"
+                  href="mailto:email@icfs.in"
+                  className="cursor-target inline-flex items-center rounded-full bg-white/95 px-3.5 py-1.5 text-[14px] font-semibold text-ink transition hover:bg-brand hover:text-white"
                 >
-                  email@indospark.com
+                  email@icfs.in
                 </a>
                 <a
                   href="tel:1800123500023"
-                  className="cursor-target inline-flex items-center rounded-full bg-brand px-3.5 py-1.5 text-[12px] font-semibold text-white transition hover:bg-white hover:text-ink"
+                  className="cursor-target inline-flex items-center rounded-full bg-brand px-3.5 py-1.5 text-[14px] font-semibold text-white transition hover:bg-white hover:text-ink"
                 >
-                  1800 1235 00023
+                  1800 123 500 023
                 </a>
               </div>
             </div>
@@ -270,23 +270,23 @@ export default function ContactPage() {
               <h2 className="max-w-md text-[clamp(1.5rem,2.8vw,2.15rem)] font-bold leading-[1.15] tracking-[-0.03em] text-ink">
                 Reach the right desk, first time.
               </h2>
-              <p className="mt-3 max-w-md text-[14px] leading-relaxed text-ink/50 sm:text-[15px]">
+              <p className="mt-3 max-w-md text-[16px] leading-relaxed text-ink/50 sm:text-[16px]">
                 Prefer a direct line? Use quick contact below — or fill the form and we&apos;ll
                 respond from the right desk.
               </p>
             </FadeIn>
 
             <FadeIn delay={0.06} className="mt-10">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand">
+              <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-brand">
                 Quick contact
               </p>
               <div className="mt-4 grid gap-5 sm:grid-cols-2">
                 {CONTACT_CHANNELS.map((ch) => (
                   <div key={ch.id}>
-                    <p className="text-[12px] font-medium text-ink/40">{ch.label}</p>
+                    <p className="text-[14px] font-medium text-ink/40">{ch.label}</p>
                     <a
                       href={ch.href}
-                      className="cursor-target mt-1.5 inline-flex items-center gap-1.5 text-[14px] font-semibold text-ink transition hover:text-brand"
+                      className="cursor-target mt-1.5 inline-flex items-center gap-1.5 text-[16px] font-semibold text-ink transition hover:text-brand"
                     >
                       {ch.title}
                       <IconArrowOut className="h-3 w-3 text-ink/30" />
@@ -299,17 +299,17 @@ export default function ContactPage() {
             <div className="mt-10 h-px bg-black/[0.08]" aria-hidden />
 
             <FadeIn delay={0.1} className="mt-10">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand">
+              <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-brand">
                 Find us
               </p>
               <div className="mt-5 space-y-7">
                 {CONTACT_OFFICES.map((office) => (
                   <div key={office.id}>
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-ink/35">
+                    <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-ink/35">
                       {office.label}
                     </p>
-                    <p className="mt-1.5 text-[15px] font-semibold text-ink">{office.title}</p>
-                    <address className="mt-1 not-italic text-[13px] leading-relaxed text-ink/50">
+                    <p className="mt-1.5 text-[16px] font-semibold text-ink">{office.title}</p>
+                    <address className="mt-1 not-italic text-[15px] leading-relaxed text-ink/50">
                       {office.lines.map((line) => (
                         <span key={line} className="block">
                           {line}
@@ -324,7 +324,7 @@ export default function ContactPage() {
             <div className="mt-10 h-px bg-black/[0.08]" aria-hidden />
 
             <FadeIn delay={0.12} className="mt-8">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand">
+              <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-brand">
                 Also visit
               </p>
               <ul className="mt-3 space-y-2">
@@ -334,7 +334,7 @@ export default function ContactPage() {
                       href={site.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="cursor-target inline-flex items-center gap-1.5 text-[13px] text-ink/55 transition hover:text-brand"
+                      className="cursor-target inline-flex items-center gap-1.5 text-[15px] text-ink/55 transition hover:text-brand"
                     >
                       {site.label}
                       <IconArrowOut className="h-3 w-3" />
@@ -354,7 +354,7 @@ export default function ContactPage() {
                 <h2 className="max-w-md text-[clamp(1.35rem,2.4vw,1.85rem)] font-bold leading-[1.15] tracking-[-0.03em] text-ink">
                   Send message to us
                 </h2>
-                <p className="mt-2 text-[13px] text-ink/45">
+                <p className="mt-2 text-[15px] text-ink/45">
                   Fields marked <span className="text-brand">*</span> are required.
                 </p>
 
@@ -363,7 +363,7 @@ export default function ContactPage() {
                     <p className="text-[18px] font-bold tracking-[-0.02em] text-ink">
                       Message received.
                     </p>
-                    <p className="mt-2 text-[14px] leading-relaxed text-ink/55">
+                    <p className="mt-2 text-[16px] leading-relaxed text-ink/55">
                       Thanks for writing in. Our team will get back to you shortly
                       {form.email ? ` at ${form.email}` : ""}.
                     </p>
@@ -376,7 +376,7 @@ export default function ContactPage() {
                         setFileName("");
                         setFindUs([]);
                       }}
-                      className="cursor-target btn-shine mt-5 inline-flex h-11 items-center rounded-full bg-ink px-6 text-[13px] font-semibold text-white transition hover:bg-brand"
+                      className="cursor-target btn-shine mt-5 inline-flex h-11 items-center rounded-full bg-ink px-6 text-[15px] font-semibold text-white transition hover:bg-brand"
                     >
                       Send another message
                     </button>
@@ -384,7 +384,7 @@ export default function ContactPage() {
                 ) : (
                   <form className="mt-8 space-y-5" onSubmit={onSubmit} noValidate>
                     {productNote ? (
-                      <p className="rounded-xl border border-brand/20 bg-brand/[0.06] px-3.5 py-2.5 text-[12px] text-ink/70">
+                      <p className="rounded-xl border border-brand/20 bg-brand/[0.06] px-3.5 py-2.5 text-[14px] text-ink/70">
                         Enquiry related to software:{" "}
                         <span className="font-semibold text-ink">{productNote}</span>
                       </p>
@@ -509,14 +509,14 @@ export default function ContactPage() {
                     </div>
 
                     <fieldset>
-                      <legend className="mb-2.5 text-[12px] font-medium text-ink/50">
+                      <legend className="mb-2.5 text-[14px] font-medium text-ink/50">
                         How did you find out about us?
                       </legend>
                       <div className="space-y-2.5">
                         {FIND_US_OPTIONS.map((opt) => (
                           <label
                             key={opt.id}
-                            className="flex cursor-pointer items-start gap-2.5 text-[13px] text-ink/65"
+                            className="flex cursor-pointer items-start gap-2.5 text-[15px] text-ink/65"
                           >
                             <input
                               type="checkbox"
@@ -536,7 +536,7 @@ export default function ContactPage() {
                         <span className="font-normal text-ink/35">(PNG, JPG, JPEG, PDF)</span>
                       </FieldLabel>
                       <div className="flex flex-wrap items-center gap-3">
-                        <label className="cursor-target inline-flex h-10 items-center rounded-full border border-black/10 bg-white px-4 text-[12px] font-semibold text-ink/70 transition hover:border-brand/40 hover:text-brand">
+                        <label className="cursor-target inline-flex h-10 items-center rounded-full border border-black/10 bg-white px-4 text-[14px] font-semibold text-ink/70 transition hover:border-brand/40 hover:text-brand">
                           Choose file
                           <input
                             id="file"
@@ -546,7 +546,7 @@ export default function ContactPage() {
                             onChange={onFile}
                           />
                         </label>
-                        <span className="text-[12px] text-ink/35">
+                        <span className="text-[14px] text-ink/35">
                           {fileName || "No file chosen"}
                         </span>
                       </div>
@@ -581,20 +581,20 @@ export default function ContactPage() {
                           setCaptcha(makeCaptcha());
                           setCaptchaInput("");
                         }}
-                        className="cursor-target h-11 text-left text-[12px] font-semibold text-ink/40 transition hover:text-brand sm:text-right"
+                        className="cursor-target h-11 text-left text-[14px] font-semibold text-ink/40 transition hover:text-brand sm:text-right"
                       >
                         Refresh code
                       </button>
                     </div>
 
                     {error ? (
-                      <p className="text-[13px] text-brand" role="alert">
+                      <p className="text-[15px] text-brand" role="alert">
                         {error}
                       </p>
                     ) : null}
 
                     <div className="flex flex-col gap-4 border-t border-black/[0.08] pt-5 sm:flex-row sm:items-center sm:justify-between">
-                      <label className="flex max-w-sm cursor-pointer items-start gap-2.5 text-[12px] leading-snug text-ink/50">
+                      <label className="flex max-w-sm cursor-pointer items-start gap-2.5 text-[14px] leading-snug text-ink/50">
                         <input
                           type="checkbox"
                           checked={form.privacy}
@@ -615,7 +615,7 @@ export default function ContactPage() {
 
                       <button
                         type="submit"
-                        className="cursor-target btn-shine inline-flex h-11 shrink-0 items-center justify-center rounded-full bg-ink px-7 text-[13px] font-semibold text-white transition hover:bg-brand"
+                        className="cursor-target btn-shine inline-flex h-11 shrink-0 items-center justify-center rounded-full bg-ink px-7 text-[15px] font-semibold text-white transition hover:bg-brand"
                       >
                         Send message
                       </button>

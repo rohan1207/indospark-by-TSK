@@ -75,7 +75,7 @@ export default function TrustedBy() {
       aria-labelledby="trusted-by-heading"
     >
       <div className="mx-auto mb-8 max-w-[1440px] px-4 text-center sm:mb-9 sm:px-5 lg:px-6 xl:px-8">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand">
+        <p className="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand">
           Our clients
         </p>
         <h2
@@ -92,7 +92,7 @@ export default function TrustedBy() {
       </div>
 
       <span className="sr-only">
-        IndoSpark works with leading construction and industrial partners across India.
+        ICFS works with leading construction and industrial partners across India.
       </span>
     </section>
   );

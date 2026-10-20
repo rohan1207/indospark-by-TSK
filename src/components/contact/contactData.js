@@ -46,13 +46,13 @@ export const CONTACT_CHANNELS = [
   {
     id: "email",
     label: "Email",
-    title: "email@indospark.com",
-    href: "mailto:email@indospark.com",
+    title: "email@icfs.in",
+    href: "mailto:email@icfs.in",
   },
   {
     id: "toll",
     label: "Toll Free",
-    title: "1800 1235 00023",
+    title: "1800 123 500 023",
     href: "tel:1800123500023",
   },
 ];
@@ -71,8 +71,9 @@ export const FIND_US_OPTIONS = [
 
 export const ENQUIRY_TYPES = [
   { value: "general", label: "General enquiry" },
-  { value: "products", label: "Products / anchors" },
-  { value: "services", label: "Construction services" },
+  { value: "products", label: "Anchor products" },
+  { value: "pull-out-test", label: "Pull Out Test (POT)" },
+  { value: "installation", label: "Installation services" },
   { value: "software", label: "Design software" },
   { value: "software-download", label: "Software download / licence" },
   { value: "dealer", label: "Dealer / partnership" },

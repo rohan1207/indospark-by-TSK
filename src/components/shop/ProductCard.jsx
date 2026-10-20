@@ -67,7 +67,7 @@ export default function ProductCard({ product, showCategory = false }) {
         </Link>
 
         {product.tag && (
-          <span className="pointer-events-none absolute left-3 top-3 z-10 rounded-full bg-brand px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-white">
+          <span className="pointer-events-none absolute left-3 top-3 z-10 rounded-full bg-brand px-2.5 py-1 text-[12px] font-bold uppercase tracking-[0.08em] text-white">
             {product.tag}
           </span>
         )}
@@ -109,21 +109,21 @@ export default function ProductCard({ product, showCategory = false }) {
 
       <div className="flex flex-1 flex-col px-4 pb-4 pt-3.5 sm:px-5 sm:pb-5">
         {showCategory && product.categoryLabel && (
-          <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-ink/35">
+          <p className="mb-1 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink/35">
             {product.categoryLabel}
           </p>
         )}
         <Link href={href}>
-          <h3 className="line-clamp-2 min-h-[2.6em] text-[13px] font-semibold leading-snug tracking-[-0.01em] text-ink transition hover:text-brand sm:text-[14px]">
+          <h3 className="line-clamp-2 min-h-[2.6em] text-[15px] font-semibold leading-snug tracking-[-0.01em] text-ink transition hover:text-brand sm:text-[16px]">
             {product.name}
           </h3>
         </Link>
         <div className="mt-auto flex items-center justify-between gap-3 pt-3">
-          <p className="text-[14px] font-bold text-ink sm:text-[15px]">{price}</p>
+          <p className="text-[16px] font-bold text-ink sm:text-[16px]">{price}</p>
           <button
             type="button"
             onClick={() => addToCart(product.id, 1, { open: true })}
-            className="cursor-target btn-shine inline-flex items-center gap-1.5 rounded-full bg-ink px-3 py-1.5 text-[11px] font-semibold text-white transition hover:bg-brand sm:text-[12px]"
+            className="cursor-target btn-shine inline-flex items-center gap-1.5 rounded-full bg-ink px-3 py-1.5 text-[13px] font-semibold text-white transition hover:bg-brand sm:text-[14px]"
           >
             <IconBag className="h-3.5 w-3.5" />
             Add

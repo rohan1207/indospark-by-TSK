@@ -39,11 +39,12 @@ const socialLinks = [
 
 const exploreLinks = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
   { label: "Shop", href: "/shop" },
+  { label: "Services", href: "/services" },
+  { label: "Pull Out Test", href: "/services/pull-out-test" },
+  { label: "Installation", href: "/services/installation" },
   { label: "Design Software", href: "/design-software" },
   { label: "Contact Us", href: "/contact" },
-  { label: "Product Catalogue", href: "/catalogue" },
 ];
 
 const otherLinks = [
@@ -126,7 +127,7 @@ function SocialIcon({ name, className = "h-3.5 w-3.5" }) {
 
 function ColLabel({ children }) {
   return (
-    <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink">
+    <p className="text-[13px] font-semibold uppercase tracking-[0.16em] text-ink">
       {children}
     </p>
   );
@@ -134,7 +135,7 @@ function ColLabel({ children }) {
 
 function TextLink({ href, children, external = false }) {
   const className =
-    "text-[12px] uppercase tracking-[0.06em] text-ink/55 transition-colors hover:text-brand sm:text-[13px]";
+    "text-[14px] uppercase tracking-[0.06em] text-ink/55 transition-colors hover:text-brand sm:text-[15px]";
 
   if (external) {
     return (
@@ -157,7 +158,7 @@ function SocialLink({ link }) {
       href={link.href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group inline-flex items-center gap-2.5 text-[12px] uppercase tracking-[0.06em] text-ink/55 transition-colors hover:text-brand sm:text-[13px]"
+      className="group inline-flex items-center gap-2.5 text-[14px] uppercase tracking-[0.06em] text-ink/55 transition-colors hover:text-brand sm:text-[15px]"
     >
       <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-ink/12 text-ink/50 transition group-hover:border-brand/30 group-hover:text-brand">
         <SocialIcon name={link.icon} />
@@ -191,7 +192,7 @@ export default function Footer() {
             id="footer-heading"
             className="max-w-3xl text-[clamp(1.5rem,4vw,2.75rem)] font-bold uppercase leading-[1.05] tracking-[-0.03em] text-ink"
           >
-            Ready to discuss your next project?
+            Need the right anchor for your project?
           </h2>
           <Link
             href="/contact"
@@ -208,7 +209,7 @@ export default function Footer() {
           <div className="lg:col-span-3">
             <Link
               href="/contact"
-              className="cursor-target btn-shine mb-4 inline-flex h-10 items-center gap-2.5 rounded-full bg-ink px-4 text-[11px] font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-brand"
+              className="cursor-target btn-shine mb-4 inline-flex h-10 items-center gap-2.5 rounded-full bg-ink px-4 text-[13px] font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-brand"
             >
               <IconArrowRight className="h-3.5 w-3.5" />
               Work with us
@@ -229,17 +230,17 @@ export default function Footer() {
                     if (status === "done") setStatus("idle");
                   }}
                   placeholder="Your email"
-                  className="min-w-0 flex-1 bg-transparent text-[13px] text-ink outline-none placeholder:text-ink/35"
+                  className="min-w-0 flex-1 bg-transparent text-[15px] text-ink outline-none placeholder:text-ink/35"
                 />
                 <button
                   type="submit"
-                  className="cursor-target btn-shine inline-flex h-8 shrink-0 items-center rounded-full bg-brand px-3.5 text-[11px] font-semibold uppercase tracking-[0.08em] text-white transition hover:bg-brand-deep"
+                  className="cursor-target btn-shine inline-flex h-8 shrink-0 items-center rounded-full bg-brand px-3.5 text-[13px] font-semibold uppercase tracking-[0.08em] text-white transition hover:bg-brand-deep"
                 >
                   Join
                 </button>
               </div>
               {status === "done" && (
-                <p className="mt-2 text-[12px] font-medium text-brand" role="status">
+                <p className="mt-2 text-[14px] font-medium text-brand" role="status">
                   Thanks — you’re on the list.
                 </p>
               )}
@@ -251,18 +252,18 @@ export default function Footer() {
             <ColLabel>Hello</ColLabel>
             <div className="mt-3 space-y-1.5">
               <a
-                href="mailto:email@indospark.com"
-                className="block text-[13px] text-ink/60 transition hover:text-brand"
+                href="mailto:email@icfs.in"
+                className="block text-[15px] text-ink/60 transition hover:text-brand"
               >
-                email@indospark.com
+                email@icfs.in
               </a>
               <a
                 href="tel:1800123500023"
-                className="block text-[13px] text-ink/60 transition hover:text-brand"
+                className="block text-[15px] text-ink/60 transition hover:text-brand"
               >
-                Toll Free — 1800 1235 00023
+                Toll Free — 1800 123 500 023
               </a>
-              <p className="pt-1 text-[12px] leading-relaxed text-ink/45">
+              <p className="pt-1 text-[14px] leading-relaxed text-ink/45">
                 HQ — Kolhapur
                 <br />
                 Studio — Pune
@@ -272,7 +273,7 @@ export default function Footer() {
             <ColLabel>
               <span className="mt-5 block">Opening hours</span>
             </ColLabel>
-            <p className="mt-2 text-[12px] uppercase tracking-[0.04em] text-ink/50">
+            <p className="mt-2 text-[14px] uppercase tracking-[0.04em] text-ink/50">
               Monday to Saturday / 9AM – 6PM
             </p>
           </div>
@@ -314,7 +315,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="flex flex-col items-center gap-5 py-6 sm:flex-row sm:justify-between sm:gap-4 sm:py-7">
-          <Link href="/" className="shrink-0" aria-label="IndoSpark home">
+          <Link href="/" className="shrink-0" aria-label="ICFS home">
             <Image
               src="/logo1.png"
               alt="ICFS — Indo Construction Fastening Systems"
@@ -324,9 +325,9 @@ export default function Footer() {
             />
           </Link>
 
-          <div className="text-center text-[11px] leading-relaxed text-ink/40 sm:text-[12px]">
-            <p>All content © Indospark Inc. {new Date().getFullYear()}</p>
-            <p>A brand of Indo Spark Group since 1978</p>
+          <div className="text-center text-[13px] leading-relaxed text-ink/40 sm:text-[14px]">
+            <p>All content © ICFS {new Date().getFullYear()}</p>
+            <p>Anchor fasteners since 1978</p>
             <p className="mt-1 text-ink/50">
               Designed &amp; developed by :{" "}
               <span className="font-medium text-ink/65">TheSocialKollab</span>
@@ -336,7 +337,7 @@ export default function Footer() {
           <button
             type="button"
             onClick={scrollTop}
-            className="cursor-target btn-shine inline-flex h-9 items-center gap-2 rounded-full bg-ink px-4 text-[11px] font-semibold uppercase tracking-[0.1em] text-white transition hover:bg-brand"
+            className="cursor-target btn-shine inline-flex h-9 items-center gap-2 rounded-full bg-ink px-4 text-[13px] font-semibold uppercase tracking-[0.1em] text-white transition hover:bg-brand"
           >
             <IconArrowUp />
             Back to top

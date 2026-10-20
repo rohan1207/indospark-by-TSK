@@ -5,8 +5,8 @@ import { getProductById } from "@/data/shopCatalog";
 
 const CartWishlistContext = createContext(null);
 
-const CART_KEY = "indospark-cart-v1";
-const WISH_KEY = "indospark-wishlist-v1";
+const CART_KEY = "icfs-cart-v1";
+const WISH_KEY = "icfs-wishlist-v1";
 
 function readJson(key, fallback) {
   if (typeof window === "undefined") return fallback;

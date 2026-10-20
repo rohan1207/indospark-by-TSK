@@ -7,7 +7,7 @@ export default function Checkout() {
   return (
     <>
       <SeoHead
-        title="Checkout | IndoSpark Shop"
+        title="Checkout | ICFS Shop"
         description="Complete your ICFS product order — shipping details, delivery, and payment options."
         path="/checkout"
       />

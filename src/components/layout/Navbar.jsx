@@ -8,20 +8,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useCartWishlist } from "@/components/shop/CartWishlistContext";
 
 const aboutLinks = [
-  { label: "Company Overview", href: "/about#overview" },
-  { label: "Our Legacy", href: "/about#history" },
-  { label: "Why ICFS", href: "/about#verticals" },
-];
-
-const serviceLinks = [
-  { label: "All Services", href: "/services#service-lines" },
-  { label: "Vibration Free Concrete Cutting", href: "/services/vibration-free-concrete-cutting" },
-  { label: "Vibration Free Metal Cutting", href: "/services/vibration-free-metal-cutting" },
-  { label: "Concrete Drilling Work", href: "/services/concrete-drilling" },
-  { label: "Door / Window Frame Fixing", href: "/services/door-window-frame-fixing" },
-  { label: "Underwater Core Demolition", href: "/services/underwater-core-demolition" },
-  { label: "Rebar Testing & Scanning", href: "/services/rebar-testing-scanning" },
-  { label: "Rock Anchoring Services", href: "/services/rock-anchoring" },
+  { label: "Overview", href: "/about#overview" },
+  { label: "Our products", href: "/about#verticals" },
+  { label: "History", href: "/about#history" },
 ];
 
 const categoryLinks = [
@@ -33,6 +22,12 @@ const categoryLinks = [
   { label: "Mechanical Anchors", href: "/shop?category=mechanical" },
   { label: "PU Foam", href: "/shop?category=foam" },
   { label: "Nylon Frame Anchors", href: "/shop?category=nylon" },
+];
+
+const serviceLinks = [
+  { label: "All services", href: "/services#service-lines" },
+  { label: "Pull Out Test (POT)", href: "/services/pull-out-test" },
+  { label: "Installation Services", href: "/services/installation" },
 ];
 
 const softwareLinks = [
@@ -125,7 +120,7 @@ function NavItem({ link, active }) {
     return (
       <Link
         href={link.href}
-        className={`rounded-full px-3 py-1.5 text-[14px] font-medium transition xl:px-3.5 xl:text-[15px] ${
+        className={`rounded-full px-3 py-1.5 text-[16px] font-medium transition xl:px-3.5 xl:text-[16px] ${
           active
             ? "text-brand"
             : "text-ink/75 hover:bg-black/[0.04] hover:text-ink"
@@ -144,7 +139,7 @@ function NavItem({ link, active }) {
     >
       <Link
         href={link.href}
-        className="inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-[14px] font-medium text-ink/75 transition hover:bg-black/[0.04] hover:text-ink xl:px-3.5 xl:text-[15px]"
+        className="inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-[16px] font-medium text-ink/75 transition hover:bg-black/[0.04] hover:text-ink xl:px-3.5 xl:text-[16px]"
         aria-expanded={open}
         aria-haspopup="true"
         onClick={() => setOpen((v) => !v)}
@@ -169,7 +164,7 @@ function NavItem({ link, active }) {
                 <Link
                   key={child.href}
                   href={child.href}
-                  className="block px-4 py-2.5 text-[13px] font-medium text-ink/80 transition hover:bg-brand/5 hover:text-brand"
+                  className="block px-4 py-2.5 text-[15px] font-medium text-ink/80 transition hover:bg-brand/5 hover:text-brand"
                   onClick={() => setOpen(false)}
                 >
                   {child.label}
@@ -206,21 +201,8 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-white text-ink shadow-[0_1px_0_rgba(0,0,0,0.08)]">
       {/* Utility strip: pills left · search center · contact/shop right */}
       <div className="border-b border-black/8 bg-[#fafafa]">
-        <div className="relative mx-auto grid h-10 max-w-[92rem] grid-cols-[1fr_auto_1fr] items-center gap-3 px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-2.5 justify-self-start">
-            <Link
-              href="/services/pull-out-test"
-              className="cursor-target btn-shine inline-flex h-8 items-center rounded-full bg-brand px-4 text-[13px] font-semibold tracking-wide text-white transition hover:bg-brand-deep"
-            >
-              Pull Out Test
-            </Link>
-            <Link
-              href="/consumer"
-              className="cursor-target btn-shine hidden h-8 items-center rounded-full bg-ink px-4 text-[13px] font-medium tracking-wide text-white transition hover:bg-brand sm:inline-flex"
-            >
-              Consumer
-            </Link>
-          </div>
+        <div className="relative mx-auto grid h-11 max-w-[92rem] grid-cols-[1fr_auto_1fr] items-center gap-3 px-4 sm:px-6 lg:px-8">
+          <div className="justify-self-start" aria-hidden />
 
           <form
             onSubmit={onSearch}
@@ -233,24 +215,24 @@ export default function Navbar() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search products…"
-              className="h-8 w-full rounded-full border border-black/12 bg-white py-0 pl-10 pr-4 text-[13px] text-ink outline-none placeholder:text-ink/40 focus:border-brand/40 focus:ring-2 focus:ring-brand/10"
+              className="h-9 w-full rounded-full border border-black/12 bg-white py-0 pl-10 pr-4 text-[14px] text-ink outline-none placeholder:text-ink/40 focus:border-brand/40 focus:ring-2 focus:ring-brand/10"
             />
           </form>
 
           <div className="flex items-center justify-self-end gap-2 sm:gap-2.5">
             <a
-              href="tel:+919873233311"
-              className="hidden h-8 items-center gap-2 rounded-full border border-black/12 bg-white px-3.5 text-[13px] font-semibold text-ink/80 transition hover:border-black/20 hover:text-ink xl:inline-flex"
+              href="tel:1800123500023"
+              className="hidden h-9 items-center gap-2 rounded-full border border-black/12 bg-white px-3.5 text-[14px] font-semibold text-ink/80 transition hover:border-black/20 hover:text-ink xl:inline-flex"
             >
               <IconPhone className="h-3.5 w-3.5 text-brand" />
-              <span>+91 98732 33311</span>
+              <span>1800 123 500 023</span>
             </a>
 
             <a
               href="https://wa.me/919873233311"
               target="_blank"
               rel="noopener noreferrer"
-              className="cursor-target inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#25D366] text-white shadow-sm transition hover:brightness-110"
+              className="cursor-target inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#25D366] text-white shadow-sm transition hover:brightness-110"
               aria-label="WhatsApp"
             >
               <IconWhatsApp className="h-4 w-4" />
@@ -258,7 +240,7 @@ export default function Navbar() {
 
             <Link
               href="/shop"
-              className="cursor-target btn-shine hidden h-8 items-center rounded-full bg-brand px-4 text-[13px] font-semibold tracking-wide text-white shadow-sm transition hover:bg-brand-deep sm:inline-flex"
+              className="cursor-target btn-shine hidden h-9 items-center rounded-full bg-brand px-4 text-[14px] font-semibold tracking-wide text-white shadow-sm transition hover:bg-brand-deep sm:inline-flex"
             >
               Shop Now
             </Link>
@@ -268,7 +250,7 @@ export default function Navbar() {
 
       {/* Main nav */}
       <div className="mx-auto flex h-[3.85rem] max-w-[92rem] items-center gap-3 px-4 sm:px-6 lg:gap-5 lg:px-8">
-        <Link href="/" className="relative shrink-0" aria-label="IndoSpark home">
+        <Link href="/" className="relative shrink-0" aria-label="ICFS home">
           <Image
             src="/logo1.png"
             alt="ICFS — Indo Construction Fastening Systems"
@@ -303,7 +285,7 @@ export default function Navbar() {
               />
             </svg>
             {wishlistCount > 0 && (
-              <span className="absolute -right-0.5 -top-0.5 flex h-[1.125rem] min-w-[1.125rem] items-center justify-center rounded-full bg-ink px-1 text-[10px] font-bold leading-none text-white">
+              <span className="absolute -right-0.5 -top-0.5 flex h-[1.125rem] min-w-[1.125rem] items-center justify-center rounded-full bg-ink px-1 text-[12px] font-bold leading-none text-white">
                 {wishlistCount > 99 ? "99+" : wishlistCount}
               </span>
             )}
@@ -315,7 +297,7 @@ export default function Navbar() {
             aria-label="Open cart"
           >
             <IconCart className="h-5 w-5" />
-            <span className="absolute -right-0.5 -top-0.5 flex h-[1.125rem] min-w-[1.125rem] items-center justify-center rounded-full bg-brand px-1 text-[10px] font-bold leading-none text-white">
+            <span className="absolute -right-0.5 -top-0.5 flex h-[1.125rem] min-w-[1.125rem] items-center justify-center rounded-full bg-brand px-1 text-[12px] font-bold leading-none text-white">
               {cartCount > 99 ? "99+" : cartCount}
             </span>
           </button>
@@ -354,7 +336,7 @@ export default function Navbar() {
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   placeholder="Search products…"
-                  className="h-11 w-full rounded-full border border-black/12 bg-[#fafafa] py-0 pl-10 pr-4 text-[15px] text-ink outline-none placeholder:text-ink/40 focus:border-brand/40"
+                  className="h-11 w-full rounded-full border border-black/12 bg-[#fafafa] py-0 pl-10 pr-4 text-[16px] text-ink outline-none placeholder:text-ink/40 focus:border-brand/40"
                 />
               </form>
 
@@ -373,7 +355,7 @@ export default function Navbar() {
                       <div>
                         <button
                           type="button"
-                          className="flex w-full items-center justify-between rounded-xl px-3 py-3 text-left text-[15px] font-medium text-ink/80 transition hover:bg-black/[0.04]"
+                          className="flex w-full items-center justify-between rounded-xl px-3 py-3 text-left text-[16px] font-medium text-ink/80 transition hover:bg-black/[0.04]"
                           onClick={() => setMobileOpen(expanded ? null : link.label)}
                           aria-expanded={expanded}
                         >
@@ -395,7 +377,7 @@ export default function Navbar() {
                                   key={child.href}
                                   href={child.href}
                                   onClick={() => setOpen(false)}
-                                  className="block rounded-lg px-3 py-2.5 text-[14px] text-ink/65 hover:bg-brand/5 hover:text-brand"
+                                  className="block rounded-lg px-3 py-2.5 text-[16px] text-ink/65 hover:bg-brand/5 hover:text-brand"
                                 >
                                   {child.label}
                                 </Link>
@@ -408,7 +390,7 @@ export default function Navbar() {
                       <Link
                         href={link.href}
                         onClick={() => setOpen(false)}
-                        className={`block rounded-xl px-3 py-3 text-[15px] font-medium transition hover:bg-black/[0.04] ${
+                        className={`block rounded-xl px-3 py-3 text-[16px] font-medium transition hover:bg-black/[0.04] ${
                           isActive(link.href) ? "text-brand" : "text-ink/80"
                         }`}
                       >
@@ -420,24 +402,17 @@ export default function Navbar() {
               })}
 
               <div className="mt-3 flex flex-col gap-2 border-t border-black/8 pt-3">
-                <Link
-                  href="/consumer"
-                  onClick={() => setOpen(false)}
-                  className="rounded-xl px-3 py-2.5 text-[15px] text-ink/70 hover:bg-black/[0.04]"
-                >
-                  Consumer
-                </Link>
                 <a
-                  href="tel:+919873233311"
-                  className="inline-flex items-center gap-2 rounded-xl px-3 py-2.5 text-[15px] text-ink/70 hover:bg-black/[0.04]"
+                  href="tel:1800123500023"
+                  className="inline-flex items-center gap-2 rounded-xl px-3 py-2.5 text-[16px] text-ink/70 hover:bg-black/[0.04]"
                 >
                   <IconPhone className="h-4 w-4 text-brand" />
-                  +91 98732 33311
+                  1800 123 500 023
                 </a>
                 <Link
                   href="/shop"
                   onClick={() => setOpen(false)}
-                  className="btn-shine mt-1 inline-flex h-11 items-center justify-center rounded-full bg-brand px-5 text-[15px] font-semibold text-white"
+                  className="btn-shine mt-1 inline-flex h-11 items-center justify-center rounded-full bg-brand px-5 text-[16px] font-semibold text-white"
                 >
                   Shop Now
                 </Link>

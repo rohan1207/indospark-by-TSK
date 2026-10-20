@@ -21,7 +21,7 @@ export default function CubeLoader({ className = "", label = "Loading 3D model" 
           </div>
         </div>
       </div>
-      <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/35">
+      <span className="text-[13px] font-semibold uppercase tracking-[0.18em] text-ink/35">
         Loading
       </span>
     </div>

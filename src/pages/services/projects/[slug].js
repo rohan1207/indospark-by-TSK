@@ -10,7 +10,7 @@ export default function ProjectPage({ project }) {
   return (
     <>
       <SeoHead
-        title={`${project.title} | IndoSpark Projects`}
+        title={`${project.title} | ICFS Projects`}
         description={project.summary}
         path={`/services/projects/${project.slug}`}
       />
