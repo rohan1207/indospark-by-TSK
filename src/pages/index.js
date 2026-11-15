@@ -7,6 +7,7 @@ import AboutPreview from "@/components/home/AboutPreview";
 import ShowcaseSlider from "@/components/home/ShowcaseSlider";
 import ProductShop from "@/components/home/ProductShop";
 import WhyChoose from "@/components/home/WhyChoose";
+import PullOutTestBanner from "@/components/home/PullOutTestBanner";
 import Testimonials from "@/components/home/Testimonials";
 import FAQ from "@/components/home/FAQ";
 import NewsEvents from "@/components/home/NewsEvents";
@@ -29,6 +30,7 @@ export default function Home() {
         <ProductShop />
         <ShowcaseSlider />
         <WhyChoose />
+        <PullOutTestBanner />
         <Testimonials />
         <FAQ />
         <NewsEvents />
