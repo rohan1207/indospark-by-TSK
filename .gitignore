@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Large product videos — keep local, skip remote (GitHub 100MB limit)
+*.mp4
