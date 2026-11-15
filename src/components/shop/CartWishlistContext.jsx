@@ -60,10 +60,10 @@ export function CartWishlistProvider({ children }) {
         const existing = prev.find((l) => l.id === productId);
         if (existing) {
           return prev.map((l) =>
-            l.id === productId ? { ...l, qty: Math.min(99, l.qty + qty) } : l
+            l.id === productId ? { ...l, qty: Math.min(999, l.qty + qty) } : l
           );
         }
-        return [...prev, { id: productId, qty: Math.min(99, qty) }];
+        return [...prev, { id: productId, qty: Math.min(999, qty) }];
       });
       if (open) setCartOpen(true);
       const product = getProductById(productId);
@@ -73,7 +73,7 @@ export function CartWishlistProvider({ children }) {
   );
 
   const setQty = useCallback((productId, qty) => {
-    const next = Math.max(0, Math.min(99, Number(qty) || 0));
+    const next = Math.max(0, Math.min(999, Number(qty) || 0));
     setCart((prev) => {
       if (next <= 0) return prev.filter((l) => l.id !== productId);
       return prev.map((l) => (l.id === productId ? { ...l, qty: next } : l));

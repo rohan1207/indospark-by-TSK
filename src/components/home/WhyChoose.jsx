@@ -126,19 +126,19 @@ function GearCard({
 
   return (
     <div
-      className={`relative h-[200px] w-[200px] shrink-0 overflow-visible sm:h-[220px] sm:w-[220px] md:h-[235px] md:w-[235px] xl:h-[250px] xl:w-[250px] ${
+      className={`relative h-[148px] w-[148px] shrink-0 sm:h-[180px] sm:w-[180px] md:h-[210px] md:w-[210px] lg:h-[230px] lg:w-[230px] xl:h-[250px] xl:w-[250px] ${
         isFirst
           ? ""
-          : /* ~12% diameter pull-in → tip seats cleanly in the next valley */
-            "-ml-[24px] sm:-ml-[26px] md:-ml-[28px] xl:-ml-[30px]"
+          : /* tip seats in the next valley */
+            "-ml-[18px] sm:-ml-[22px] md:-ml-[25px] lg:-ml-[28px] xl:-ml-[30px]"
       }`}
       style={{ zIndex }}
     >
       <div
-        className="why-gear-spin pointer-events-none absolute inset-0 overflow-visible"
+        className="why-gear-spin pointer-events-none absolute inset-0"
         style={{
           animation: `${spinName} ${SPIN_DURATION}s linear infinite`,
-          willChange: "transform",
+          transformOrigin: "50% 50%",
         }}
       >
         <GearRing
@@ -149,11 +149,11 @@ function GearCard({
         />
       </div>
 
-      <div className="absolute inset-[18%] z-10 flex flex-col items-center justify-center rounded-full bg-white px-3 text-center sm:px-4">
-        <span className="mb-2 flex h-9 w-9 items-center justify-center rounded-full bg-brand/10 text-brand sm:mb-2.5 sm:h-10 sm:w-10 md:h-11 md:w-11">
+      <div className="absolute inset-[18%] z-10 flex flex-col items-center justify-center rounded-full bg-white px-2 text-center sm:px-3">
+        <span className="mb-1.5 flex h-8 w-8 items-center justify-center rounded-full bg-brand/10 text-brand sm:mb-2 sm:h-9 sm:w-9 md:h-10 md:w-10">
           <FeatureIcon name={feature.icon} />
         </span>
-        <h3 className="max-w-[7.5rem] text-[15px] font-bold leading-snug tracking-[-0.02em] text-ink sm:max-w-[8.5rem] sm:text-[16px] md:text-[17px]">
+        <h3 className="max-w-[6.5rem] text-[13px] font-bold leading-snug tracking-[-0.02em] text-ink sm:max-w-[7.5rem] sm:text-[15px] md:text-[16px] xl:text-[17px]">
           {feature.title}
         </h3>
       </div>
@@ -165,7 +165,7 @@ export default function WhyChoose() {
   return (
     <section
       id="why-choose"
-      className="relative flex min-h-[100svh] flex-col justify-center bg-white py-10 sm:py-12"
+      className="relative flex min-h-[100svh] flex-col justify-center overflow-x-hidden bg-white py-10 sm:py-12"
       aria-labelledby="why-choose-heading"
     >
       <div className="relative mx-auto w-full max-w-[1440px] px-3 sm:px-5 lg:px-6 xl:px-8">
@@ -181,8 +181,19 @@ export default function WhyChoose() {
           </p>
         </div>
 
-        <div className="mx-auto flex max-w-full justify-center overflow-x-auto overflow-y-visible px-2 pb-4 pt-2 [scrollbar-width:none] sm:px-4 [&::-webkit-scrollbar]:hidden">
-          <div className="flex min-w-min items-center overflow-visible">
+        {/* Fixed gears strip — page scroll only; no nested pan */}
+        <div
+          className="mx-auto w-full overflow-x-clip overflow-y-clip overscroll-none touch-pan-y"
+          style={{ contain: "paint layout" }}
+          onWheel={(e) => {
+            /* keep wheel on the document — never scroll this strip */
+            if (e.currentTarget.scrollLeft !== 0 || e.currentTarget.scrollTop !== 0) {
+              e.currentTarget.scrollLeft = 0;
+              e.currentTarget.scrollTop = 0;
+            }
+          }}
+        >
+          <div className="pointer-events-none flex w-full items-center justify-center py-2">
             {FEATURES.map((feature, i) => {
               const isOdd = i % 2 === 1;
               return (

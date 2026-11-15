@@ -5,16 +5,19 @@ import Link from "next/link";
 
 const IMAGES = [
   {
-    src: "/images/banners/chemical-mortars.png",
-    alt: "ICFS chemical anchor mortars",
+    src: "/images/about-preview/chemical-injection.jpg",
+    alt: "ICFS chemical injection mortar application on site",
+    fit: "cover",
   },
   {
-    src: "/images/banners/mechanical-anchors.png",
-    alt: "ICFS mechanical anchors",
+    src: "/images/about-preview/mechanical-anchor.png",
+    alt: "ICFS mechanical wedge anchor",
+    fit: "contain",
   },
   {
-    src: "/images/banners/design-software.png",
-    alt: "ICFS anchor design software",
+    src: "/images/about-preview/indoexpert-software.png",
+    alt: "IndoExpert professional anchor design software",
+    fit: "cover",
   },
 ];
 
@@ -92,13 +95,18 @@ export default function AboutPreview() {
               />
             </div>
             {IMAGES.map((img) => (
-              <div key={img.src} className="relative overflow-hidden rounded-2xl">
+              <div
+                key={img.src}
+                className="relative overflow-hidden rounded-2xl bg-white ring-1 ring-black/[0.06]"
+              >
                 <Image
                   src={img.src}
                   alt={img.alt}
                   fill
                   sizes="(max-width: 1024px) 33vw, 18vw"
-                  className="object-cover transition-transform duration-500 hover:scale-105"
+                  className={`transition-transform duration-500 hover:scale-105 ${
+                    img.fit === "contain" ? "object-contain p-3" : "object-cover"
+                  }`}
                 />
               </div>
             ))}

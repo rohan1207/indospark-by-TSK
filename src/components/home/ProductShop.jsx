@@ -34,13 +34,13 @@ function CategoryCircle({ category, active, onSelect }) {
               active ? "border-brand" : "border-brand/80"
             }`}
           />
-          <span className="absolute inset-[7px] overflow-hidden rounded-full bg-[#f3f3f3] sm:inset-[8px]">
+          <span className="absolute inset-[7px] overflow-hidden rounded-full bg-white sm:inset-[8px]">
             <Image
               src={category.image}
               alt={category.label}
               fill
               sizes="128px"
-              className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+              className="object-contain p-1.5 transition-transform duration-500 ease-out group-hover:scale-110"
             />
           </span>
         </span>
@@ -101,7 +101,7 @@ export default function ProductShop() {
             <div
               role="tablist"
               aria-label="Product categories"
-              className="mx-auto flex w-max items-stretch justify-center gap-5 sm:grid sm:w-full sm:grid-cols-7 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-6"
+              className="mx-auto flex w-max items-stretch justify-center gap-5 sm:grid sm:w-full sm:max-w-6xl sm:grid-cols-4 sm:justify-items-center sm:gap-3 md:grid-cols-7 md:gap-3 lg:gap-4 xl:gap-5"
             >
               {CATEGORY_SHORTCUTS.map((category) => (
                 <CategoryCircle
@@ -123,22 +123,43 @@ export default function ProductShop() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -6 }}
             transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-            className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4 lg:gap-5"
           >
-            {products.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
+            {products.length === 0 ? (
+              <div className="rounded-[1.5rem] border border-dashed border-black/10 bg-white px-6 py-14 text-center">
+                <p className="text-[16px] font-semibold text-ink">
+                  Products coming soon
+                </p>
+                <p className="mx-auto mt-2 max-w-md text-[15px] text-ink/50">
+                  We&apos;re adding real {activeCategory.label.toLowerCase()} to the store one by
+                  one. Browse Chemical Mortars for available SKUs.
+                </p>
+                <Link
+                  href="/shop?category=mortars"
+                  className="cursor-target btn-shine mt-6 inline-flex h-11 items-center rounded-full bg-brand px-6 text-[15px] font-semibold text-white transition hover:bg-brand-deep"
+                >
+                  Shop Chemical Mortars
+                </Link>
+              </div>
+            ) : (
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4 lg:gap-5">
+                {products.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+              </div>
+            )}
           </motion.div>
         </AnimatePresence>
 
-        <div className="mt-10 flex justify-center sm:mt-12">
-          <Link
-            href={activeCategory.href}
-            className="cursor-target btn-shine inline-flex h-11 items-center rounded-full bg-ink px-7 text-[15px] font-semibold text-white transition hover:bg-brand"
-          >
-            View all {activeCategory.label}
-          </Link>
-        </div>
+        {products.length > 0 && (
+          <div className="mt-10 flex justify-center sm:mt-12">
+            <Link
+              href={activeCategory.href}
+              className="cursor-target btn-shine inline-flex h-11 items-center rounded-full bg-ink px-7 text-[15px] font-semibold text-white transition hover:bg-brand"
+            >
+              View all {activeCategory.label}
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

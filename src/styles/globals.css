@@ -209,6 +209,13 @@ button {
   }
 }
 
+/* Isolate gear spin so page scroll doesn't pan the strip */
+.why-gear-spin {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
 .animate-marquee-up {
   animation: marquee-up 42s linear infinite;
 }

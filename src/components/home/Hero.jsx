@@ -126,7 +126,7 @@ export default function Hero() {
                 max={12}
               >
                 <Image
-                  src="/pu-foam_3d.png"
+                  src="/images/hero/foam.png"
                   alt="ICFS PU Foam"
                   fill
                   className="object-contain object-bottom drop-shadow-2xl"
@@ -148,25 +148,12 @@ export default function Hero() {
               max={16}
             >
               <Image
-                src="/anchors_product.png"
-                alt="ICFS anchor products"
+                src="/images/hero/anchors.png"
+                alt="ICFS mechanical anchors"
                 fill
                 className="object-contain object-top drop-shadow-2xl"
                 sizes="240px"
                 priority
-              />
-            </MagneticFloat>
-            <MagneticFloat
-              className="absolute bottom-[12%] right-[38%] h-[40%] w-[32%] rotate-6"
-              strength={0.2}
-              max={12}
-            >
-              <Image
-                src="/chemical-capsule-supercap.png"
-                alt="ICFS chemical capsule supercap"
-                fill
-                className="object-contain drop-shadow-lg"
-                sizes="120px"
               />
             </MagneticFloat>
 
@@ -200,7 +187,7 @@ export default function Hero() {
               max={14}
             >
               <Image
-                src="/chemical_mortars.png"
+                src="/images/hero/mortars.png"
                 alt="ICFS chemical mortars"
                 fill
                 className="object-contain object-bottom drop-shadow-xl"

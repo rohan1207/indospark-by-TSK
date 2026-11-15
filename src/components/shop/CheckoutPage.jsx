@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { motion, AnimatePresence } from "framer-motion";
 import { formatMoney, useCartWishlist } from "./CartWishlistContext";
+import CheckoutAnchorAssistant from "./CheckoutAnchorAssistant";
 
 const STEPS = ["Details", "Delivery", "Review"];
 
@@ -168,20 +169,39 @@ export default function CheckoutPage() {
     );
   }
 
+  const attachQuoteNote = (note) => {
+    setForm((f) => ({
+      ...f,
+      payment: "quote",
+      notes: f.notes?.trim() ? `${f.notes.trim()}\n\n${note}` : note,
+    }));
+    setStep(0);
+  };
+
   if (cartCount === 0) {
     return (
       <div className="bg-[#fafafa]">
-        <div className="mx-auto max-w-lg px-4 py-20 text-center sm:px-5">
-          <h1 className="text-[clamp(1.5rem,3vw,2rem)] font-bold tracking-[-0.03em] text-ink">
-            Your cart is empty
-          </h1>
-          <p className="mt-2 text-[16px] text-ink/55">Add products before checking out.</p>
-          <Link
-            href="/shop"
-            className="cursor-target btn-shine mt-8 inline-flex h-11 items-center rounded-full bg-brand px-6 text-[15px] font-semibold text-white transition hover:bg-brand-deep"
-          >
-            Browse shop
-          </Link>
+        <div className="mx-auto max-w-3xl px-4 py-12 sm:px-5 lg:py-16">
+          <div className="mb-8 text-center">
+            <p className="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand">
+              Checkout
+            </p>
+            <h1 className="mt-2 text-[clamp(1.5rem,3vw,2rem)] font-bold tracking-[-0.03em] text-ink">
+              Build your order first
+            </h1>
+            <p className="mx-auto mt-2 max-w-lg text-[16px] text-ink/55">
+              Use the smart selector or paste an IndoExperts BOM, then continue to checkout.
+            </p>
+          </div>
+          <CheckoutAnchorAssistant onAttachQuoteNote={attachQuoteNote} />
+          <div className="mt-8 text-center">
+            <Link
+              href="/shop"
+              className="cursor-target inline-flex h-11 items-center rounded-full border border-black/10 px-6 text-[15px] font-semibold text-ink transition hover:border-brand hover:text-brand"
+            >
+              Or browse the full shop
+            </Link>
+          </div>
         </div>
       </div>
     );
@@ -229,7 +249,9 @@ export default function CheckoutPage() {
 
       <div className="mx-auto grid max-w-[1440px] gap-8 px-4 py-8 sm:px-5 lg:grid-cols-12 lg:gap-10 lg:px-6 lg:py-12 xl:px-8">
         {/* Form column */}
-        <div className="lg:col-span-7">
+        <div className="space-y-6 lg:col-span-7">
+          <CheckoutAnchorAssistant compact onAttachQuoteNote={attachQuoteNote} />
+
           <AnimatePresence mode="wait">
             <motion.div
               key={step}
@@ -544,7 +566,7 @@ export default function CheckoutPage() {
             <ul className="mt-4 max-h-[320px] space-y-3 overflow-y-auto pr-1">
               {cartLines.map(({ product, qty, lineTotal }) => (
                 <li key={product.id} className="flex gap-3">
-                  <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-xl bg-[#f5f5f5]">
+                  <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-xl bg-white ring-1 ring-black/[0.06]">
                     <Image
                       src={product.image}
                       alt=""

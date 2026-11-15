@@ -61,7 +61,7 @@ export default function HeroProductModel() {
       {libReady && (
         <model-viewer
           ref={viewerRef}
-          src="/model.glb"
+          src="/anchor.glb"
           alt="ICFS chemical fastening product"
           loading="eager"
           reveal="auto"

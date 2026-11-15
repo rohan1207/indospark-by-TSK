@@ -60,7 +60,7 @@ function NewsCard({ item, index }) {
       transition={{ duration: 0.4, delay: index * 0.06, ease: [0.22, 1, 0.36, 1] }}
       className="group flex h-full flex-col overflow-hidden rounded-2xl border border-black/[0.06] bg-white transition-shadow duration-300 hover:shadow-[0_16px_40px_rgba(0,0,0,0.07)]"
     >
-      <Wrapper {...wrapperProps} className="relative block aspect-[16/10] overflow-hidden bg-[#f3f3f3]">
+      <Wrapper {...wrapperProps} className="relative block aspect-[16/10] overflow-hidden bg-white">
         <Image
           src={item.image}
           alt={item.alt}

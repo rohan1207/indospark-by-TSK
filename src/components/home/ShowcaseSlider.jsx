@@ -8,47 +8,48 @@ import { AnimatePresence, motion } from "framer-motion";
 const SLIDES = [
   {
     id: "mortars",
-    eyebrow: "Chemical anchors",
+    eyebrow: "Chemical Mortars",
     title: "ICFS Chemical Mortars",
     description:
-      "Resin mortars for rebaring, façades, and heavy fixing in concrete and masonry.",
+      "Injectable mortars for rebaring, façades, and heavy fixing in concrete and masonry.",
     cta: "Shop chemical mortars",
     href: "/shop?category=mortars",
-    image: "/images/banners/chemical-mortars.png",
-    alt: "ICFS chemical mortar for structural anchoring",
+    image: "/images/categories/mortars-cm350vesf.png",
+    alt: "ICFS CM350VESF vinyl ester styrene-free injection resin",
+    fit: "contain",
   },
   {
-    id: "capsules",
-    eyebrow: "Chemical anchors",
-    title: "Capsules & Studs",
+    id: "studs",
+    eyebrow: "Chemical Anchor Studs",
+    title: "Threaded Rod Studs",
     description:
-      "Ready-to-use capsules and studs for clean, repeatable chemical fixing on site.",
-    cta: "Shop capsules",
-    href: "/shop?category=capsules",
-    image: "/images/banners/chemical-mortars.png",
-    alt: "ICFS chemical capsules and anchor studs",
+      "Anchor studs with nuts and washers matched to ICFS chemical systems.",
+    cta: "Shop anchor studs",
+    href: "/shop?category=studs",
+    image: "/images/categories/studs.png",
+    alt: "ICFS chemical anchor studs",
   },
   {
-    id: "anchors",
-    eyebrow: "Mechanical anchors",
+    id: "mechanical",
+    eyebrow: "Mechanical Anchors",
     title: "ICFS Mechanical Anchors",
     description:
       "Wedge anchors and related hardware for reliable hold in concrete and masonry.",
     cta: "Shop mechanical anchors",
     href: "/shop?category=mechanical",
-    image: "/images/banners/mechanical-anchors.png",
-    alt: "ICFS mechanical wedge anchors",
+    image: "/images/categories/mechanical.png",
+    alt: "ICFS mechanical anchors",
   },
   {
-    id: "software",
-    eyebrow: "Design tools",
-    title: "Anchor Design Software",
+    id: "guns",
+    eyebrow: "Chemical Guns",
+    title: "ICFS Chemical Guns",
     description:
-      "Size chemical and mechanical anchors before you specify — free tools for engineers.",
-    cta: "Explore design software",
-    href: "/design-software",
-    image: "/images/banners/design-software.png",
-    alt: "ICFS anchor design software",
+      "Dispenser and rebaring caulking guns for clean, consistent mortar application.",
+    cta: "Shop chemical guns",
+    href: "/shop?category=guns",
+    image: "/images/categories/guns.png",
+    alt: "ICFS chemical guns",
   },
 ];
 
@@ -174,7 +175,7 @@ export default function ShowcaseSlider() {
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
       >
-        <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[1.25rem] bg-ink sm:aspect-[21/9] sm:rounded-[1.5rem] lg:h-[min(28rem,52vw)] lg:aspect-auto">
+        <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[1.25rem] bg-white ring-1 ring-black/[0.06] sm:aspect-[21/9] sm:rounded-[1.5rem] lg:h-[min(28rem,52vw)] lg:aspect-auto">
           <AnimatePresence initial={false} custom={direction} mode="popLayout">
             <motion.div
               key={slide.id}
@@ -194,12 +195,20 @@ export default function ShowcaseSlider() {
                 fill
                 priority={index === 0}
                 sizes="(max-width: 1440px) 100vw, 1440px"
-                className="object-cover"
+                className={
+                  slide.fit === "contain"
+                    ? "object-contain object-right p-4 sm:p-6 lg:p-8"
+                    : "object-cover"
+                }
               />
 
-              {/* Readable gradient — no blur flash */}
+              {/* Readable gradient — softer on product-contain slides */}
               <div
-                className="absolute inset-0 bg-gradient-to-r from-black/72 via-black/40 to-black/15"
+                className={
+                  slide.fit === "contain"
+                    ? "absolute inset-0 bg-gradient-to-r from-black/78 via-black/45 to-transparent sm:from-black/70 sm:via-black/35"
+                    : "absolute inset-0 bg-gradient-to-r from-black/72 via-black/40 to-black/15"
+                }
                 aria-hidden
               />
 

@@ -23,13 +23,13 @@ function CategoryItem({ category }) {
         <span className="relative mx-auto mb-3.5 block aspect-square w-[104px] sm:w-[112px] md:w-[120px] lg:w-[128px]">
           <span className="absolute inset-0 rounded-full border-[1.5px] border-ink transition-shadow duration-300 group-hover:shadow-[0_8px_22px_rgba(201,52,46,0.12)]" />
           <span className="absolute inset-[3px] rounded-full border border-brand/80 bg-white" />
-          <span className="absolute inset-[7px] overflow-hidden rounded-full bg-[#f3f3f3] sm:inset-[8px]">
+          <span className="absolute inset-[7px] overflow-hidden rounded-full bg-white sm:inset-[8px]">
             <Image
               src={category.image}
               alt={category.label}
               fill
               sizes="128px"
-              className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+              className="object-contain p-1.5 transition-transform duration-500 ease-out group-hover:scale-110"
             />
           </span>
         </span>
@@ -93,12 +93,12 @@ export default function ShopByCategory() {
             Shop By Category
           </h2>
           <p className="mx-auto mt-3 max-w-md text-[16px] leading-relaxed text-ink/55">
-            Chemical anchors, mechanical fixings, foam, and accessories — shop by type.
+            Mortars, guns, capsules, studs, mechanical, foam, and nylon — shop by type.
           </p>
         </div>
 
         <div className="-mx-4 overflow-x-auto px-4 pb-1 [scrollbar-width:none] sm:mx-0 sm:overflow-visible sm:px-0 [&::-webkit-scrollbar]:hidden">
-          <div className="mx-auto flex w-max items-stretch justify-center gap-5 sm:grid sm:w-full sm:grid-cols-7 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-6">
+          <div className="mx-auto flex w-max items-stretch justify-center gap-5 sm:grid sm:w-full sm:max-w-6xl sm:grid-cols-4 sm:justify-items-center sm:gap-3 md:grid-cols-7 md:gap-3 lg:gap-4 xl:gap-5">
             {CATEGORY_SHORTCUTS.map((category) => (
               <CategoryItem key={category.id} category={category} />
             ))}

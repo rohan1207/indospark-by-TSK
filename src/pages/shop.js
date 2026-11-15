@@ -8,7 +8,7 @@ export default function Shop() {
     <>
       <SeoHead
         title="Shop ICFS Products"
-        description="Shop ICFS anchor fasteners — chemical mortars, guns, capsules, studs, mechanical anchors, PU foam, and nylon frame anchors. Order online across India."
+        description="Shop ICFS — chemical mortars, guns, capsules, studs, mechanical anchors, PU foam, and nylon frame anchors. Order online across India."
         path="/shop"
       />
       <Navbar />

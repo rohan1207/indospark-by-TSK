@@ -33,101 +33,85 @@ function IconBag({ className = "h-4 w-4" }) {
   );
 }
 
-function IconEye({ className = "h-4 w-4" }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
-      <path
-        d="M2.5 12s3.5-6.5 9.5-6.5S21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinejoin="round"
-      />
-      <circle cx="12" cy="12" r="2.6" stroke="currentColor" strokeWidth="1.6" />
-    </svg>
-  );
-}
-
 export default function ProductCard({ product, showCategory = false }) {
   const { addToCart, toggleWishlist, isWishlisted } = useCartWishlist();
   const wishlisted = isWishlisted(product.id);
   const price = product.priceLabel || product.price;
   const href = product.href || (product.slug ? `/shop/${product.slug}` : "/shop");
+  const title = product.shortName || product.name;
 
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-black/[0.06] bg-white transition-shadow duration-300 hover:shadow-[0_14px_36px_rgba(0,0,0,0.07)]">
-      <div className="relative aspect-[4/3] overflow-hidden bg-[#f5f5f5]">
+    <article className="group flex h-full flex-col overflow-hidden rounded-[1.25rem] bg-white ring-1 ring-black/[0.06] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_rgba(0,0,0,0.08)] hover:ring-black/10">
+      <div className="relative aspect-[5/4] overflow-hidden bg-white">
         <Link href={href} className="absolute inset-0 block">
           <Image
             src={product.image}
             alt={product.name}
             fill
             sizes="(max-width: 768px) 50vw, 25vw"
-            className="object-contain p-5 transition-transform duration-500 ease-out group-hover:scale-105"
+            className="object-contain p-6 transition-transform duration-500 ease-out group-hover:scale-[1.04]"
           />
         </Link>
 
         {product.tag && (
-          <span className="pointer-events-none absolute left-3 top-3 z-10 rounded-full bg-brand px-2.5 py-1 text-[12px] font-bold uppercase tracking-[0.08em] text-white">
+          <span className="pointer-events-none absolute left-3 top-3 z-10 rounded-full bg-ink/90 px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-white">
             {product.tag}
           </span>
         )}
 
-        <div className="absolute right-3 top-3 z-10 flex flex-col gap-2 opacity-100 transition-opacity sm:opacity-0 sm:group-hover:opacity-100">
-          <button
-            type="button"
-            aria-label={wishlisted ? "Remove from wishlist" : "Add to wishlist"}
-            onClick={(e) => {
-              e.preventDefault();
-              toggleWishlist(product.id);
-            }}
-            className={`cursor-target inline-flex h-9 w-9 items-center justify-center rounded-full border bg-white shadow-sm transition hover:border-brand hover:text-brand ${
-              wishlisted ? "border-brand text-brand" : "border-black/8 text-ink/60"
-            }`}
-          >
-            <IconHeart filled={wishlisted} />
-          </button>
-          <Link
-            href={href}
-            aria-label="View product"
-            className="cursor-target inline-flex h-9 w-9 items-center justify-center rounded-full border border-black/8 bg-white text-ink/60 shadow-sm transition hover:border-brand hover:text-brand"
-          >
-            <IconEye />
-          </Link>
-          <button
-            type="button"
-            aria-label="Add to cart"
-            onClick={(e) => {
-              e.preventDefault();
-              addToCart(product.id, 1, { open: true });
-            }}
-            className="cursor-target inline-flex h-9 w-9 items-center justify-center rounded-full border border-black/8 bg-white text-ink/60 shadow-sm transition hover:border-brand hover:bg-brand hover:text-white"
-          >
-            <IconBag />
-          </button>
-        </div>
+        <button
+          type="button"
+          aria-label={wishlisted ? "Remove from wishlist" : "Add to wishlist"}
+          onClick={(e) => {
+            e.preventDefault();
+            toggleWishlist(product.id);
+          }}
+          className={`cursor-target absolute right-3 top-3 z-10 inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/95 shadow-sm ring-1 transition hover:text-brand ${
+            wishlisted ? "text-brand ring-brand/30" : "text-ink/50 ring-black/5"
+          }`}
+        >
+          <IconHeart filled={wishlisted} />
+        </button>
       </div>
 
       <div className="flex flex-1 flex-col px-4 pb-4 pt-3.5 sm:px-5 sm:pb-5">
         {showCategory && product.categoryLabel && (
-          <p className="mb-1 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink/35">
+          <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-brand">
             {product.categoryLabel}
           </p>
         )}
         <Link href={href}>
-          <h3 className="line-clamp-2 min-h-[2.6em] text-[15px] font-semibold leading-snug tracking-[-0.01em] text-ink transition hover:text-brand sm:text-[16px]">
-            {product.name}
+          <h3 className="line-clamp-2 min-h-[2.7em] text-[15px] font-semibold leading-snug tracking-[-0.015em] text-ink transition hover:text-brand sm:text-[16px]">
+            {title}
           </h3>
         </Link>
-        <div className="mt-auto flex items-center justify-between gap-3 pt-3">
-          <p className="text-[16px] font-bold text-ink sm:text-[16px]">{price}</p>
+
+        <div className="mt-3 flex flex-wrap items-baseline gap-2">
+          <p className="text-[17px] font-bold tracking-[-0.02em] text-brand sm:text-[18px]">
+            {price}
+          </p>
+          {product.compareAtLabel && (
+            <p className="text-[13px] font-medium text-ink/35 line-through">
+              {product.compareAtLabel}
+            </p>
+          )}
+        </div>
+
+        <div className="mt-auto flex items-center gap-2 pt-4">
           <button
             type="button"
             onClick={() => addToCart(product.id, 1, { open: true })}
-            className="cursor-target btn-shine inline-flex items-center gap-1.5 rounded-full bg-ink px-3 py-1.5 text-[13px] font-semibold text-white transition hover:bg-brand sm:text-[14px]"
+            className="cursor-target btn-shine inline-flex h-10 flex-1 items-center justify-center gap-1.5 rounded-full bg-brand text-[13px] font-semibold text-white transition hover:bg-brand-deep sm:text-[14px]"
           >
             <IconBag className="h-3.5 w-3.5" />
-            Add
+            Add to cart
           </button>
+          <Link
+            href={href}
+            className="cursor-target inline-flex h-10 items-center justify-center rounded-full border border-black/10 px-3.5 text-[13px] font-semibold text-ink/70 transition hover:border-brand hover:text-brand sm:text-[14px]"
+          >
+            View
+          </Link>
         </div>
       </div>
     </article>
