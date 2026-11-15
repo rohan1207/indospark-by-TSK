@@ -280,13 +280,15 @@ function normalizeGalleryItem(item, fallbackPoster) {
     return {
       type: isVideo ? "video" : "image",
       src: item,
-      poster: isVideo ? fallbackPoster : undefined,
+      poster: isVideo ? fallbackPoster || null : null,
     };
   }
+  const type =
+    item.type || (/\.(mp4|webm|ogg|mov)$/i.test(item.src || "") ? "video" : "image");
   return {
-    type: item.type || (/\.(mp4|webm|ogg|mov)$/i.test(item.src || "") ? "video" : "image"),
+    type,
     src: item.src,
-    poster: item.poster || (item.type === "video" ? fallbackPoster : undefined),
+    poster: item.poster || (type === "video" ? fallbackPoster || null : null),
   };
 }
 
