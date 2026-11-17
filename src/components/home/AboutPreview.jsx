@@ -1,7 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+
+const YOUTUBE_ID = "BmEwjzdobek";
 
 const IMAGES = [
   {
@@ -22,6 +25,8 @@ const IMAGES = [
 ];
 
 export default function AboutPreview() {
+  const [playing, setPlaying] = useState(false);
+
   return (
     <section
       id="about-preview"
@@ -59,7 +64,7 @@ export default function AboutPreview() {
 
           <blockquote className="relative mt-5 max-w-md overflow-hidden rounded-2xl bg-white p-5 ring-1 ring-black/[0.06] sm:mt-6 sm:p-6">
             <p className="text-[16px] leading-snug text-ink/80 sm:text-[16px]">
-              Many companies talk about service. We deliver the right fastener — and let results
+              Many companies talk about service. We deliver the right fastener, and let results
               speak.
             </p>
             <footer className="mt-4 flex items-center gap-2.5">
@@ -71,7 +76,7 @@ export default function AboutPreview() {
           </blockquote>
 
           <p className="mt-4 max-w-md text-[15px] leading-relaxed text-ink/45">
-            From Kolhapur to sites across India — the same goal: the right product, on time.
+            From Kolhapur to sites across India, the same goal: the right product, on time.
           </p>
 
           <Link
@@ -85,14 +90,41 @@ export default function AboutPreview() {
         <div className="lg:col-span-7">
           <div className="grid h-[min(72svh,560px)] grid-cols-3 grid-rows-[1.15fr_0.85fr] gap-2.5 sm:gap-3 lg:h-[min(78svh,620px)]">
             <div className="relative col-span-3 overflow-hidden rounded-2xl bg-stone">
-              <iframe
-                className="absolute inset-0 h-full w-full border-0"
-                src="https://www.youtube.com/embed/BmEwjzdobek?si=8WmTqsks2JkbLt3j"
-                title="ICFS introduction"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              />
+              {playing ? (
+                <iframe
+                  className="absolute inset-0 h-full w-full border-0"
+                  src={`https://www.youtube.com/embed/${YOUTUBE_ID}?autoplay=1&rel=0`}
+                  title="ICFS introduction"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setPlaying(true)}
+                  className="group absolute inset-0 block h-full w-full cursor-pointer"
+                  aria-label="Play ICFS introduction video"
+                >
+                  <Image
+                    src="/images/about-preview/youtube-thumb.jpg"
+                    alt="ICFS introduction video"
+                    fill
+                    priority
+                    quality={90}
+                    sizes="(max-width: 1024px) 100vw, 58vw"
+                    className="object-cover"
+                  />
+                  <span className="absolute inset-0 bg-black/25 transition group-hover:bg-black/35" aria-hidden />
+                  <span className="absolute inset-0 flex items-center justify-center">
+                    <span className="flex h-14 w-14 items-center justify-center rounded-full bg-brand text-white shadow-[0_10px_28px_rgba(0,0,0,0.35)] transition group-hover:scale-105 sm:h-16 sm:w-16">
+                      <svg viewBox="0 0 24 24" className="h-5 w-5 translate-x-px sm:h-6 sm:w-6" fill="currentColor" aria-hidden>
+                        <path d="M8 5.5v13l11-6.5L8 5.5z" />
+                      </svg>
+                    </span>
+                  </span>
+                </button>
+              )}
             </div>
             {IMAGES.map((img) => (
               <div

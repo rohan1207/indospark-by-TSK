@@ -14,7 +14,7 @@ export default function CartPageView() {
           {cartCount} {cartCount === 1 ? "item" : "items"} in your cart
         </h1>
         <p className="mt-2 text-[16px] text-ink/55">
-          Subtotal {formatMoney(cartSubtotal)} — review in the drawer or continue to checkout.
+          Subtotal {formatMoney(cartSubtotal)}, review in the drawer or continue to checkout.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           {cartCount > 0 && (

@@ -8,7 +8,7 @@ export default function Wishlist() {
     <>
       <SeoHead
         title="Wishlist | ICFS Shop"
-        description="Saved ICFS fastening products — mortars, guns, capsules, anchors, foam, and more."
+        description="Saved ICFS fastening products, mortars, guns, capsules, anchors, foam, and more."
         path="/wishlist"
       />
       <Navbar />

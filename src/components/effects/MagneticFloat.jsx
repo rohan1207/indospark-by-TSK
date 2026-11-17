@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 /**
- * Subtle magnetic pull toward the cursor — smooth, elegant, restrained.
+ * Subtle magnetic pull toward the cursor, smooth, elegant, restrained.
  * Outer node keeps layout classes; inner node receives GSAP transforms.
  */
 export default function MagneticFloat({

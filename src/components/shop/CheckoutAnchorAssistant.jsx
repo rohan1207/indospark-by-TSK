@@ -217,7 +217,7 @@ export default function CheckoutAnchorAssistant({
             Size anchors & build your order
           </h2>
           <p className="mt-1.5 max-w-xl text-[14px] leading-relaxed text-ink/50 sm:text-[15px]">
-            Quick site estimate, or paste an IndoExperts BOM — not a substitute for full EN / ETAG
+            Quick site estimate, or paste an IndoExperts BOM, not a substitute for full EN / ETAG
             design software.
           </p>
         </div>
@@ -383,7 +383,7 @@ export default function CheckoutAnchorAssistant({
                 <ul className="mt-2 max-h-56 space-y-2 overflow-y-auto pr-1">
                   {filtered.length === 0 && (
                     <li className="rounded-xl bg-[#f7f6f4] px-4 py-3 text-[14px] text-ink/50">
-                      No products match these filters — try “Any” size or another category.
+                      No products match these filters, try “Any” size or another category.
                     </li>
                   )}
                   {filtered.map((p) => {
@@ -473,7 +473,7 @@ export default function CheckoutAnchorAssistant({
                   IndoExperts / Chemical Anchor Calculation
                 </Link>
                 , then paste product lines below (name or SKU + qty). We match the shop catalog and
-                add them to cart — calculation stays on the desktop software.
+                add them to cart, calculation stays on the desktop software.
               </div>
 
               <div className="grid gap-3 sm:grid-cols-2">

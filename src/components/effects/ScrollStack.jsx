@@ -21,7 +21,7 @@ const ScrollStack = ({
   rotationAmount = 0,
   blurAmount = 0,
   useWindowScroll = false,
-  /** 0–1 page-driven progress; when set, Lenis is disabled and scroll is scrubbed externally */
+  /** 0-1 page-driven progress; when set, Lenis is disabled and scroll is scrubbed externally */
   scrollProgress = null,
   onStackComplete,
 }) => {

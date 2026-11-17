@@ -241,7 +241,7 @@ export default function Footer() {
               </div>
               {status === "done" && (
                 <p className="mt-2 text-[14px] font-medium text-brand" role="status">
-                  Thanks — you’re on the list.
+                  Thanks, you’re on the list.
                 </p>
               )}
             </form>
@@ -261,12 +261,12 @@ export default function Footer() {
                 href="tel:1800123500023"
                 className="block text-[15px] text-ink/60 transition hover:text-brand"
               >
-                Toll Free — 1800 123 500 023
+                Toll Free: 1800 123 500 023
               </a>
               <p className="pt-1 text-[14px] leading-relaxed text-ink/45">
-                HQ — Kolhapur
+                HQ: Kolhapur
                 <br />
-                Studio — Pune
+                Studio: Pune
               </p>
             </div>
 
@@ -274,7 +274,7 @@ export default function Footer() {
               <span className="mt-5 block">Opening hours</span>
             </ColLabel>
             <p className="mt-2 text-[14px] uppercase tracking-[0.04em] text-ink/50">
-              Monday to Saturday / 9AM – 6PM
+              Monday to Saturday / 9AM to 6PM
             </p>
           </div>
 
@@ -318,7 +318,7 @@ export default function Footer() {
           <Link href="/" className="shrink-0" aria-label="ICFS home">
             <Image
               src="/logo1.png"
-              alt="ICFS — Indo Construction Fastening Systems"
+              alt="ICFS: Indo Construction Fastening Systems"
               width={180}
               height={60}
               className="h-10 w-auto sm:h-11"

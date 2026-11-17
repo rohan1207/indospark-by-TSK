@@ -41,7 +41,7 @@ export default function Hero() {
       className="relative isolate min-h-[calc(100svh-6.85rem)] overflow-hidden bg-[#ececec] lg:h-[calc(100svh-6.85rem)]"
       aria-labelledby="hero-heading"
     >
-      {/* Soft brand atmosphere — concrete / fastening texture */}
+      {/* Soft brand atmosphere, concrete / fastening texture */}
       <div className="pointer-events-none absolute inset-0 z-0" aria-hidden>
         <Image
           src="/images/hero-bg-anchors.jpg"
@@ -57,7 +57,7 @@ export default function Hero() {
       {/* 6.85rem ≈ navbar top bar (2.75rem) + main bar (4rem) + borders */}
       <div className="relative z-10 mx-auto flex h-full min-h-[calc(100svh-6.85rem)] w-full max-w-[1440px] flex-col px-4 py-5 sm:px-5 sm:py-6 lg:min-h-0 lg:px-6 lg:py-4 xl:px-8">
         <div className="grid min-h-0 flex-1 grid-cols-1 gap-3 lg:grid-cols-12 lg:grid-rows-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-3.5">
-          {/* Intro — top left */}
+          {/* Intro, top left */}
           <div
             data-bento
             className="flex flex-col justify-center lg:col-span-7 lg:row-start-1"
@@ -88,12 +88,12 @@ export default function Hero() {
               </div>
 
               <p className="max-w-[280px] text-[16px] leading-relaxed text-ink/55">
-                Right product on time — ICFS chemical and mechanical anchors across India.
+                Right product on time: ICFS chemical and mechanical anchors across India.
               </p>
             </div>
           </div>
 
-          {/* Feature card — 3D product model only, centered */}
+          {/* Feature card: 3D product model only, centered */}
           <div
             data-bento
             className="relative min-h-[220px] overflow-hidden rounded-[1.5rem] border border-black/5 bg-gradient-to-b from-[#fafafa] to-[#f0f0f0] shadow-[0_10px_40px_rgba(0,0,0,0.04)] lg:col-span-5 lg:row-start-1 lg:min-h-0"
@@ -105,7 +105,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Stats card — bottom left */}
+          {/* Stats card, bottom left */}
           <div
             data-bento
             data-magnetic-field
@@ -121,13 +121,13 @@ export default function Hero() {
                 </p>
               </div>
               <MagneticFloat
-                className="relative h-[9rem] w-[9rem] shrink-0 scale-[1.15] sm:h-[10.5rem] sm:w-[10.5rem] md:h-[11.5rem] md:w-[11.5rem]"
+                className="relative h-[9rem] w-[9rem] shrink-0 -translate-y-5 scale-[1.15] sm:h-[10.5rem] sm:w-[10.5rem] sm:-translate-y-7 md:h-[11.5rem] md:w-[11.5rem] md:-translate-y-8"
                 strength={0.12}
                 max={12}
               >
                 <Image
-                  src="/images/hero/foam.png"
-                  alt="ICFS PU Foam"
+                  src="/images/hero/anchors.png"
+                  alt="ICFS mechanical anchors"
                   fill
                   className="object-contain object-bottom drop-shadow-2xl"
                   sizes="200px"
@@ -136,42 +136,33 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Middle card — product collection */}
+          {/* Middle card, product collection */}
           <div
             data-bento
             data-magnetic-field
-            className="relative min-h-[200px] overflow-visible rounded-[1.5rem] bg-brand p-5 text-white sm:p-6 lg:col-span-4 lg:row-start-2 lg:min-h-0"
+            className="relative flex min-h-[220px] flex-col overflow-hidden rounded-[1.5rem] bg-brand p-4 text-white sm:p-5 lg:col-span-4 lg:row-start-2 lg:min-h-0"
           >
-            <MagneticFloat
-              className="absolute right-1 top-[-28%] z-30 h-[95%] w-[62%] translate-x-0 scale-[1.15] sm:top-[-32%]"
-              strength={0.15}
-              max={16}
-            >
-              <Image
-                src="/images/hero/anchors.png"
-                alt="ICFS mechanical anchors"
-                fill
-                className="object-contain object-top drop-shadow-2xl"
-                sizes="240px"
-                priority
-              />
-            </MagneticFloat>
-
-            <div className="relative z-10 flex h-full min-h-[180px] flex-col justify-between pr-[42%] lg:min-h-0">
-              <div>
-                <p className="text-[1.2rem] font-bold leading-snug tracking-[-0.02em] xl:text-[1.3rem]">
-                  Complete collection of ICFS fastening products
-                </p>
-                <p className="mt-1.5 text-[15px] leading-relaxed text-white/80 xl:text-[16px]">
-                  See our chemical, mechanical & foam range.
-                </p>
-              </div>
+            <div className="relative z-10 shrink-0">
+              <p className="text-[1.15rem] font-bold leading-snug tracking-[-0.02em] xl:text-[1.25rem]">
+                Complete collection of ICFS fastening products
+              </p>
               <Link
                 href="/shop"
-                className="cursor-target btn-shine mt-4 inline-flex w-fit items-center rounded-full bg-white px-4 py-2 text-[14px] font-semibold text-brand transition-colors hover:bg-white/90 xl:px-5 xl:py-2.5 xl:text-[15px]"
+                className="cursor-target btn-shine mt-3 inline-flex w-fit items-center rounded-full bg-white px-4 py-2 text-[14px] font-semibold text-brand transition-colors hover:bg-white/90 xl:px-5 xl:py-2.5 xl:text-[15px]"
               >
                 Shop products
               </Link>
+            </div>
+
+            <div className="relative mt-3 min-h-[7.5rem] flex-1 sm:min-h-[8.5rem]">
+              <Image
+                src="/images/hero/collection.png"
+                alt="ICFS complete fastening product collection"
+                fill
+                className="object-contain object-bottom translate-x-6 -translate-y-9 sm:translate-x-8 sm:-translate-y-12"
+                sizes="(max-width: 1024px) 90vw, 360px"
+                priority
+              />
             </div>
           </div>
 
@@ -187,8 +178,8 @@ export default function Hero() {
               max={14}
             >
               <Image
-                src="/images/hero/mortars.png"
-                alt="ICFS chemical mortars"
+                src="/images/hero/featured-mortars.png"
+                alt="ICFS chemical mortars: pure epoxy and injection resin cartridges"
                 fill
                 className="object-contain object-bottom drop-shadow-xl"
                 sizes="220px"
@@ -201,10 +192,10 @@ export default function Hero() {
                   Featured product
                 </p>
                 <h3 className="mt-2 text-[1.25rem] font-bold leading-snug tracking-[-0.02em] text-ink xl:text-[1.35rem]">
-                  ICFS Chemical Fastening System
+                  ICFS Chemical Mortars
                 </h3>
                 <p className="mt-2 text-[15px] leading-relaxed text-ink/55 xl:text-[16px]">
-                  High-strength chemical anchors for rebaring, façades, and heavy structural fixing.
+                  Pure epoxy and injection resins for high-load anchoring in concrete and masonry.
                 </p>
               </div>
 
@@ -212,7 +203,7 @@ export default function Hero() {
                 href="/shop?category=mortars"
                 className="cursor-target btn-shine inline-flex w-fit items-center gap-1.5 rounded-full bg-brand px-4 py-2 text-[14px] font-semibold text-white transition hover:bg-brand-deep"
               >
-                Explore product
+                Shop mortars
                 <span aria-hidden="true">→</span>
               </Link>
             </div>

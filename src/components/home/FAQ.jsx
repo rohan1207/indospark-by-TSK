@@ -10,9 +10,9 @@ const FAQS = [
       "Chemical anchors use a resin mortar to bond a stud or rebar into drilled concrete or masonry. They are used for structural fixing, façades, machinery bases, and retrofit work where a strong, even hold is needed.",
   },
   {
-    question: "Chemical vs mechanical anchors — which should I use?",
+    question: "Chemical vs mechanical anchors: which should I use?",
     answer:
-      "Mechanical anchors expand in the hole for a friction hold. Chemical anchors bond with resin and often suit higher loads, edge distances, and cracked concrete. ICFS offers both — we help you match the product to the base and the load.",
+      "Mechanical anchors expand in the hole for a friction hold. Chemical anchors bond with resin and often suit higher loads, edge distances, and cracked concrete. ICFS offers both. We help you match the product to the base and the load.",
   },
   {
     question: "How do I choose the right fastener?",
@@ -172,7 +172,7 @@ export default function FAQ() {
                     <IconArrowOut className="h-3.5 w-3.5 text-ink/30 transition group-hover:text-brand" />
                   </span>
                   <span className="mt-0.5 block text-[14px] text-ink/45">
-                    Weekdays, 9:00–18:00 IST
+                    Weekdays, 9:00-18:00 IST
                   </span>
                 </span>
               </a>

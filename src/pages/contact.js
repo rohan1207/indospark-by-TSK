@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <>
       <SeoHead
-        title="Contact Us — ICFS"
+        title="Contact Us: ICFS"
         description="Contact ICFS for chemical and mechanical anchor fasteners. Head office Kolhapur, branches in Pune & Mumbai. Call 1800 123 500 023 or email email@icfs.in."
         path="/contact"
       />

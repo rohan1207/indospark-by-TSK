@@ -202,7 +202,7 @@ export default function ShowcaseSlider() {
                 }
               />
 
-              {/* Readable gradient — softer on product-contain slides */}
+              {/* Readable gradient, softer on product-contain slides */}
               <div
                 className={
                   slide.fit === "contain"

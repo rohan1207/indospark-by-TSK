@@ -408,7 +408,7 @@ export default function PullOutTestBooking() {
             <div className="sm:col-span-2">
               <Field
                 label="Upload Site Photographs"
-                hint="Optional. Multiple images allowed — maximum 5 images, 5 MB each (JPG, PNG, WEBP)."
+                hint="Optional. Multiple images allowed, maximum 5 images, 5 MB each (JPG, PNG, WEBP)."
               >
                 <input
                   type="file"

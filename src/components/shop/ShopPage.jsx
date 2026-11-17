@@ -70,7 +70,7 @@ export default function ShopPage() {
               </h1>
               <p className="mt-2 max-w-lg text-[16px] leading-relaxed text-ink/55 sm:text-[16px]">
                 Chemical mortars, guns, capsules, studs, mechanical anchors, PU foam, and
-                nylon frame anchors — order online for sites across India.
+                nylon frame anchors, order online for sites across India.
               </p>
             </div>
 

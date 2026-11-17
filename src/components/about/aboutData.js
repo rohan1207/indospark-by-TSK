@@ -29,7 +29,7 @@ export const VERTICALS = [
     title: "Chemical anchors",
     eyebrow: "Products",
     summary:
-      "Resin mortars, capsules, and studs for bonded fixing in concrete and masonry — with clear specs for site use.",
+      "Resin mortars, capsules, and studs for bonded fixing in concrete and masonry, with clear specs for site use.",
     points: [
       "Pure epoxy, vinylester, and polyester mortars",
       "Zinc, SS 304, and SS 316 studs and bolts",
@@ -72,7 +72,7 @@ export const VERTICALS = [
 export const TIMELINE = [
   {
     year: "1978",
-    text: "A small workshop in Kolhapur — the start of our journey.",
+    text: "A small workshop in Kolhapur, the start of our journey.",
     tag: "origins",
     image: "/images/history/workshop.jpg",
   },
@@ -160,7 +160,7 @@ export const ACHIEVEMENTS = [
   {
     tag: "Community",
     title: "Trade shows & milestones",
-    text: "From MAHATECH floors to anniversary events — meeting engineers and builders face to face.",
+    text: "From MAHATECH floors to anniversary events, meeting engineers and builders face to face.",
     image: "/images/news/exhibition.png",
   },
   {

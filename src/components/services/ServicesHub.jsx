@@ -37,7 +37,7 @@ export default function ServicesHub() {
             </div>
             <div className="lg:pb-1">
               <p className="max-w-md text-[16px] leading-relaxed text-ink/55">
-                Two focused services from ICFS — prove anchor hold on site with calibrated pull-out
+                Two focused services from ICFS, prove anchor hold on site with calibrated pull-out
                 testing, and install chemical and mechanical fasteners correctly.
               </p>
               <div className="mt-6 flex flex-wrap items-center gap-3">
@@ -163,7 +163,7 @@ export default function ServicesHub() {
               Need a pull-out test or installation crew?
             </h3>
             <p className="mx-auto mt-3 max-w-md text-[15px] text-white/60">
-              Call toll free 1800 123 500 023 or email email@icfs.in — we serve sites across India.
+              Call toll free 1800 123 500 023 or email email@icfs.in, we serve sites across India.
             </p>
             <Link
               href="/contact"

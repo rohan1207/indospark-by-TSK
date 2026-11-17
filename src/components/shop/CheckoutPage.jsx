@@ -103,7 +103,7 @@ export default function CheckoutPage() {
     if (!hydrated) return;
     if (orderId) return;
     if (cartCount === 0) {
-      // empty cart — leave them on page with empty state
+      // empty cart, leave them on page with empty state
     }
   }, [hydrated, cartCount, orderId]);
 
@@ -367,12 +367,12 @@ export default function CheckoutPage() {
                         {
                           id: "standard",
                           title: "Standard dispatch",
-                          text: cartSubtotal >= 5000 ? "Free · 4–7 business days" : "₹199 · 4–7 business days",
+                          text: cartSubtotal >= 5000 ? "Free · 4-7 business days" : "₹199 · 4-7 business days",
                         },
                         {
                           id: "express",
                           title: "Express",
-                          text: "₹499 · 1–3 business days (metros)",
+                          text: "₹499 · 1-3 business days (metros)",
                         },
                         {
                           id: "pickup",
@@ -421,7 +421,7 @@ export default function CheckoutPage() {
                         {
                           id: "quote",
                           title: "Request project quote",
-                          text: "Best for bulk / site orders — our team confirms pricing.",
+                          text: "Best for bulk / site orders, our team confirms pricing.",
                         },
                         {
                           id: "cod",

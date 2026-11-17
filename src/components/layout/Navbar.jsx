@@ -253,7 +253,7 @@ export default function Navbar() {
         <Link href="/" className="relative shrink-0" aria-label="ICFS home">
           <Image
             src="/logo1.png"
-            alt="ICFS — Indo Construction Fastening Systems"
+            alt="ICFS: Indo Construction Fastening Systems"
             width={240}
             height={80}
             priority

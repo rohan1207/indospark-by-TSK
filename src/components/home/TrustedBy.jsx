@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-/** Row A — scrolls right → left */
+/** Row A, scrolls right → left */
 const ROW_A = [
   { src: "/images/clients/client-01.jpg", alt: "Client partner 1" },
   { src: "/images/clients/client-02.jpg", alt: "Client partner 2" },
@@ -13,7 +13,7 @@ const ROW_A = [
   { src: "/images/clients/client-07.jpg", alt: "Client partner 7" },
 ];
 
-/** Row B — scrolls left → right (different set) */
+/** Row B, scrolls left → right (different set) */
 const ROW_B = [
   { src: "/images/clients/client-08.jpg", alt: "Client partner 8" },
   { src: "/images/clients/client-09.jpg", alt: "Client partner 9" },

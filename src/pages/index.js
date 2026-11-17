@@ -18,7 +18,7 @@ export default function Home() {
     <>
       <SeoHead
         title="Chemical & Mechanical Anchor Fasteners"
-        description="ICFS — chemical and mechanical anchor fasteners for construction. Shop mortars, studs, capsules, guns, and accessories online across India."
+        description="ICFS, chemical and mechanical anchor fasteners for construction. Shop mortars, studs, capsules, guns, and accessories online across India."
         path="/"
       />
       <Navbar />

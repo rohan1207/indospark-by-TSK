@@ -76,7 +76,7 @@ function AboutHero() {
       aria-labelledby="about-hero-heading"
     >
       <div className="mx-auto max-w-[1440px] px-4 py-10 sm:px-5 sm:py-12 lg:px-6 lg:py-14 xl:px-8">
-        {/* Centered headline — matches reference */}
+        {/* Centered headline, matches reference */}
         <h1
           id="about-hero-heading"
           className="mx-auto max-w-3xl text-center text-[clamp(1.75rem,3.6vw,2.85rem)] font-bold leading-[1.12] tracking-[-0.03em] text-ink"
@@ -84,9 +84,9 @@ function AboutHero() {
           Anchor fasteners. Clear specs. On-time supply.
         </h1>
 
-        {/* Bento grid — same structure as reference */}
+        {/* Bento grid, same structure as reference */}
         <div className="mt-8 grid grid-cols-1 gap-3 sm:mt-10 sm:grid-cols-2 sm:gap-3.5 lg:grid-cols-[0.9fr_1.55fr_1fr_1.05fr] lg:grid-rows-[minmax(300px,1fr)] lg:items-stretch">
-          {/* Col 1 — stacked: stat / pill / stat */}
+          {/* Col 1, stacked: stat / pill / stat */}
           <div className="flex flex-col gap-3 sm:gap-3.5 lg:min-h-[440px]">
             <div className="flex flex-1 flex-col justify-between rounded-[1.5rem] bg-[#fceeed] p-5 sm:rounded-[1.75rem] sm:p-6">
               <div>
@@ -156,7 +156,7 @@ function AboutHero() {
             </div>
           </div>
 
-          {/* Col 2 — large feature image */}
+          {/* Col 2, large feature image */}
           <div className="relative min-h-[260px] overflow-hidden rounded-[1.5rem] sm:col-span-2 sm:min-h-[320px] sm:rounded-[1.75rem] lg:col-span-1 lg:min-h-0">
             <Image
               src="/images/news/exhibition.png"
@@ -175,7 +175,7 @@ function AboutHero() {
             </p>
           </div>
 
-          {/* Col 3 — stacked image + reviews */}
+          {/* Col 3, stacked image + reviews */}
           <div className="flex flex-col gap-3 sm:gap-3.5 lg:min-h-[420px]">
             <div className="relative min-h-[180px] flex-1 overflow-hidden rounded-[1.5rem] sm:rounded-[1.75rem] lg:min-h-0">
               <Image
@@ -216,7 +216,7 @@ function AboutHero() {
             </div>
           </div>
 
-          {/* Col 4 — tall CTA panel */}
+          {/* Col 4, tall CTA panel */}
           <div className="relative flex min-h-[280px] flex-col justify-between overflow-hidden rounded-[1.5rem] bg-[#f4f4f4] p-5 sm:min-h-[320px] sm:rounded-[1.75rem] sm:p-6 lg:min-h-0">
             <div
               className="pointer-events-none absolute -right-8 -top-8 h-40 w-40 rounded-full bg-brand/20"
@@ -334,7 +334,7 @@ function OverviewSection() {
     >
       <div className="mx-auto flex min-h-[calc(100svh-10.1rem)] max-w-[1440px] flex-col justify-center px-4 py-8 sm:px-5 sm:py-10 lg:h-[calc(100svh-10.1rem)] lg:min-h-0 lg:px-6 lg:py-6 xl:px-8 xl:py-8">
         <div className="grid flex-1 items-stretch gap-7 lg:grid-cols-2 lg:gap-10 xl:gap-12">
-          {/* Left — copy + social, vertically balanced */}
+          {/* Left, copy + social, vertically balanced */}
           <FadeIn className="flex h-full flex-col justify-between gap-8 lg:py-1">
             <div>
               <p className="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand">
@@ -346,7 +346,7 @@ function OverviewSection() {
               </h2>
               <p className="mt-3 max-w-md text-[16px] leading-relaxed text-ink/55">
                 ICFS supplies anchor fasteners that hold when the load matters. Clear specs, steady
-                stock, and support across India — including Solapur, Hyderabad, Bengaluru, Chiplun,
+                stock, and support across India, including Solapur, Hyderabad, Bengaluru, Chiplun,
                 and Mumbai.
               </p>
               <div className="mt-5 flex flex-wrap gap-2.5">
@@ -381,7 +381,7 @@ function OverviewSection() {
                 From our fastening house
               </h3>
               <p className="mt-1.5 max-w-sm text-[14px] leading-relaxed text-ink/50 sm:text-[15px]">
-                Jobsite sales, consultation, and ETA-backed ICFS products — customers talk about the
+                Jobsite sales, consultation, and ETA-backed ICFS products, customers talk about the
                 service.
               </p>
               <div className="mt-4 flex flex-wrap items-center gap-3.5">
@@ -426,7 +426,7 @@ function OverviewSection() {
             </div>
           </FadeIn>
 
-          {/* Right — video fills height, stats + gallery lock to bottom */}
+          {/* Right, video fills height, stats + gallery lock to bottom */}
           <FadeIn delay={0.06} className="flex min-h-0 flex-col gap-3.5 lg:h-full">
             <div className="relative min-h-[200px] flex-1 overflow-hidden rounded-[1.15rem] sm:min-h-[240px] sm:rounded-[1.35rem] lg:min-h-0">
               <Image
@@ -522,7 +522,7 @@ function VerticalsSection() {
 
   return (
     <section id="verticals" className="scroll-mt-[10.5rem] bg-white">
-      {/* Tall runway — panel locks while page scroll scrubs the stack */}
+      {/* Tall runway, panel locks while page scroll scrubs the stack */}
       <div ref={runwayRef} className="relative h-[260svh]">
         <div className="sticky top-[calc(6.85rem+3.25rem)] flex h-[calc(100svh-6.85rem-3.25rem)] items-center overflow-hidden border-b border-black/[0.05] bg-white">
           <div className="mx-auto grid h-full w-full max-w-[1440px] items-center gap-6 px-4 sm:px-5 lg:grid-cols-12 lg:gap-10 lg:px-6 xl:gap-12 xl:px-8">
@@ -533,7 +533,7 @@ function VerticalsSection() {
                   Anchors and the tools to size them
                 </h2>
                 <p className="mt-3 max-w-sm text-[16px] leading-relaxed text-ink/55 sm:text-[16px]">
-                  Chemical anchors, mechanical anchors, and free design software — scroll to explore
+                  Chemical anchors, mechanical anchors, and free design software, scroll to explore
                   each line.
                 </p>
                 <div className="mt-6 flex items-center gap-3" aria-hidden>
@@ -623,10 +623,10 @@ function LeadershipSection() {
       className="scroll-mt-[10.1rem] overflow-hidden bg-white"
     >
       <div className="mx-auto grid min-h-[min(88svh,720px)] max-w-[1440px] lg:grid-cols-12">
-        {/* Left — modern quote card */}
+        {/* Left, modern quote card */}
         <FadeIn className="flex items-center px-4 py-12 sm:px-5 sm:py-14 lg:col-span-6 lg:px-6 lg:py-16 xl:px-8">
           <blockquote className="relative w-full overflow-hidden rounded-[2rem] bg-brand p-7 text-white sm:rounded-[2.5rem] sm:p-9 lg:rounded-[2.75rem] lg:p-10 xl:p-12">
-            {/* Soft geometric accents — shape interest, not a second card */}
+            {/* Soft geometric accents, shape interest, not a second card */}
             <span
               className="pointer-events-none absolute -right-16 -top-20 h-56 w-56 rounded-full bg-white/10"
               aria-hidden
@@ -663,12 +663,12 @@ function LeadershipSection() {
                 </p>
                 <p>
                   From a small workshop with two people in 1978 to a trusted fastener brand in
-                  India — the journey had challenges. We stayed honest, delivered on time, and
+                  Across India, the journey had challenges. We stayed honest, delivered on time, and
                   kept quality first.
                 </p>
                 <p>
                   Two things made ICFS grow: the wisdom of our chairperson Mr. Tilakchand Ingale
-                  and his trust in people — and the hard work of our team, young and old.
+                  and his trust in people, and the hard work of our team, young and old.
                 </p>
               </div>
 
@@ -684,14 +684,14 @@ function LeadershipSection() {
           </blockquote>
         </FadeIn>
 
-        {/* Right — founder PNG flush to bottom; no card / shadow / frame */}
+        {/* Right, founder PNG flush to bottom; no card / shadow / frame */}
         <FadeIn
           delay={0.08}
           className="relative flex min-h-[420px] items-end justify-center bg-white lg:col-span-6 lg:min-h-0"
         >
           <Image
             src="/founder.png"
-            alt="ICFS founders — Tilakchand Ingale and Sandeep Ingale"
+            alt="ICFS founders: Tilakchand Ingale and Sandeep Ingale"
             width={920}
             height={1100}
             priority
@@ -710,11 +710,11 @@ function AchievementsSection() {
         <FadeIn className="max-w-2xl">
           <SectionLabel>Exhibitions · Events · Approvals</SectionLabel>
           <h2 className="mt-3 text-[clamp(1.75rem,3.2vw,2.75rem)] font-bold tracking-[-0.035em] text-ink">
-            Proof on the floor — and on paper.
+            Proof on the floor, and on paper.
           </h2>
           <p className="mt-3 text-[16px] leading-relaxed text-ink/55 sm:text-[16px]">
             Limca records, ETA approvals, UK partnership, anniversary milestones, and industry
-            exhibitions — curated highlights from a long public journey.
+            exhibitions, curated highlights from a long public journey.
           </p>
         </FadeIn>
 
@@ -759,7 +759,7 @@ function AchievementsSection() {
             Need the right anchor for your project?
           </h3>
           <p className="mx-auto mt-3 max-w-md text-[16px] text-white/55">
-            Tell us the job — we will help you pick the product and get it to site.
+            Tell us the job. We will help you pick the product and get it to site.
           </p>
           <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
             <Link

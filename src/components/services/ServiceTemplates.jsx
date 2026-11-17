@@ -104,7 +104,7 @@ export function ServiceDetail({ service }) {
           {service.equipment && (
             <section>
               <h2 className="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand">
-                Test unit — {service.equipment.model}
+                Test unit {service.equipment.model}
               </h2>
               <p className="mt-2 text-[18px] font-bold tracking-[-0.02em] text-ink">
                 {service.equipment.name}
@@ -199,7 +199,7 @@ export function ServiceDetail({ service }) {
                 >
                   <Image
                     src={src}
-                    alt={`${service.title} — image ${i + 1}`}
+                    alt={`${service.title}, image ${i + 1}`}
                     fill
                     sizes={i === 0 ? "80vw" : "40vw"}
                     className="object-cover"
@@ -539,8 +539,7 @@ export function ProjectDetail({ project }) {
                 <p className="font-display text-[17px] leading-snug italic text-white/90 sm:text-[19px]">
                   “{project.quote.text}”
                 </p>
-                <footer className="mt-4 text-[14px] font-semibold uppercase tracking-[0.12em] text-white/40">
-                  — {project.quote.by}
+                <footer className="mt-4 text-[14px] font-semibold uppercase tracking-[0.12em] text-white/40"> {project.quote.by}
                 </footer>
               </blockquote>
             )}

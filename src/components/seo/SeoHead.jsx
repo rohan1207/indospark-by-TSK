@@ -3,7 +3,7 @@ import Head from "next/head";
 const SITE_NAME = "ICFS";
 const SITE_URL = "https://www.indospark.com";
 const DEFAULT_DESCRIPTION =
-  "ICFS — chemical and mechanical anchor fasteners for construction. Shop mortars, studs, capsules, guns, and accessories online across India.";
+  "ICFS, chemical and mechanical anchor fasteners for construction. Shop mortars, studs, capsules, guns, and accessories online across India.";
 
 export default function SeoHead({
   title = "Chemical & Mechanical Anchor Fasteners",

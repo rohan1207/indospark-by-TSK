@@ -8,7 +8,7 @@ export default function ServicesPage() {
     <>
       <SeoHead
         title="Pull Out Test & Installation Services"
-        description="ICFS pull-out testing (POT) and chemical/mechanical anchor installation — on-site tests up to 75 tons, calibrated equipment, and co-signed reports across India."
+        description="ICFS pull-out testing (POT) and chemical/mechanical anchor installation, on-site tests up to 75 tons, calibrated equipment, and co-signed reports across India."
         path="/services"
       />
       <Navbar />

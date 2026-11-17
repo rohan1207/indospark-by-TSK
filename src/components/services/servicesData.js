@@ -1,4 +1,4 @@
-/** ICFS site services — Pull Out Test (POT) and Installation only */
+/** ICFS site services: Pull Out Test (POT) and Installation only */
 
 export const SERVICE_SECTORS = [
   "Structural fixing",
@@ -12,7 +12,7 @@ export const SERVICES = [
     slug: "pull-out-test",
     title: "Pull Out Test (POT)",
     short:
-      "On-site pull-out testing for chemical anchors, mechanical anchors, and rebars — calibrated equipment, clear reports, tested with you on site.",
+      "On-site pull-out testing for chemical anchors, mechanical anchors, and rebars, calibrated equipment, clear reports, tested with you on site.",
     hero: "Prove the hold. Test on site. Get a co-signed report.",
     image: "/images/banners/mechanical-anchors.png",
     gallery: [
@@ -21,7 +21,7 @@ export const SERVICES = [
       "/images/news/exhibition.png",
       "/images/banners/design-software.png",
     ],
-    highlights: ["Up to 75 tons", "Dia 8–40 mm", "On-site report"],
+    highlights: ["Up to 75 tons", "Dia 8-40 mm", "On-site report"],
     overview:
       "Pull-out tests measure anchor strength under tensile load for mechanical anchors, chemical anchors, and rebars. ICFS runs tests from diameter 8 mm to 40 mm, with capacity up to 75 tons on site. Hydraulic equipment applies tension to extract the rebar or stud so you can see how the fixing performs. Tests happen at your site, with you or your consultant present. Trained staff handle the work for accuracy and safety. You decide how many anchors to test and the target load. After the test, a detailed report is co-signed by your team and ICFS. Reports cover anchor performance and base-material suitability. We use calibrated gauges and equipment. Pull-out testing confirms anchoring quality and whether the substrate can take the planned load.",
     capabilities: [
@@ -41,16 +41,16 @@ export const SERVICES = [
     ],
     equipment: {
       model: "IPT-30-Y",
-      name: "Pull Out Test Unit — 30 Ton",
+      name: "Pull Out Test Unit: 30 Ton",
       maxForce: "30 tons",
-      rebarSizes: "Ø 8–16 mm and Ø 20–38 mm",
+      rebarSizes: "Ø 8-16 mm and Ø 20-38 mm",
       description:
-        "The rebar under full test is clamped by a gripper unit with a pair of tapered jaws and hardened serration on the gripping surfaces. The tapered jaws slide in a housing on an inverted hollow jack of 30-ton capacity. When the jack is pressurised with a high-pressure hand pump, the jaws grip the rebar and tension the bar. Load is read on a load-calibrated pressure gauge. Gripper units come in two sizes: IPT 10–16 mm and IPT 20–38 mm.",
+        "The rebar under full test is clamped by a gripper unit with a pair of tapered jaws and hardened serration on the gripping surfaces. The tapered jaws slide in a housing on an inverted hollow jack of 30-ton capacity. When the jack is pressurised with a high-pressure hand pump, the jaws grip the rebar and tension the bar. Load is read on a load-calibrated pressure gauge. Gripper units come in two sizes: IPT 10-16 mm and IPT 20-38 mm.",
       kit: [
         "30-ton centre-hole jack",
         "Hand pump unit and load-calibrated pressure gauge assembly",
-        "Rebar puller jaw assembly (10–16 mm) in steel carry box",
-        "Rebar puller jaw assembly (20–38 mm) in steel carry box",
+        "Rebar puller jaw assembly (10-16 mm) in steel carry box",
+        "Rebar puller jaw assembly (20-38 mm) in steel carry box",
       ],
       note: "All equipment is packed in steel carry boxes.",
     },
@@ -59,48 +59,48 @@ export const SERVICES = [
       rows: [
         {
           product: "Chemical Anchor Stud (CAS) / Rebar",
-          light: "6–16 mm (up to ~3.5 ton class)",
-          heavy: "8–40 mm (up to ~60 ton class)",
+          light: "6-16 mm (up to ~3.5 ton class)",
+          heavy: "8-40 mm (up to ~60 ton class)",
         },
         {
           product: "Indo Wedge Anchor (IWA)",
-          light: "6–16 mm",
-          heavy: "8–30 mm",
+          light: "6-16 mm",
+          heavy: "8-30 mm",
         },
         {
           product: "Through Bolt Anchor (TBA)",
-          light: "6–16 mm",
-          heavy: "8–24 mm",
+          light: "6-16 mm",
+          heavy: "8-24 mm",
         },
         {
           product: "Lite Wedge Anchor (LWA)",
-          light: "6–16 mm",
-          heavy: "8–24 mm",
+          light: "6-16 mm",
+          heavy: "8-24 mm",
         },
         {
           product: "Drop In Anchor (DIA)",
-          light: "6–16 mm",
-          heavy: "8–24 mm",
+          light: "6-16 mm",
+          heavy: "8-24 mm",
         },
         {
           product: "Indo Prime Bolt Zone (IPBZ)",
-          light: "6–16 mm",
-          heavy: "8–20 mm",
+          light: "6-16 mm",
+          heavy: "8-20 mm",
         },
         {
           product: "Indo Concrete Screw (ICS)",
-          light: "8–16 mm",
-          heavy: "8–12 mm",
+          light: "8-16 mm",
+          heavy: "8-12 mm",
         },
         {
           product: "Nylon Frame Plug (NFP)",
-          light: "10 mm / 8–12 mm",
-          heavy: "5–8 mm",
+          light: "10 mm / 8-12 mm",
+          heavy: "5-8 mm",
         },
         {
           product: "Nylon Hammer Fixing Plug (NHF)",
-          light: "5–8 mm",
-          heavy: "—",
+          light: "5-8 mm",
+          heavy: "-",
         },
       ],
     },
@@ -123,7 +123,7 @@ export const SERVICES = [
     slug: "installation",
     title: "Installation Services",
     short:
-      "Professional on-site installation of chemical and mechanical anchors — correct depth, cleaning, and fixing for reliable hold.",
+      "Professional on-site installation of chemical and mechanical anchors, correct depth, cleaning, and fixing for reliable hold.",
     hero: "Right product. Correct install. Hold you can trust.",
     image: "/images/banners/chemical-mortars.png",
     gallery: [
@@ -134,7 +134,7 @@ export const SERVICES = [
     ],
     highlights: ["Chemical & mechanical", "Site crews", "Spec-led"],
     overview:
-      "ICFS installation services cover chemical and mechanical anchor fixing on site. Our teams follow product data sheets for hole diameter, depth, cleaning, and cure times — so the fastener performs as specified. We support new fixing, retrofit work, and project supply with installation where you need trained hands on the tools.",
+      "ICFS installation services cover chemical and mechanical anchor fixing on site. Our teams follow product data sheets for hole diameter, depth, cleaning, and cure times, so the fastener performs as specified. We support new fixing, retrofit work, and project supply with installation where you need trained hands on the tools.",
     capabilities: [
       "Chemical mortar and capsule installation",
       "Mechanical wedge, through-bolt, and drop-in fixing",

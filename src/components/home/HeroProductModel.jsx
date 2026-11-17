@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import CubeLoader from "@/components/effects/CubeLoader";
 
 /**
- * Hero product turntable — auto-spins, drag / touch to orbit.
+ * Hero product turntable, auto-spins, drag / touch to orbit.
  * Shows a minimal 3D cube loader until the GLB is ready (no poster image).
  */
 export default function HeroProductModel() {

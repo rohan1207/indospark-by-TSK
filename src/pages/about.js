@@ -7,7 +7,7 @@ export default function About() {
   return (
     <>
       <SeoHead
-        title="About ICFS — Anchor Fasteners Since 1978"
+        title="About ICFS: Anchor Fasteners Since 1978"
         description="ICFS makes chemical and mechanical anchor fasteners for construction. Learn our story, product range, and the team behind reliable hold on site."
         path="/about"
       />

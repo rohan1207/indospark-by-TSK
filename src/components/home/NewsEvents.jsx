@@ -9,7 +9,7 @@ const ITEMS = [
     id: "exhibition",
     tag: "Events",
     title: "Exhibition, Events & Achievements",
-    excerpt: "MAHATECH, Pune — ICFS on the floor with live demos and project conversations.",
+    excerpt: "MAHATECH, Pune: ICFS on the floor with live demos and project conversations.",
     href: "/news/mahatech-pune",
     image: "/images/news/exhibition.png",
     alt: "ICFS exhibition booth at a trade fair",
@@ -19,7 +19,7 @@ const ITEMS = [
     tag: "Software",
     title: "ICFS Chemical Anchor / Rebar Design",
     excerpt:
-      "Select chemical anchors, cartridge volumes, loads, and concrete dimensions — download the design tools engineers rely on.",
+      "Select chemical anchors, cartridge volumes, loads, and concrete dimensions, download the design tools engineers rely on.",
     href: "/design-software",
     image: "/images/news/software.png",
     alt: "ICFS chemical anchor design software on a workstation",
@@ -28,10 +28,10 @@ const ITEMS = [
     id: "video",
     tag: "Video",
     title: "ICFS Introduction",
-    excerpt: "A short film on ICFS chemical and mechanical anchors — and how we support your projects.",
+    excerpt: "A short film on ICFS chemical and mechanical anchors, and how we support your projects.",
     href: "https://www.youtube.com/@indospark/videos",
     image: "/images/news/video.png",
-    alt: "ICFS product introduction video thumbnail",
+    alt: "ICFS anchor fasteners product film thumbnail",
     external: true,
     isVideo: true,
   },
@@ -39,10 +39,10 @@ const ITEMS = [
     id: "catalogue",
     tag: "Resources",
     title: "New product catalogue release",
-    excerpt: "Updated specs across chemical mortars, mechanical anchors, capsules, and site accessories — ready to download.",
+    excerpt: "Updated specs across chemical mortars, mechanical anchors, capsules, and site accessories, ready to download.",
     href: "/catalogue",
-    image: "/images/banners/mechanical-anchors.png",
-    alt: "ICFS mechanical anchors product photography",
+    image: "/images/hero/collection.png",
+    alt: "ICFS chemical mortars, foam, guns, and anchors product range",
   },
 ];
 
@@ -65,6 +65,7 @@ function NewsCard({ item, index }) {
           src={item.image}
           alt={item.alt}
           fill
+          quality={item.isVideo ? 90 : 75}
           sizes="(max-width: 1024px) 100vw, 33vw"
           className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
         />

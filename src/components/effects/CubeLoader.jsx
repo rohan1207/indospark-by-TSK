@@ -1,6 +1,6 @@
 "use client";
 
-/** Minimal CSS 3D cube — used while the hero GLB loads */
+/** Minimal CSS 3D cube, used while the hero GLB loads */
 export default function CubeLoader({ className = "", label = "Loading 3D model" }) {
   return (
     <div

@@ -8,7 +8,7 @@ export default function DesignSoftwarePage() {
     <>
       <SeoHead
         title="Anchor Design Software"
-        description="Free ICFS tools to size chemical and mechanical anchors — mobile and desktop software for engineers and contractors."
+        description="Free ICFS tools to size chemical and mechanical anchors, mobile and desktop software for engineers and contractors."
         path="/design-software"
       />
       <Navbar />

@@ -147,7 +147,7 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-white text-ink">
-      {/* Hero — split like home: copy + CTAs + full visual */}
+      {/* Hero, split like home: copy + CTAs + full visual */}
       <section
         className="relative overflow-hidden bg-[#f4f4f4]"
         aria-labelledby="contact-hero-heading"
@@ -177,7 +177,7 @@ export default function ContactPage() {
             </h1>
             <p className="mt-4 max-w-md text-[16px] leading-relaxed text-ink/55 sm:text-[16px]">
               Send your enquiry and we will reply soon. Chemical and mechanical anchors for sites
-              across India — Kolhapur, Pune, Mumbai, and beyond.
+              across India: Kolhapur, Pune, Mumbai, and beyond.
             </p>
 
             <div className="mt-7 flex flex-wrap items-center gap-2.5">
@@ -271,7 +271,7 @@ export default function ContactPage() {
                 Reach the right desk, first time.
               </h2>
               <p className="mt-3 max-w-md text-[16px] leading-relaxed text-ink/50 sm:text-[16px]">
-                Prefer a direct line? Use quick contact below — or fill the form and we&apos;ll
+                Prefer a direct line? Use quick contact below, or fill the form and we&apos;ll
                 respond from the right desk.
               </p>
             </FadeIn>

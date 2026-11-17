@@ -1,4 +1,4 @@
-/** ICFS product catalog — categories with products inside. Add products one by one. */
+/** ICFS product catalog, categories with products inside. Add products one by one. */
 
 const IMG = {
   mortars: "/images/categories/mortars.png",
@@ -64,7 +64,7 @@ export const CATEGORY_SHORTCUTS = SHOP_CATEGORIES.filter((c) => c.id !== "all");
 
 /**
  * Products by category id.
- * Only real products — no dummy SKUs. Add the next product under its category when ready.
+ * Only real products, no dummy SKUs. Add the next product under its category when ready.
  */
 const PRODUCTS_BY_CAT = {
   mortars: [
@@ -90,7 +90,7 @@ const PRODUCTS_BY_CAT = {
         `${AGNI360_BASE}/typical.jpg`,
       ],
       shortDescription:
-        "High-performance rapid-curing two-component polyester injection mortar for anchor bolt fixing — 350 ml side-by-side cartridge.",
+        "High-performance rapid-curing two-component polyester injection mortar for anchor bolt fixing: 350 ml side-by-side cartridge.",
       description: [
         "The CM360P / AGNI360 is a high performance rapid curing two-component chemical injection anchoring system based on high reactivity unsaturated Polyester resin. The side by side cartridge format comprises of a resin and hardening agent in separated internal compartments that are mixed to the correct ratio when triggered using the required manual dispenser.",
         "The resin is available in grey colour. All features combined make Polyester anchoring resin a versatile and cost effective anchoring system. Polyester CM360P is available in CiC (foil pack), C-CN (co-axial) and S-SN (side-by-side) cartridges.",
@@ -106,7 +106,7 @@ const PRODUCTS_BY_CAT = {
       ],
       features: [
         "Rapid curing two-component polyester system",
-        "Side-by-side cartridge — resin and hardener mixed on dispense",
+        "Side-by-side cartridge, resin and hardener mixed on dispense",
         "Cost-effective for medium-load anchoring",
         "Grey resin colour for clean site identification",
         "Compatible with ICFS chemical dispenser guns",
@@ -142,7 +142,7 @@ const PRODUCTS_BY_CAT = {
       installationImage: `${AGNI360_BASE}/installation.jpg`,
       installationSteps: [
         "Drill the hole to the specified diameter and depth for the stud / rebar.",
-        "Clean the hole thoroughly — brush and blow out dust until clear.",
+        "Clean the hole thoroughly, brush and blow out dust until clear.",
         "Fit the mixing nozzle and dispense a small amount until resin is evenly mixed.",
         "Inject from the bottom of the hole while withdrawing the nozzle.",
         "Insert the stud or rebar with a twisting motion to the required embedment.",
@@ -170,10 +170,10 @@ const PRODUCTS_BY_CAT = {
         { type: "image", src: `${CM350VESF_BASE}/applications.jpg` },
       ],
       shortDescription:
-        "Styrene-free vinylester injection mortar for high-load anchoring in concrete and masonry — 350 ml cartridge with ETA approvals.",
+        "Styrene-free vinylester injection mortar for high-load anchoring in concrete and masonry: 350 ml cartridge with ETA approvals.",
       description: [
         "ICFS CM350VESF is a high-performance styrene-free vinylester chemical injection anchoring system for medium to heavy-duty fixing in concrete and masonry. The dual-component cartridge mixes resin and hardener through the nozzle for consistent bond strength on site.",
-        "Engineered for demanding installs — including damp and wet holes, close-to-edge fixing, and outdoor environments — CM350VESF delivers fast working times for early loading when the schedule is tight.",
+        "Engineered for demanding installs, including damp and wet holes, close-to-edge fixing, and outdoor environments: CM350VESF delivers fast working times for early loading when the schedule is tight.",
       ],
       variant: "350ml cartridge",
       material: "Vinylester (styrene free)",
@@ -212,22 +212,22 @@ const PRODUCTS_BY_CAT = {
       documents: [
         {
           title: "Certificate of Constancy of Performance",
-          type: "PDF — Approval",
+          type: "PDF: Approval",
           href: `${CM350VESF_BASE}/documents/certificate-constancy-of-performance.pdf`,
         },
         {
-          title: "ETA 14/0170 — Bonded injection type anchor",
-          type: "PDF — Approval",
+          title: "ETA 14/0170: Bonded injection type anchor",
+          type: "PDF: Approval",
           href: `${CM350VESF_BASE}/documents/eta-bonded-injection-anchor.pdf`,
         },
         {
-          title: "ETA — Rebar connection",
-          type: "PDF — Approval",
+          title: "ETA: Rebar connection",
+          type: "PDF: Approval",
           href: `${CM350VESF_BASE}/documents/eta-rebar-connection.pdf`,
         },
         {
-          title: "Product catalogue — CM350VESF",
-          type: "PDF — Catalogue",
+          title: "Product catalogue: CM350VESF",
+          type: "PDF: Catalogue",
           href: `${CM350VESF_BASE}/documents/product-catalogue.pdf`,
         },
       ],
@@ -250,7 +250,7 @@ const PRODUCTS_BY_CAT = {
       installationImage: `${CM350VESF_BASE}/installation.jpg`,
       installationSteps: [
         "Drill the hole to the specified diameter and depth for the stud / rebar.",
-        "Clean the hole thoroughly — blow and brush until dust-free (follow datasheet cycles).",
+        "Clean the hole thoroughly, blow and brush until dust-free (follow datasheet cycles).",
         "Fit the mixing nozzle; discard the first mixed resin until colour is uniform.",
         "Inject from the bottom of the hole while withdrawing the nozzle slowly.",
         "Insert the stud or rebar with a twisting motion to full embedment.",
@@ -359,8 +359,8 @@ export const SORT_OPTIONS = [
   { id: "featured", label: "Featured" },
   { id: "price-asc", label: "Price: Low to high" },
   { id: "price-desc", label: "Price: High to low" },
-  { id: "name-asc", label: "Name: A–Z" },
-  { id: "name-desc", label: "Name: Z–A" },
+  { id: "name-asc", label: "Name: A-Z" },
+  { id: "name-desc", label: "Name: Z-A" },
 ];
 
 export function filterShopProducts({

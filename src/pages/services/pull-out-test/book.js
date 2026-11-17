@@ -8,7 +8,7 @@ export default function PullOutTestBookPage() {
     <>
       <SeoHead
         title="Pull Out Test Booking | ICFS"
-        description="Book on-site ICFS pull out testing across India. Share project, anchor, and site details — our technical team will confirm your test schedule."
+        description="Book on-site ICFS pull out testing across India. Share project, anchor, and site details, our technical team will confirm your test schedule."
         path="/services/pull-out-test/book"
       />
       <Navbar />

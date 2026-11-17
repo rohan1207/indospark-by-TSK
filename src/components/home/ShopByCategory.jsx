@@ -93,7 +93,7 @@ export default function ShopByCategory() {
             Shop By Category
           </h2>
           <p className="mx-auto mt-3 max-w-md text-[16px] leading-relaxed text-ink/55">
-            Mortars, guns, capsules, studs, mechanical, foam, and nylon — shop by type.
+            Mortars, guns, capsules, studs, mechanical, foam, and nylon, shop by type.
           </p>
         </div>
 

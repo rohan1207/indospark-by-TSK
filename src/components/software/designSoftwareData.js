@@ -5,13 +5,13 @@ export const SOFTWARE_PRODUCTS = [
     eyebrow: "Mobile & tablet",
     title: "ICFS Chemical Anchor / Rebar Design",
     shortTitle: "Chemical Anchor / Rebar Design",
-    tagline: "Size chemical anchors, cartridge volume, and hole depth — on site or at the desk.",
+    tagline: "Size chemical anchors, cartridge volume, and hole depth, on site or at the desk.",
     short:
       "Select configuration, loads, and concrete dimensions. The app suggests ICFS chemical anchor size, embedment, mortar volume, and cartridge quantity.",
     hero:
-      "Built for site engineers and applicators who need a fast, reliable chemical-anchor answer — including spacing, edge distance, and design-load factors used in everyday fixing.",
+      "Built for site engineers and applicators who need a fast, reliable chemical-anchor answer, including spacing, edge distance, and design-load factors used in everyday fixing.",
     overview:
-      "ICFS Chemical Anchor / Rebar Design helps you move from job conditions to a clear product recommendation. Enter the fixing layout, design loads, and concrete geometry; the app returns the suggested ICFS chemical anchor, required hole depth, mortar volume, and how many cartridges you need. Results respect design load, spacing, and edge-distance factors so the suggestion is practical for site work — not just a catalogue pick.",
+      "ICFS Chemical Anchor / Rebar Design helps you move from job conditions to a clear product recommendation. Enter the fixing layout, design loads, and concrete geometry; the app returns the suggested ICFS chemical anchor, required hole depth, mortar volume, and how many cartridges you need. Results respect design load, spacing, and edge-distance factors so the suggestion is practical for site work, not just a catalogue pick.",
     image: "/images/software/rebar-design.png",
     platforms: ["Android", "iOS"],
     category: "Mobile design suite",
@@ -44,7 +44,7 @@ export const SOFTWARE_PRODUCTS = [
       {
         step: "02",
         title: "Enter loads & spacing",
-        text: "Add design loads and layout constraints — including edge distance and spacing between anchors.",
+        text: "Add design loads and layout constraints, including edge distance and spacing between anchors.",
       },
       {
         step: "03",
@@ -94,7 +94,7 @@ export const SOFTWARE_PRODUCTS = [
         image: "/images/software/module-concrete-cutting.png",
         summary: "ICFS concrete cutting area / volume calculator for planning site works.",
         detail:
-          "Select the type of structure and key dimensions to estimate concrete cutting area and volume — useful when chemical fixing work sits alongside selective demolition or openings.",
+          "Select the type of structure and key dimensions to estimate concrete cutting area and volume, useful when chemical fixing work sits alongside selective demolition or openings.",
         bullets: [
           "Structure-type presets",
           "Area and volume estimates",
@@ -118,14 +118,14 @@ export const SOFTWARE_PRODUCTS = [
   {
     slug: "chemical-anchor-calculation",
     code: "02",
-    eyebrow: "Desktop — IndoExperts",
+    eyebrow: "Desktop: IndoExperts",
     title: "Chemical Anchor Calculation Software",
     shortTitle: "Chemical Anchor Calculation",
     tagline: "Desktop IndoExperts suite for chemical-anchor calculation and installation planning.",
     short:
       "Professional chemical-anchor calculation software developed for installation design under the IndoExperts brand.",
     hero:
-      "A structured calculation environment for chemical anchors — concrete grade, anchor data, loads, and reinforcement inputs in one workspace, with 3D orientation of the fixing.",
+      "A structured calculation environment for chemical anchors, concrete grade, anchor data, loads, and reinforcement inputs in one workspace, with 3D orientation of the fixing.",
     overview:
       "Chemical Anchor Calculation Software (IndoExperts) is built for engineers who need a fuller calculation pass than a mobile checklist. Define anchor type, concrete properties, design loads (including moments), and reinforcement context, then review the connection visually before you specify product and install depth on drawings.",
     image: "/images/software/anchor-calc.png",
@@ -193,7 +193,7 @@ export const SOFTWARE_PRODUCTS = [
         image: "/images/software/module-design-resistance.png",
         summary: "Fx, Fy, Fz and moment components for realistic fixing checks.",
         detail:
-          "Model the governing load case — including combined actions — so chemical anchors are judged on how the fixture actually behaves.",
+          "Model the governing load case, including combined actions, so chemical anchors are judged on how the fixture actually behaves.",
         bullets: [
           "Force and moment inputs",
           "Combined action awareness",
@@ -231,19 +231,19 @@ export const SOFTWARE_PRODUCTS = [
   {
     slug: "indoexpert-professional",
     code: "03",
-    eyebrow: "Desktop — IndoExperts",
+    eyebrow: "Desktop: IndoExperts",
     title: "IndoExpert Professional Anchor Design Software",
     shortTitle: "IndoExpert Professional",
-    tagline: "Mechanical anchor calculation for installation — IndoExperts professional desktop suite.",
+    tagline: "Mechanical anchor calculation for installation: IndoExperts professional desktop suite.",
     short:
       "Professional mechanical-anchor calculation software developed for installation design under the IndoExperts brand.",
     hero:
-      "Focused on mechanical anchors — wedge, heavy-duty, and related systems — with the same IndoExperts calculation discipline used on chemical projects.",
+      "Focused on mechanical anchors, wedge, heavy-duty, and related systems, with the same IndoExperts calculation discipline used on chemical projects.",
     overview:
       "IndoExpert Professional Anchor Design Software supports mechanical anchor calculation for installation. Use it when the connection calls for expansion or other mechanical systems rather than chemical mortars: define loads and substrate conditions, review the recommended mechanical solution, and align site installation with the calculation.",
     image: "/images/software/indoexpert.png",
     platforms: ["Windows"],
-    category: "Desktop — mechanical",
+    category: "Desktop, mechanical",
     highlights: [
       "Mechanical anchors",
       "Installation design",

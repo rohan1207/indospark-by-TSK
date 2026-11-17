@@ -255,7 +255,7 @@ button {
   }
 }
 
-/* Elegant glass shine — left → right on hover (pill CTAs) */
+/* Elegant glass shine, left → right on hover (pill CTAs) */
 @keyframes btn-shine-sweep {
   from {
     transform: translateX(-130%) skewX(-16deg);

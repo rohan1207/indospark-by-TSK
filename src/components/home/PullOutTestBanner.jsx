@@ -58,7 +58,7 @@ export default function PullOutTestBanner() {
                 id="pull-out-test-cta-heading"
                 className="text-[clamp(1.55rem,3.2vw,2.35rem)] font-bold leading-[1.12] tracking-[-0.03em] text-white"
               >
-                Pull Out Test — <span className="text-brand">Book Now</span>
+                Pull Out Test: <span className="text-brand">Book Now</span>
               </h2>
               <p className="mt-3 max-w-md text-[15px] leading-relaxed text-white/75 sm:text-[16px]">
                 Ensure anchor strength and safety with certified on-site testing services.

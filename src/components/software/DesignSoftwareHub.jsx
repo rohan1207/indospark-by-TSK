@@ -48,7 +48,7 @@ export default function DesignSoftwareHub() {
               <span className="text-brand">Then order with confidence.</span>
             </h1>
             <p className="mt-5 max-w-lg text-[16px] leading-relaxed text-ink/55 sm:text-[16px]">
-              Free tools to size chemical and mechanical anchors — from quick mobile checks to
+              Free tools to size chemical and mechanical anchors, from quick mobile checks to
               desktop calculation software.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -106,7 +106,7 @@ export default function DesignSoftwareHub() {
             </h2>
             <p className="mt-3 text-[16px] leading-relaxed text-ink/55 sm:text-[16px]">
               Mobile chemical design, desktop chemical calculation, and professional mechanical
-              design — pick the workspace that matches the job.
+              design, pick the workspace that matches the job.
             </p>
           </FadeIn>
 
@@ -186,12 +186,12 @@ export default function DesignSoftwareHub() {
                 Why use it
               </p>
               <h2 className="mt-3 text-[clamp(1.6rem,3vw,2.4rem)] font-bold tracking-[-0.035em] text-ink">
-                From load case to cartridge count — without the guesswork.
+                From load case to cartridge count, without the guesswork.
               </h2>
             </FadeIn>
             <FadeIn delay={0.06} className="lg:col-span-5">
               <p className="text-[16px] leading-relaxed text-ink/55 sm:text-[16px]">
-                Pair the software with ETA-backed ICFS products and on-site support — so
+                Pair the software with ETA-backed ICFS products and on-site support, so
                 design, procurement, and installation stay in the same language.
               </p>
             </FadeIn>
