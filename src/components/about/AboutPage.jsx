@@ -246,10 +246,30 @@ function AboutTabs({ active, onSelect }) {
 
 function OverviewSection() {
   const gallery = [
-    { src: "/images/about-preview/chemical-injection.jpg", alt: "Chemical mortar injection" },
-    { src: "/images/about-preview/mechanical-anchor.png", alt: "Mechanical wedge anchor" },
-    { src: "/images/about-preview/indoexpert-software.png", alt: "ICFS anchor design software" },
-    { src: "/images/news/exhibition.png", alt: "ICFS at trade shows" },
+    {
+      src: "/images/categories/mortars.png",
+      alt: "Chemical mortars",
+      href: "/shop?category=mortars",
+      fit: "contain",
+    },
+    {
+      src: "/images/categories/mechanical.png",
+      alt: "Mechanical anchors",
+      href: "/shop?category=mechanical",
+      fit: "contain",
+    },
+    {
+      src: "/images/categories/studs.png",
+      alt: "Chemical anchor studs",
+      href: "/shop?category=studs",
+      fit: "contain",
+    },
+    {
+      src: "/images/news/exhibition.png",
+      alt: "ICFS at trade shows",
+      href: "/about#achievements",
+      fit: "cover",
+    },
   ];
 
   const stats = [
@@ -406,18 +426,22 @@ function OverviewSection() {
 
             <div className="grid shrink-0 grid-cols-4 gap-2 sm:gap-2.5">
               {gallery.map((img) => (
-                <div
+                <Link
                   key={img.src}
-                  className="relative aspect-[4/5] overflow-hidden rounded-[0.85rem] sm:rounded-[1rem]"
+                  href={img.href}
+                  className="cursor-target group relative aspect-[4/5] overflow-hidden rounded-[0.85rem] bg-[#f5f5f5] ring-1 ring-black/[0.06] transition hover:ring-brand/40 sm:rounded-[1rem]"
+                  aria-label={img.alt}
                 >
                   <Image
                     src={img.src}
                     alt={img.alt}
                     fill
                     sizes="(max-width: 1024px) 25vw, 12vw"
-                    className="object-cover"
+                    className={`transition duration-500 group-hover:scale-[1.04] ${
+                      img.fit === "contain" ? "object-contain p-2.5 sm:p-3" : "object-cover"
+                    }`}
                   />
-                </div>
+                </Link>
               ))}
             </div>
           </FadeIn>

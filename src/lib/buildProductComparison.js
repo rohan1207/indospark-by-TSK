@@ -163,38 +163,11 @@ export function buildProductComparison(products = []) {
     )
   );
 
-  const docsRows = [
-    row(
-      "docs",
-      "Documents available",
-      list.map((p) => {
-        const n =
-          (p.documents?.length || 0) + (p.technicalDatasheets?.length || 0);
-        return n ? `${n} file${n === 1 ? "" : "s"}` : "None listed";
-      }),
-      { group: "docs" }
-    ),
-    row(
-      "eta",
-      "ETA / approvals listed",
-      list.map((p) => {
-        const docs = [...(p.documents || []), ...(p.technicalDatasheets || [])];
-        const hasEta = docs.some((d) => /eta|approval|constancy/i.test(`${d.title} ${d.type}`));
-        const spec = pickSpec(p, ["Approvals"]);
-        if (hasEta || (spec && /eta/i.test(spec))) return "Yes";
-        if (spec) return spec;
-        return "Not listed";
-      }),
-      { group: "docs" }
-    ),
-  ];
-
   const rows = [
     ...overviewRows,
     ...technicalRows,
     ...featureRows,
     ...applicationRows,
-    ...docsRows,
   ];
 
   const differenceRows = rows.filter((r) => r.differs);
@@ -244,21 +217,6 @@ export function buildProductComparison(products = []) {
     });
   }
 
-  const etaYes = list.filter((p) => {
-    const docs = [...(p.documents || []), ...(p.technicalDatasheets || [])];
-    return (
-      docs.some((d) => /eta|approval|constancy/i.test(`${d.title} ${d.type}`)) ||
-      /eta/i.test(pickSpec(p, ["Approvals"]) || "")
-    );
-  });
-  if (etaYes.length && etaYes.length < list.length) {
-    insights.push({
-      id: "eta",
-      tone: "good",
-      text: `${etaYes.map((p) => p.shortName || p.name).join(", ")} list ETA / approval documents.`,
-    });
-  }
-
   if (differenceRows.length) {
     insights.push({
       id: "diff-count",
@@ -278,7 +236,6 @@ export function buildProductComparison(products = []) {
       { id: "technical", label: "Technical" },
       { id: "features", label: "Features" },
       { id: "applications", label: "Applications" },
-      { id: "docs", label: "Documents" },
     ],
   };
 }
