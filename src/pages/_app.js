@@ -3,6 +3,7 @@ import SiteCursor from "@/components/effects/SiteCursor";
 import DesktopOnlyGate from "@/components/layout/DesktopOnlyGate";
 import { CartWishlistProvider } from "@/components/shop/CartWishlistContext";
 import CartDrawer, { ShopToast } from "@/components/shop/CartDrawer";
+import CompareBar from "@/components/shop/CompareBar";
 import "@/styles/globals.css";
 
 const outfit = Outfit({
@@ -19,6 +20,7 @@ export default function App({ Component, pageProps }) {
           <SiteCursor />
           <Component {...pageProps} />
           <CartDrawer />
+          <CompareBar />
           <ShopToast />
         </CartWishlistProvider>
       </DesktopOnlyGate>

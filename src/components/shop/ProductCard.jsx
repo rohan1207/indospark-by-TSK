@@ -33,9 +33,24 @@ function IconBag({ className = "h-4 w-4" }) {
   );
 }
 
+function IconCompare({ className = "h-4 w-4" }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
+      <path
+        d="M7 4v16M17 4v16M4 8h6M14 16h6"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
 export default function ProductCard({ product, showCategory = false }) {
-  const { addToCart, toggleWishlist, isWishlisted } = useCartWishlist();
+  const { addToCart, toggleWishlist, isWishlisted, toggleCompare, isInCompare } =
+    useCartWishlist();
   const wishlisted = isWishlisted(product.id);
+  const inCompare = isInCompare(product.id);
   const price = product.priceLabel || product.price;
   const href = product.href || (product.slug ? `/shop/${product.slug}` : "/shop");
   const title = product.shortName || product.name;
@@ -59,19 +74,34 @@ export default function ProductCard({ product, showCategory = false }) {
           </span>
         )}
 
-        <button
-          type="button"
-          aria-label={wishlisted ? "Remove from wishlist" : "Add to wishlist"}
-          onClick={(e) => {
-            e.preventDefault();
-            toggleWishlist(product.id);
-          }}
-          className={`cursor-target absolute right-3 top-3 z-10 inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/95 shadow-sm ring-1 transition hover:text-brand ${
-            wishlisted ? "text-brand ring-brand/30" : "text-ink/50 ring-black/5"
-          }`}
-        >
-          <IconHeart filled={wishlisted} />
-        </button>
+        <div className="absolute right-3 top-3 z-10 flex flex-col gap-2">
+          <button
+            type="button"
+            aria-label={wishlisted ? "Remove from wishlist" : "Add to wishlist"}
+            onClick={(e) => {
+              e.preventDefault();
+              toggleWishlist(product.id);
+            }}
+            className={`cursor-target inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/95 shadow-sm ring-1 transition hover:text-brand ${
+              wishlisted ? "text-brand ring-brand/30" : "text-ink/50 ring-black/5"
+            }`}
+          >
+            <IconHeart filled={wishlisted} />
+          </button>
+          <button
+            type="button"
+            aria-label={inCompare ? "Remove from compare" : "Add to compare"}
+            onClick={(e) => {
+              e.preventDefault();
+              toggleCompare(product.id);
+            }}
+            className={`cursor-target inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/95 shadow-sm ring-1 transition hover:text-brand ${
+              inCompare ? "text-brand ring-brand/30" : "text-ink/50 ring-black/5"
+            }`}
+          >
+            <IconCompare />
+          </button>
+        </div>
       </div>
 
       <div className="flex flex-1 flex-col px-4 pb-4 pt-3.5 sm:px-5 sm:pb-5">

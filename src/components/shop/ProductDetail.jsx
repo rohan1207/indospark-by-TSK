@@ -86,13 +86,28 @@ function IconExt({ className = "h-4 w-4" }) {
   );
 }
 
+function IconCompare({ className = "h-4 w-4" }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
+      <path
+        d="M7 4v16M17 4v16M4 8h6M14 16h6"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
 export default function ProductDetail({ product }) {
   const router = useRouter();
-  const { addToCart, toggleWishlist, isWishlisted } = useCartWishlist();
+  const { addToCart, toggleWishlist, isWishlisted, toggleCompare, isInCompare } =
+    useCartWishlist();
   const [qty, setQty] = useState(1);
   const [activeMedia, setActiveMedia] = useState(0);
   const [tab, setTab] = useState("description");
   const wishlisted = isWishlisted(product.id);
+  const inCompare = isInCompare(product.id);
   const related = useMemo(() => getRelatedProducts(product, 4), [product]);
   const gallery = useMemo(() => {
     if (product.gallery?.length) return product.gallery;
@@ -353,6 +368,18 @@ export default function ProductDetail({ product }) {
 
           {/* Secondary actions */}
           <div className="mt-4 flex flex-wrap gap-2.5">
+            <button
+              type="button"
+              onClick={() => toggleCompare(product.id)}
+              className={`cursor-target inline-flex h-10 items-center gap-2 rounded-xl border px-3.5 text-[14px] font-semibold transition ${
+                inCompare
+                  ? "border-brand bg-brand/5 text-brand"
+                  : "border-black/10 text-ink/65 hover:border-brand hover:text-brand"
+              }`}
+            >
+              <IconCompare />
+              {inCompare ? "In compare" : "Compare"}
+            </button>
             <button
               type="button"
               onClick={() => toggleWishlist(product.id)}

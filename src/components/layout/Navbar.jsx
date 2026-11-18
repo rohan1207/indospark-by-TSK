@@ -180,7 +180,7 @@ function NavItem({ link, active }) {
 
 export default function Navbar() {
   const router = useRouter();
-  const { cartCount, wishlistCount, openCart } = useCartWishlist();
+  const { cartCount, wishlistCount, compareCount, openCart } = useCartWishlist();
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [mobileOpen, setMobileOpen] = useState(null);
@@ -271,6 +271,25 @@ export default function Navbar() {
         </nav>
 
         <div className="ml-auto flex items-center gap-1.5 sm:gap-2">
+          <Link
+            href="/compare"
+            className="relative inline-flex h-9 w-9 items-center justify-center rounded-full text-ink/70 transition hover:bg-black/[0.04] hover:text-ink"
+            aria-label="Compare products"
+          >
+            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden>
+              <path
+                d="M7 4v16M17 4v16M4 8h6M14 16h6"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+              />
+            </svg>
+            {compareCount > 0 && (
+              <span className="absolute -right-0.5 -top-0.5 flex h-[1.125rem] min-w-[1.125rem] items-center justify-center rounded-full bg-ink px-1 text-[12px] font-bold leading-none text-white">
+                {compareCount > 99 ? "99+" : compareCount}
+              </span>
+            )}
+          </Link>
           <Link
             href="/wishlist"
             className="relative inline-flex h-9 w-9 items-center justify-center rounded-full text-ink/70 transition hover:bg-black/[0.04] hover:text-ink"

@@ -187,17 +187,31 @@ export default function CartDrawer() {
 }
 
 export function ShopToast() {
-  const { toast } = useCartWishlist();
+  const { toast, compareCount } = useCartWishlist();
+  const message = typeof toast === "string" ? toast : toast?.message;
+  const actionHref = typeof toast === "object" ? toast?.actionHref : null;
+  const actionLabel = typeof toast === "object" ? toast?.actionLabel : null;
+  const lift = compareCount > 0 ? "bottom-24 sm:bottom-28" : "bottom-6";
+
   return (
     <AnimatePresence>
-      {toast && (
+      {message && (
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 12 }}
-          className="pointer-events-none fixed bottom-6 left-1/2 z-[100] -translate-x-1/2 rounded-full bg-ink px-5 py-2.5 text-[14px] font-semibold text-white shadow-lg"
+          className={`fixed left-1/2 z-[100] flex -translate-x-1/2 items-center gap-3 rounded-full bg-ink px-4 py-2.5 text-[14px] font-semibold text-white shadow-lg ${lift}`}
+          role="status"
         >
-          {toast}
+          <span className="max-w-[16rem] truncate sm:max-w-none">{message}</span>
+          {actionHref && actionLabel ? (
+            <Link
+              href={actionHref}
+              className="cursor-target shrink-0 rounded-full bg-white/15 px-3 py-1 text-[13px] font-bold text-white transition hover:bg-brand"
+            >
+              {actionLabel}
+            </Link>
+          ) : null}
         </motion.div>
       )}
     </AnimatePresence>
