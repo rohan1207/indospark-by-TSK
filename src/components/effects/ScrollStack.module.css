@@ -52,10 +52,11 @@
 }
 
 .driven .inner {
-  padding: 18% 0 70%;
+  /* Short runway: last card settles near progress=1 so sticky can unlock immediately */
+  padding: 10% 0 22%;
   min-height: 100%;
 }
 
 .driven .card {
-  min-height: min(56vh, 420px);
+  min-height: min(52vh, 400px);
 }

@@ -36,7 +36,7 @@ export const VERTICALS = [
       "Guns, brushes, blow pumps, and cleaning kits",
       "ETA-approved options for critical applications",
     ],
-    image: "/images/banners/chemical-mortars.png",
+    image: "/images/categories/mortars-cm350vesf.png",
   },
   {
     id: "mechanical",
@@ -51,7 +51,7 @@ export const VERTICALS = [
       "Nylon frame anchors for lighter fixing",
       "Matching washers, nuts, and accessories",
     ],
-    image: "/images/banners/mechanical-anchors.png",
+    image: "/images/about-preview/mechanical-anchor.png",
   },
   {
     id: "designer",
@@ -65,7 +65,7 @@ export const VERTICALS = [
       "Helps estimate mortar volume per hole",
       "Available for mobile and desktop use",
     ],
-    image: "/images/banners/design-software.png",
+    image: "/images/about-preview/indoexpert-software.png",
   },
 ];
 
@@ -142,6 +142,25 @@ export const TIMELINE = [
     tag: "partnership",
     image: "/images/history/exhibition.jpg",
   },
+  {
+    year: "2022",
+    text: "Free ICFS anchor design tools to size chemical and mechanical fixings.",
+    tag: "software",
+    image: "/images/history/cutting.jpg",
+  },
+  {
+    year: "2024",
+    text: "Wider ETA-backed range and stronger presence at trade shows nationwide.",
+    tag: "growth",
+    image: "/images/history/exhibition.jpg",
+  },
+  {
+    year: "2026",
+    text: "Today: ICFS anchors on jobsites across India, still partnered with CFS UK.",
+    tag: "present",
+    image: "/images/news/exhibition.png",
+    present: true,
+  },
 ];
 
 export const ACHIEVEMENTS = [
@@ -149,13 +168,13 @@ export const ACHIEVEMENTS = [
     tag: "Approvals",
     title: "ETA approvals",
     text: "Chemical and mechanical anchors tested to international performance standards.",
-    image: "/images/banners/mechanical-anchors.png",
+    image: "/images/hero/anchors.png",
   },
   {
     tag: "Partnership",
     title: "CFS United Kingdom",
     text: "Long-standing partnership with Construction Fastening Systems (UK).",
-    image: "/images/banners/chemical-mortars.png",
+    image: "/images/history/exhibition.jpg",
   },
   {
     tag: "Community",

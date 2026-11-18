@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 
 const FAQS = [
@@ -198,6 +199,15 @@ export default function FAQ() {
                   </span>
                 </span>
               </a>
+            </div>
+
+            <div className="mt-5">
+              <Link
+                href="/contact"
+                className="cursor-target btn-shine inline-flex h-10 items-center rounded-full bg-ink px-5 text-[14px] font-semibold text-white transition hover:bg-brand"
+              >
+                View all
+              </Link>
             </div>
           </div>
         </div>

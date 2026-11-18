@@ -70,204 +70,135 @@ function SectionLabel({ children }) {
 }
 
 function AboutHero() {
+  const stats = [
+    {
+      title: "Est. 1978",
+      sub: "Trusted Legacy",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" aria-hidden>
+          <rect x="3.5" y="5" width="17" height="15" rx="2" stroke="currentColor" strokeWidth="1.7" />
+          <path d="M8 3.5v3M16 3.5v3M3.5 10h17" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+        </svg>
+      ),
+    },
+    {
+      title: "43+ Years",
+      sub: "of Expertise",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" aria-hidden>
+          <path d="M12 4.2L4 8.5 12 12.8 20 8.5 12 4.2Z" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
+          <path d="M4 12.2L12 16.5 20 12.2M4 15.5L12 19.8 20 15.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      ),
+    },
+    {
+      title: "Global",
+      sub: "Supply Reach",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" aria-hidden>
+          <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.7" />
+          <path d="M4.5 12h15M12 4.5c2.4 2.6 3.6 5.2 3.6 7.5S14.4 16.9 12 19.5C9.6 16.9 8.4 14.3 8.4 12S9.6 7.1 12 4.5Z" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
+        </svg>
+      ),
+    },
+  ];
+
   return (
     <section
-      className="relative overflow-hidden bg-white"
+      className="relative overflow-hidden bg-white lg:h-[calc(100svh-6.85rem)] lg:max-h-[calc(100svh-6.85rem)]"
       aria-labelledby="about-hero-heading"
     >
-      <div className="mx-auto max-w-[1440px] px-4 py-10 sm:px-5 sm:py-12 lg:px-6 lg:py-14 xl:px-8">
-        {/* Centered headline, matches reference */}
-        <h1
-          id="about-hero-heading"
-          className="mx-auto max-w-3xl text-center text-[clamp(1.75rem,3.6vw,2.85rem)] font-bold leading-[1.12] tracking-[-0.03em] text-ink"
-        >
-          Anchor fasteners. Clear specs. On-time supply.
-        </h1>
+      <div className="grid w-full items-stretch lg:h-full lg:grid-cols-12">
+        {/* Left copy */}
+        <div className="relative z-10 flex flex-col justify-center px-4 py-8 sm:px-5 sm:py-10 lg:col-span-5 lg:pl-[max(1.5rem,calc((100vw-1440px)/2+1.5rem))] lg:pr-6 lg:py-6 xl:col-span-5 xl:pr-8">
+          <p className="flex items-center gap-3 text-[13px] font-bold uppercase tracking-[0.18em] text-ink">
+            About ICFS
+            <span className="h-[2px] w-8 rounded-full bg-brand" aria-hidden />
+          </p>
 
-        {/* Bento grid, same structure as reference */}
-        <div className="mt-8 grid grid-cols-1 gap-3 sm:mt-10 sm:grid-cols-2 sm:gap-3.5 lg:grid-cols-[0.9fr_1.55fr_1fr_1.05fr] lg:grid-rows-[minmax(300px,1fr)] lg:items-stretch">
-          {/* Col 1, stacked: stat / pill / stat */}
-          <div className="flex flex-col gap-3 sm:gap-3.5 lg:min-h-[440px]">
-            <div className="flex flex-1 flex-col justify-between rounded-[1.5rem] bg-[#fceeed] p-5 sm:rounded-[1.75rem] sm:p-6">
-              <div>
-                <p className="text-[clamp(2.4rem,4vw,3.25rem)] font-bold leading-none tracking-[-0.05em] text-ink">
-                  43<span className="text-brand">+</span>
-                </p>
-                <p className="mt-2 text-[15px] font-medium leading-snug text-ink/55">
-                  Years of ICFS
-                </p>
-              </div>
-              <div className="mt-5 inline-flex w-fit items-center gap-1 rounded-full bg-white px-2 py-1.5 shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
-                {["/images/clients/client-01.jpg", "/images/clients/client-02.jpg", "/images/clients/client-03.jpg"].map(
-                  (src) => (
-                    <span
-                      key={src}
-                      className="relative -ml-1.5 h-7 w-7 overflow-hidden rounded-full ring-2 ring-white first:ml-0"
-                    >
-                      <Image src={src} alt="" fill sizes="28px" className="object-cover" />
-                    </span>
-                  )
-                )}
-                <span className="ml-1 flex h-7 w-7 items-center justify-center rounded-full bg-brand text-[13px] text-white">
-                  ♥
+          <h1
+            id="about-hero-heading"
+            className="mt-2.5 max-w-lg text-[clamp(1.75rem,3.4vw,2.7rem)] font-bold leading-[1.08] tracking-[-0.035em] text-ink"
+          >
+            Precision Anchor Fastening{" "}
+            <span className="text-brand">Solutions</span>
+          </h1>
+
+          <p className="mt-3 max-w-md text-[14px] leading-relaxed text-ink/55 sm:text-[15px]">
+            Engineered for strength, safety and long-term performance since 1978.
+            Clear specs, steady supply, and site-ready systems for concrete and
+            masonry fixing.
+          </p>
+
+          <ul className="mt-4 max-w-md space-y-1.5 text-[13px] leading-snug text-ink/70 sm:text-[14px]">
+            <li className="flex gap-2">
+              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" aria-hidden />
+              Chemical anchors: resin mortars, capsules, and studs
+            </li>
+            <li className="flex gap-2">
+              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" aria-hidden />
+              Mechanical anchors: wedge, drop-in, and frame fixings
+            </li>
+            <li className="flex gap-2">
+              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" aria-hidden />
+              Free design tools to size anchors before you specify
+            </li>
+          </ul>
+
+          <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-black/10">
+            {stats.map((item) => (
+              <div key={item.title} className="flex items-start gap-3 sm:flex-col sm:gap-2 sm:px-4 first:sm:pl-0 last:sm:pr-0">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-brand/10 text-brand">
+                  {item.icon}
                 </span>
+                <div>
+                  <p className="text-[14px] font-bold tracking-[-0.02em] text-ink sm:text-[15px]">
+                    {item.title}
+                  </p>
+                  <p className="mt-0.5 text-[12px] leading-snug text-ink/50 sm:text-[13px]">
+                    {item.sub}
+                  </p>
+                </div>
               </div>
-            </div>
-
-            <button
-              type="button"
-              onClick={() => scrollToId("verticals")}
-              className="cursor-target btn-shine flex h-12 shrink-0 items-center justify-between rounded-full bg-brand px-5 text-[15px] font-semibold text-white transition hover:bg-brand-deep sm:h-14 sm:px-6"
-            >
-              Our products
-              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-ink text-lg leading-none text-white">
-                +
-              </span>
-            </button>
-
-            <div className="relative flex flex-1 flex-col justify-between overflow-hidden rounded-[1.5rem] bg-[#ebebeb] p-5 sm:rounded-[1.75rem] sm:p-6">
-              <div className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-white shadow-sm">
-                <svg viewBox="0 0 24 24" className="h-4 w-4 text-ink" fill="none" aria-hidden>
-                  <path
-                    d="M6 10V9a6 6 0 1 1 12 0v1M5 10h14v8a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-8Z"
-                    stroke="currentColor"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </div>
-              <div>
-                <p className="text-[clamp(2.4rem,4vw,3.25rem)] font-bold leading-none tracking-[-0.05em] text-ink">
-                  2
-                </p>
-                <p className="mt-2 text-[15px] font-medium leading-snug text-ink/55">
-                  Anchor systems
-                </p>
-              </div>
-              <div className="mt-4 flex h-16 items-end gap-1.5" aria-hidden>
-                {[40, 65, 48, 80, 55, 92, 70].map((h, i) => (
-                  <span
-                    key={i}
-                    className="flex-1 rounded-t-md bg-white/90"
-                    style={{ height: `${h}%` }}
-                  />
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
 
-          {/* Col 2, large feature image */}
-          <div className="relative min-h-[260px] overflow-hidden rounded-[1.5rem] sm:col-span-2 sm:min-h-[320px] sm:rounded-[1.75rem] lg:col-span-1 lg:min-h-0">
-            <Image
-              src="/images/news/exhibition.png"
-              alt="ICFS at industry exhibitions and project sites"
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 40vw"
-              className="object-cover"
-            />
-            <span className="absolute right-4 top-4 rounded-full bg-white px-3.5 py-1.5 text-[13px] font-semibold text-ink shadow-sm">
-              Est. 1978
+          <button
+            type="button"
+            onClick={() => scrollToId("overview")}
+            className="cursor-target btn-shine mt-5 inline-flex h-11 w-fit items-center gap-2 rounded-full bg-brand px-6 text-[15px] font-semibold text-white transition hover:bg-brand-deep"
+          >
+            Our Story
+            <span aria-hidden className="text-lg leading-none">
+              →
             </span>
-            <div className="absolute -bottom-6 -left-6 h-[58%] w-[72%] rounded-[100%] bg-brand sm:h-[52%] sm:w-[65%]" />
-            <p className="absolute bottom-5 left-5 z-10 max-w-[11rem] text-[16px] font-bold leading-snug tracking-[-0.02em] text-white sm:bottom-6 sm:left-6 sm:max-w-[13rem] sm:text-[17px]">
-              Right product. On time. Every order.
-            </p>
-          </div>
+          </button>
+        </div>
 
-          {/* Col 3, stacked image + reviews */}
-          <div className="flex flex-col gap-3 sm:gap-3.5 lg:min-h-[420px]">
-            <div className="relative min-h-[180px] flex-1 overflow-hidden rounded-[1.5rem] sm:rounded-[1.75rem] lg:min-h-0">
-              <Image
-                src="/images/banners/mechanical-anchors.png"
-                alt="ICFS mechanical anchors"
-                fill
-                sizes="(max-width: 1024px) 100vw, 22vw"
-                className="object-cover"
-              />
-              <span className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white shadow-sm">
-                <svg viewBox="0 0 24 24" className="h-4 w-4 text-brand" fill="currentColor" aria-hidden>
-                  <path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7L12 16.8 5.7 20.6l2.3-7-6-4.4h7.6L12 2z" />
-                </svg>
-              </span>
-              <button
-                type="button"
-                onClick={() => scrollToId("history")}
-                className="cursor-target absolute bottom-3 left-3 rounded-full bg-ink px-3.5 py-2 text-[13px] font-semibold text-white transition hover:bg-brand"
-              >
-                Our history
-              </button>
-            </div>
+        {/* Right visual: flush right + bottom, above left copy */}
+        <div className="relative z-20 hidden h-full items-end justify-end overflow-visible lg:col-span-7 lg:flex xl:col-span-7">
+          <Image
+            src="/images/about/hero-products.png"
+            alt="ICFS chemical and mechanical anchor fasteners on site"
+            width={1400}
+            height={1050}
+            priority
+            sizes="(max-width: 1024px) 100vw, 58vw"
+            className="pointer-events-none h-[132%] w-[132%] max-w-none origin-bottom-right object-contain object-right-bottom"
+          />
+        </div>
 
-            <div className="flex flex-1 flex-col justify-between rounded-[1.5rem] bg-[#fceeed] p-5 sm:rounded-[1.75rem] sm:p-6">
-              <div>
-                <p className="text-[clamp(2rem,3.5vw,2.75rem)] font-bold leading-none tracking-[-0.05em] text-ink">
-                  ETA
-                </p>
-                <p className="mt-2 text-[15px] font-medium text-ink/55">Approved products</p>
-              </div>
-              <div className="mt-4 flex gap-1" aria-label="5 star reputation">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <svg key={i} viewBox="0 0 24 24" className="h-5 w-5 text-brand" fill="currentColor" aria-hidden>
-                    <path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7L12 16.8 5.7 20.6l2.3-7-6-4.4h7.6L12 2z" />
-                  </svg>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Col 4, tall CTA panel */}
-          <div className="relative flex min-h-[280px] flex-col justify-between overflow-hidden rounded-[1.5rem] bg-[#f4f4f4] p-5 sm:min-h-[320px] sm:rounded-[1.75rem] sm:p-6 lg:min-h-0">
-            <div
-              className="pointer-events-none absolute -right-8 -top-8 h-40 w-40 rounded-full bg-brand/20"
-              aria-hidden
-            />
-            <div
-              className="pointer-events-none absolute bottom-16 -left-10 h-36 w-36 rounded-full bg-ink/[0.06]"
-              aria-hidden
-            />
-            <div
-              className="pointer-events-none absolute right-6 top-24 h-24 w-24 rounded-full bg-brand/10"
-              aria-hidden
-            />
-
-            <div className="relative z-10 flex gap-2 self-end">
-              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white shadow-sm">
-                <svg viewBox="0 0 24 24" className="h-4 w-4 text-ink" fill="none" aria-hidden>
-                  <circle cx="12" cy="8" r="3.2" stroke="currentColor" strokeWidth="1.6" />
-                  <path
-                    d="M5.5 19c1.2-3 3.5-4.5 6.5-4.5s5.3 1.5 6.5 4.5"
-                    stroke="currentColor"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </span>
-              <Link
-                href="/contact"
-                className="cursor-target flex h-9 w-9 items-center justify-center rounded-full bg-white shadow-sm transition hover:bg-brand hover:text-white"
-                aria-label="Contact us"
-              >
-                <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden>
-                  <circle cx="11" cy="11" r="6" stroke="currentColor" strokeWidth="1.6" />
-                  <path d="M16 16l4 4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-                </svg>
-              </Link>
-            </div>
-
-            <p className="relative z-10 mt-8 max-w-[15rem] text-[16px] font-medium leading-relaxed text-ink/70 sm:text-[16px]">
-              From a two-person workshop in 1978 to ICFS anchor fasteners and design tools
-              under one house.
-            </p>
-
-            <button
-              type="button"
-              onClick={() => scrollToId("overview")}
-              className="cursor-target btn-shine relative z-10 mt-6 inline-flex h-11 w-full items-center justify-center rounded-full bg-ink px-5 text-[15px] font-semibold text-white transition hover:bg-brand sm:mt-8"
-            >
-              Explore our story
-            </button>
-          </div>
+        {/* Mobile image */}
+        <div className="relative z-20 flex items-end justify-end overflow-hidden px-0 lg:hidden">
+          <Image
+            src="/images/about/hero-products.png"
+            alt="ICFS chemical and mechanical anchor fasteners on site"
+            width={900}
+            height={700}
+            priority
+            sizes="100vw"
+            className="h-auto max-h-[52svh] w-[125%] max-w-none origin-bottom-right object-contain object-right-bottom"
+          />
         </div>
       </div>
     </section>
@@ -315,9 +246,9 @@ function AboutTabs({ active, onSelect }) {
 
 function OverviewSection() {
   const gallery = [
-    { src: "/images/banners/chemical-mortars.png", alt: "Chemical mortars" },
-    { src: "/images/banners/mechanical-anchors.png", alt: "Mechanical anchors" },
-    { src: "/images/banners/design-software.png", alt: "Design software" },
+    { src: "/images/about-preview/chemical-injection.jpg", alt: "Chemical mortar injection" },
+    { src: "/images/about-preview/mechanical-anchor.png", alt: "Mechanical wedge anchor" },
+    { src: "/images/about-preview/indoexpert-software.png", alt: "ICFS anchor design software" },
     { src: "/images/news/exhibition.png", alt: "ICFS at trade shows" },
   ];
 
@@ -504,11 +435,15 @@ function VerticalsSection() {
     const runway = runwayRef.current;
     if (!runway) return undefined;
 
+    // Stack finishes slightly before sticky ends, then page scroll unlocks
+    const SETTLE_AT = 0.94;
+
     const update = () => {
       const rect = runway.getBoundingClientRect();
       const total = Math.max(1, runway.offsetHeight - window.innerHeight);
       const scrolled = Math.min(total, Math.max(0, -rect.top));
-      setStackProgress(scrolled / total);
+      const raw = scrolled / total;
+      setStackProgress(Math.min(1, raw / SETTLE_AT));
     };
 
     update();
@@ -522,8 +457,8 @@ function VerticalsSection() {
 
   return (
     <section id="verticals" className="scroll-mt-[10.5rem] bg-white">
-      {/* Tall runway, panel locks while page scroll scrubs the stack */}
-      <div ref={runwayRef} className="relative h-[260svh]">
+      {/* Runway sized so sticky unlocks as soon as the 3rd card settles */}
+      <div ref={runwayRef} className="relative h-[165svh]">
         <div className="sticky top-[calc(6.85rem+3.25rem)] flex h-[calc(100svh-6.85rem-3.25rem)] items-center overflow-hidden border-b border-black/[0.05] bg-white">
           <div className="mx-auto grid h-full w-full max-w-[1440px] items-center gap-6 px-4 sm:px-5 lg:grid-cols-12 lg:gap-10 lg:px-6 xl:gap-12 xl:px-8">
             <div className="lg:col-span-4">
@@ -549,12 +484,12 @@ function VerticalsSection() {
               <ScrollStack
                 className="h-full"
                 scrollProgress={stackProgress}
-                itemDistance={90}
-                itemStackDistance={24}
+                itemDistance={70}
+                itemStackDistance={22}
                 baseScale={0.9}
                 itemScale={0.035}
-                stackPosition="12%"
-                scaleEndPosition="6%"
+                stackPosition="8%"
+                scaleEndPosition="4%"
                 blurAmount={0.5}
               >
                 {VERTICALS.map((v) => (
@@ -562,7 +497,7 @@ function VerticalsSection() {
                     key={v.id}
                     itemClassName="overflow-hidden rounded-[1.35rem] border border-black/[0.06] bg-paper shadow-[0_18px_50px_rgba(0,0,0,0.08)] sm:rounded-[1.75rem]"
                   >
-                    <div className="grid h-full min-h-[min(56vh,420px)] lg:grid-cols-12">
+                    <div className="grid h-full min-h-[min(52vh,400px)] lg:grid-cols-12">
                       <div className="flex flex-col justify-center p-5 sm:p-7 lg:col-span-6 lg:p-8">
                         <span className="text-[26px] font-bold text-brand/70 sm:text-[32px]">
                           {v.code}
@@ -751,29 +686,47 @@ function AchievementsSection() {
           ))}
         </div>
 
-        <FadeIn className="mt-14 overflow-hidden rounded-[1.75rem] bg-steel px-6 py-10 text-center text-white sm:rounded-[2rem] sm:px-10 sm:py-12">
-          <p className="text-[13px] font-semibold uppercase tracking-[0.2em] text-white/40">
-            Next step
-          </p>
-          <h3 className="mx-auto mt-3 max-w-lg text-[clamp(1.5rem,3vw,2.25rem)] font-bold tracking-[-0.03em]">
-            Need the right anchor for your project?
-          </h3>
-          <p className="mx-auto mt-3 max-w-md text-[16px] text-white/55">
-            Tell us the job. We will help you pick the product and get it to site.
-          </p>
-          <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
-            <Link
-              href="/contact"
-              className="cursor-target btn-shine inline-flex h-11 items-center rounded-full bg-brand px-6 text-[15px] font-semibold text-white transition hover:bg-brand-deep"
-            >
-              Contact us
-            </Link>
-            <Link
-              href="/#shop"
-              className="cursor-target btn-shine inline-flex h-11 items-center rounded-full bg-white px-6 text-[15px] font-semibold text-ink transition hover:bg-brand hover:text-white"
-            >
-              Browse products
-            </Link>
+        <FadeIn className="mt-14 overflow-hidden rounded-[1.75rem] bg-brand sm:rounded-[2rem]">
+          <div className="flex flex-col gap-8 px-6 py-9 sm:px-8 sm:py-11 lg:flex-row lg:items-center lg:justify-between lg:gap-12 lg:px-10 lg:py-12">
+            <div className="max-w-xl">
+              <p className="text-[13px] font-semibold uppercase tracking-[0.22em] text-white/70">
+                Next step
+              </p>
+              <h3 className="mt-3 text-[clamp(1.45rem,2.8vw,2.15rem)] font-bold tracking-[-0.035em] text-white">
+                Spec the fix. Get it on site.
+              </h3>
+              <p className="mt-3 text-[15px] leading-relaxed text-white/80 sm:text-[16px]">
+                Share your base material, load, and timeline. ICFS will recommend the right
+                chemical or mechanical anchor and arrange supply.
+              </p>
+              <ul className="mt-5 flex flex-wrap gap-2" aria-label="How we help">
+                {["Site guidance", "ETA-backed range", "Pan-India supply"].map((item) => (
+                  <li
+                    key={item}
+                    className="rounded-full bg-white/15 px-3 py-1 text-[12px] font-medium text-white ring-1 ring-white/25 sm:text-[13px]"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="flex shrink-0 flex-wrap items-center gap-3">
+              <Link
+                href="/contact"
+                className="cursor-target btn-shine inline-flex h-11 items-center gap-2 rounded-full bg-white px-6 text-[15px] font-semibold text-brand transition hover:bg-ink hover:text-white"
+              >
+                Contact us
+                <span aria-hidden className="text-lg leading-none">
+                  →
+                </span>
+              </Link>
+              <Link
+                href="/#shop"
+                className="cursor-target inline-flex h-11 items-center rounded-full border border-white/45 bg-transparent px-6 text-[15px] font-semibold text-white transition hover:border-white hover:bg-white/10"
+              >
+                Browse products
+              </Link>
+            </div>
           </div>
         </FadeIn>
       </div>

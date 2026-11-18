@@ -26,11 +26,11 @@ export default function Home() {
         <Hero />
         <TrustedBy />
         <AboutPreview />
+        <PullOutTestBanner />
         {/* <ShopByCategory /> */}
         <ProductShop />
         <ShowcaseSlider />
         <WhyChoose />
-        <PullOutTestBanner />
         <Testimonials />
         <FAQ />
         <NewsEvents />

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { TIMELINE } from "./aboutData";
 
@@ -25,9 +25,9 @@ export default function HistorySection() {
   const railYears = [
     TIMELINE[0],
     TIMELINE[3],
-    TIMELINE[5],
-    TIMELINE[8],
+    TIMELINE[6],
     TIMELINE[9],
+    TIMELINE[12],
     TIMELINE[TIMELINE.length - 1],
   ].filter(Boolean);
 
@@ -139,7 +139,7 @@ export default function HistorySection() {
                   Our history
                 </p>
                 <h2 className="mt-1.5 text-[clamp(1.45rem,2.6vw,2.15rem)] font-bold tracking-[-0.035em]">
-                  1978 → Today
+                  1978 → 2026
                 </h2>
               </div>
 
@@ -182,71 +182,85 @@ export default function HistorySection() {
                 ref={scrollRef}
                 className="min-h-0 flex-1 overflow-hidden [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
               >
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-                  {TIMELINE.map((item, i) => {
-                    const imageFirst = i % 2 === 0;
+                {/* 3 years/row on lg (image+text × 3). Every cell is the same square. */}
+                <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6">
+                  {TIMELINE.map((item) => {
                     const border = isDark ? "border-white/10" : "border-black/[0.08]";
                     const muted = isDark ? "text-white/50" : "text-ink/50";
                     const tagMuted = isDark ? "text-white/30" : "text-ink/30";
-
-                    const textCell = (
-                      <div
-                        className={`flex aspect-square flex-col items-center justify-center px-4 py-5 text-center sm:px-5 ${
-                          isDark ? "bg-[#16181c]" : "bg-[#fafafa]"
-                        }`}
-                      >
-                        <p className="text-[clamp(1.65rem,2.8vw,2.35rem)] font-bold leading-none tracking-[-0.045em]">
-                          {item.year}
-                        </p>
-                        <p className={`mt-3 max-w-[16ch] text-[14px] leading-snug sm:text-[14px] ${muted}`}>
-                          {item.text}
-                        </p>
-                        <p className={`mt-4 text-[12px] font-semibold uppercase tracking-[0.18em] ${tagMuted}`}>
-                          {item.tag}
-                        </p>
-                        <span
-                          className={`mt-3 h-1.5 w-1.5 rounded-full ${isDark ? "bg-white/25" : "bg-ink/20"}`}
-                          aria-hidden
-                        />
-                      </div>
-                    );
-
-                    const imageCell = (
-                      <div className="relative aspect-square overflow-hidden">
-                        <Image
-                          src={item.image}
-                          alt=""
-                          fill
-                          sizes="(max-width: 640px) 50vw, (max-width: 1280px) 25vw, 20vw"
-                          className="object-cover grayscale contrast-[1.05]"
-                        />
-                        <div
-                          className={`pointer-events-none absolute inset-0 ${
-                            isDark ? "bg-black/25" : "bg-black/[0.04]"
-                          }`}
-                          aria-hidden
-                        />
-                      </div>
-                    );
+                    const isPresent = Boolean(item.present);
+                    const cell = `relative aspect-square w-full min-w-0 overflow-hidden border-b border-r ${border}`;
 
                     return (
-                      <article
-                        key={item.year}
-                        data-year={item.year}
-                        className={`border-b border-r ${border}`}
-                      >
-                        {imageFirst ? (
-                          <>
-                            {imageCell}
-                            {textCell}
-                          </>
-                        ) : (
-                          <>
-                            {textCell}
-                            {imageCell}
-                          </>
-                        )}
-                      </article>
+                      <Fragment key={item.year}>
+                        <div data-year={item.year} className={cell}>
+                          <Image
+                            src={item.image}
+                            alt=""
+                            fill
+                            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 16.6vw"
+                            className={`object-cover ${
+                              isPresent ? "" : "grayscale contrast-[1.05]"
+                            }`}
+                          />
+                          <div
+                            className={`pointer-events-none absolute inset-0 ${
+                              isPresent
+                                ? "bg-transparent"
+                                : isDark
+                                  ? "bg-black/25"
+                                  : "bg-black/[0.04]"
+                            }`}
+                            aria-hidden
+                          />
+                          {isPresent ? (
+                            <span className="absolute left-2 top-2 rounded-full bg-brand px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.14em] text-white">
+                              Now
+                            </span>
+                          ) : null}
+                        </div>
+
+                        <article
+                          data-year={item.year}
+                          className={`${cell} ${
+                            isPresent
+                              ? isDark
+                                ? "bg-brand/15"
+                                : "bg-brand/[0.06]"
+                              : isDark
+                                ? "bg-[#16181c]"
+                                : "bg-[#fafafa]"
+                          }`}
+                        >
+                          <div className="absolute inset-0 flex flex-col items-center justify-center px-2.5 py-3 text-center sm:px-3.5 sm:py-4">
+                            <p className="text-[clamp(1.35rem,2.2vw,1.95rem)] font-bold leading-none tracking-[-0.045em]">
+                              {item.year}
+                            </p>
+                            <p
+                              className={`mt-2.5 line-clamp-4 max-w-[18ch] text-[12px] leading-snug sm:mt-3 sm:text-[13px] ${muted}`}
+                            >
+                              {item.text}
+                            </p>
+                            <p
+                              className={`mt-3 text-[10px] font-semibold uppercase tracking-[0.18em] sm:mt-3.5 sm:text-[11px] ${
+                                isPresent ? "text-brand" : tagMuted
+                              }`}
+                            >
+                              {item.tag}
+                            </p>
+                            <span
+                              className={`mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full ${
+                                isPresent
+                                  ? "bg-brand"
+                                  : isDark
+                                    ? "bg-white/25"
+                                    : "bg-ink/20"
+                              }`}
+                              aria-hidden
+                            />
+                          </div>
+                        </article>
+                      </Fragment>
                     );
                   })}
                 </div>

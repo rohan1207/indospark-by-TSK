@@ -11,16 +11,22 @@ const IMAGES = [
     src: "/images/about-preview/chemical-injection.jpg",
     alt: "ICFS chemical injection mortar application on site",
     fit: "cover",
+    label: "Chemical anchors",
+    href: "/shop?category=mortars",
   },
   {
     src: "/images/about-preview/mechanical-anchor.png",
     alt: "ICFS mechanical wedge anchor",
     fit: "contain",
+    label: "Mechanical anchors",
+    href: "/shop?category=mechanical",
   },
   {
     src: "/images/about-preview/indoexpert-software.png",
     alt: "IndoExpert professional anchor design software",
     fit: "cover",
+    label: "Design software",
+    href: "/design-software",
   },
 ];
 
@@ -50,17 +56,6 @@ export default function AboutPreview() {
             ICFS supplies chemical and mechanical anchors that hold when the load matters.
             Clear specs, steady stock, and support when you need to choose the right fixing.
           </p>
-
-          <ul className="mt-4 flex max-w-md flex-wrap gap-2" aria-label="Product lines">
-            {["Chemical anchors", "Mechanical anchors", "Design tools"].map((label) => (
-              <li
-                key={label}
-                className="rounded-full bg-white/80 px-3 py-1 text-[13px] font-medium text-ink/60 ring-1 ring-black/[0.06]"
-              >
-                {label}
-              </li>
-            ))}
-          </ul>
 
           <blockquote className="relative mt-5 max-w-md overflow-hidden rounded-2xl bg-white p-5 ring-1 ring-black/[0.06] sm:mt-6 sm:p-6">
             <p className="text-[16px] leading-snug text-ink/80 sm:text-[16px]">
@@ -127,19 +122,28 @@ export default function AboutPreview() {
               )}
             </div>
             {IMAGES.map((img) => (
-              <div
-                key={img.src}
-                className="relative overflow-hidden rounded-2xl bg-white ring-1 ring-black/[0.06]"
-              >
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  sizes="(max-width: 1024px) 33vw, 18vw"
-                  className={`transition-transform duration-500 hover:scale-105 ${
-                    img.fit === "contain" ? "object-contain p-3" : "object-cover"
-                  }`}
-                />
+              <div key={img.src} className="flex min-h-0 flex-col gap-2">
+                <Link
+                  href={img.href}
+                  className="group relative min-h-0 flex-1 overflow-hidden rounded-2xl bg-white ring-1 ring-black/[0.06] transition hover:ring-brand/30"
+                  aria-label={img.label}
+                >
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    sizes="(max-width: 1024px) 33vw, 18vw"
+                    className={`transition-transform duration-500 group-hover:scale-105 ${
+                      img.fit === "contain" ? "object-contain p-3" : "object-cover"
+                    }`}
+                  />
+                </Link>
+                <Link
+                  href={img.href}
+                  className="cursor-target mx-auto inline-flex rounded-full bg-brand px-3.5 py-1.5 text-center text-[12px] font-semibold text-white transition hover:bg-brand-deep sm:text-[13px]"
+                >
+                  {img.label}
+                </Link>
               </div>
             ))}
           </div>
